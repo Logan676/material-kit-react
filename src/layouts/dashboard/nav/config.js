@@ -12,19 +12,34 @@ const navConfig = [
     icon: icon('ic_analytics'),
   },
   {
-    title: 'user',
-    path: '/dashboard/user',
-    icon: icon('ic_user'),
-  },
-  {
-    title: 'product',
-    path: '/dashboard/products',
-    icon: icon('ic_cart'),
-  },
-  {
     title: 'blog',
     path: '/dashboard/blog',
     icon: icon('ic_blog'),
+  },
+  {
+    title: 'books',
+    path: '/dashboard/books',
+    icon: icon('ic_blog'),
+  },
+  {
+    title: 'publisher',
+    path: '/dashboard/publisher',
+    icon: icon('ic_cart'),
+  },
+  {
+    title: 'authors',
+    path: '/dashboard/authors',
+    icon: icon('ic_user'),
+  },
+  {
+    title: 'tags',
+    path: '/dashboard/tags',
+    icon: icon('ic_cart'),
+  },
+  {
+    title: 'topics',
+    path: '/dashboard/topics',
+    icon: icon('ic_cart'),
   },
   {
     title: 'login',

@@ -9,6 +9,11 @@ import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
 import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
+import PublisherForm from './pages/PublisherForm';
+import AuthorForm from './pages/AuthorForm';
+import TagForm from './pages/TagForm';
+import TopicForm from './pages/TopicForm';
+import BookForm from './pages/BookForm';
 
 // ----------------------------------------------------------------------
 
@@ -20,9 +25,14 @@ export default function Router() {
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
-        { path: 'user', element: <UserPage /> },
-        { path: 'products', element: <ProductsPage /> },
+        // { path: 'user', element: <UserPage /> },
+        // { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
+        { path: 'publisher', element: <PublisherForm /> },
+        { path: 'authors', element: <AuthorForm /> },
+        { path: 'books', element: <BookForm /> },
+        { path: 'tags', element: <TagForm /> },
+        { path: 'topics', element: <TopicForm /> },
       ],
     },
     {
