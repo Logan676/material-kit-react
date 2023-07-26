@@ -12,33 +12,38 @@ const navConfig = [
     icon: icon('ic_analytics'),
   },
   {
-    title: 'blog',
+    title: '博客',
     path: '/dashboard/blog',
     icon: icon('ic_blog'),
   },
   {
-    title: 'books',
+    title: '书籍',
     path: '/dashboard/books',
     icon: icon('ic_blog'),
   },
   {
-    title: 'publisher',
+    title: '出版社',
     path: '/dashboard/publisher',
     icon: icon('ic_cart'),
   },
   {
-    title: 'authors',
+    title: '作者',
     path: '/dashboard/authors',
     icon: icon('ic_user'),
   },
   {
-    title: 'tags',
+    title: '标签',
     path: '/dashboard/tags',
     icon: icon('ic_cart'),
   },
   {
-    title: 'topics',
+    title: '主题阅读',
     path: '/dashboard/topics',
+    icon: icon('ic_cart'),
+  },
+  {
+    title: 'dev',
+    path: '/dashboard/dev',
     icon: icon('ic_cart'),
   },
   {

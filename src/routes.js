@@ -14,6 +14,7 @@ import AuthorForm from './pages/AuthorForm';
 import TagForm from './pages/TagForm';
 import TopicForm from './pages/TopicForm';
 import BookForm from './pages/BookForm';
+import Dev from './pages/Dev';
 
 // ----------------------------------------------------------------------
 
@@ -33,6 +34,7 @@ export default function Router() {
         { path: 'books', element: <BookForm /> },
         { path: 'tags', element: <TagForm /> },
         { path: 'topics', element: <TopicForm /> },
+        { path: 'dev', element: <Dev /> },
       ],
     },
     {
