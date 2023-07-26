@@ -1,7 +1,15 @@
 // BookForm.js
 import React, { useState } from 'react';
 import { TextField, Button, FormControl, InputLabel, Select, MenuItem, Box } from '@mui/material';
-import { DatePicker } from '@mui/pickers'; // Import DatePicker from @mui/pickers
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { deDE as coreDeDE } from '@mui/material/locale';
+import { deDE } from '@mui/x-date-pickers/locales';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+// date-fns
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+// or for dayjs
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { v4 as uuidv4 } from 'uuid'; // Import uuidv4 to generate unique IDs
 import axios from 'axios';
 
@@ -130,22 +138,50 @@ const BookForm = () => {
           />
         </Box>
         <Box mb={2}>
-          <DatePicker
+          {/* <DatePicker
             label="Purchase Year"
             name="purchaseYear"
             value={bookData.purchaseYear}
             onChange={(date) => handleDateChange('purchaseYear', date)}
             renderInput={(params) => <TextField {...params} />}
-          />
+          /> */}
+
+          <LocalizationProvider
+            dateAdapter={AdapterDateFns}
+            localeText={deDE.components.MuiLocalizationProvider.defaultProps.localeText}
+          >
+            <DatePicker
+              label="Purchase Year"
+              name="purchaseYear"
+              views={['year', 'month', 'day']}
+              value={bookData.purchaseYear}
+              onChange={(date) => handleDateChange('purchaseYear', date)}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          </LocalizationProvider>
         </Box>
         <Box mb={2}>
-          <DatePicker
+          {/* <DatePicker
             label="Publication Year"
             name="publicationYear"
             value={bookData.publicationYear}
             onChange={(date) => handleDateChange('publicationYear', date)}
             renderInput={(params) => <TextField {...params} />}
-          />
+          /> */}
+          <LocalizationProvider
+            dateAdapter={AdapterDateFns}
+            localeText={deDE.components.MuiLocalizationProvider.defaultProps.localeText}
+          >
+            <DatePicker
+              label="Publication Year"
+              name="publicationYear"
+              views={['year', 'month', 'day']}
+              defaultValue={new Date(2022, 1, 1)}
+              value={bookData.publicationYear}
+              onChange={(date) => handleDateChange('publicationYear', date)}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          </LocalizationProvider>
         </Box>
         <Box mb={2}>
           <TextField
