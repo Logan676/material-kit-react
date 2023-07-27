@@ -18,32 +18,6 @@ const UploadImage = ({ onImageSelect }) => {
   };
 
   return (
-    // <Box>
-    //   {selectedImage ? (
-    //     <>
-    //       <Typography variant="subtitle1">Selected Image:</Typography>
-    //       <img src={URL.createObjectURL(selectedImage)} alt="Selected" style={{ maxWidth: '100%', marginBottom: 10 }} />
-    //       <Button onClick={handleRemoveImage} variant="contained" color="secondary">
-    //         Remove Image
-    //       </Button>
-    //     </>
-    //   ) : (
-    //     <>
-    //       <label htmlFor="image-upload-button">
-    //         <input
-    //           accept="image/*"
-    //           style={{ display: 'none' }}
-    //           id="image-upload-button"
-    //           type="file"
-    //           onChange={handleImageChange}
-    //         />
-    //         <Button variant="contained" component="span">
-    //           Upload Image
-    //         </Button>
-    //       </label>
-    //     </>
-    //   )}
-    // </Box>
     <Box mt={2}>
       <Grid container spacing={3}>
         {/* Other input fields */}

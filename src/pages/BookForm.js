@@ -25,21 +25,19 @@ import UploadImage from './UploadImage';
 import BookList from './BookList';
 
 const BookForm = () => {
-  const [bookData, setBookData] = useState({
-    title: '',
-    authors: [], // Change to an empty array
-    tags: [], // Change to an empty array
-    topics: [], // Change to an empty array
-    readingStatus: '想读',
-    readingProgress: '',
-    publisherInfo: '', // Update this field based on your actual publisher data
-    isbn: '',
-    reviews: [], // Change to an empty array
-    excerpts: [], // Change to an empty array
-    purchaseYear: '',
-    publicationYear: '',
-    pic: null,
-  });
+  const [title, setTitle] = useState('');
+  const [authors, setAuthors] = useState([]);
+  const [tags, setTags] = useState([]);
+  const [topics, setTopics] = useState([]);
+  const [readingStatus, setReadingStatus] = useState('想读');
+  const [readingProgress, setReadingProgress] = useState('');
+  const [publisherInfo, setPublisherInfo] = useState('');
+  const [isbn, setIsbn] = useState('');
+  const [reviews, setReviews] = useState([]);
+  const [excerpts, setExcerpts] = useState([]);
+  const [purchaseYear, setPurchaseYear] = useState('');
+  const [publicationYear, setPublicationYear] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const [error, setError] = useState(null);
   const [refreshList, setRefreshList] = useState(false);
@@ -48,25 +46,65 @@ const BookForm = () => {
     const { name, value } = event.target;
     if (name === 'authors' || name === 'tags' || name === 'topics' || name === 'reviews' || name === 'excerpts') {
       // Split the input value based on commas to create an array
-      setBookData((prevData) => ({ ...prevData, [name]: value.split(',') }));
+      const arrayValue = value.split(',');
+      switch (name) {
+        case 'authors':
+          setAuthors(arrayValue);
+          break;
+        case 'tags':
+          setTags(arrayValue);
+          break;
+        case 'topics':
+          setTopics(arrayValue);
+          break;
+        case 'reviews':
+          setReviews(arrayValue);
+          break;
+        case 'excerpts':
+          setExcerpts(arrayValue);
+          break;
+        default:
+          break;
+      }
     } else {
-      setBookData((prevData) => ({ ...prevData, [name]: value }));
+      switch (name) {
+        case 'title':
+          setTitle(value);
+          break;
+        case 'readingStatus':
+          setReadingStatus(value);
+          break;
+        case 'readingProgress':
+          setReadingProgress(value);
+          break;
+        case 'publisherInfo':
+          setPublisherInfo(value);
+          break;
+        case 'isbn':
+          setIsbn(value);
+          break;
+        case 'purchaseYear':
+          setPurchaseYear(value);
+          break;
+        case 'publicationYear':
+          setPublicationYear(value);
+          break;
+        default:
+          break;
+      }
     }
   };
-
   const handleDateChange = (name, date) => {
-    setBookData((prevData) => ({ ...prevData, [name]: date }));
-  };
-
-  const handleImageSelect = (file) => {
-    setBookData((prevData) => ({ ...prevData, pic: file }));
-  };
-
-  const convertToArray = (field) => {
-    if (typeof field === 'string') {
-      return field.split(',').map((item) => item.trim());
+    switch (name) {
+      case 'purchaseYear':
+        setPurchaseYear(date);
+        break;
+      case 'publicationYear':
+        setPublicationYear(date);
+        break;
+      default:
+        break;
     }
-    return Array.isArray(field) ? field.map((item) => item.trim()) : [];
   };
 
   // Function to read a file as a base64-encoded data URL
@@ -82,19 +120,19 @@ const BookForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const missingFields = [];
-    if (!bookData.title) missingFields.push('书名');
-    if (bookData.authors.length === 0) missingFields.push('作者 (逗号分割)');
-    if (bookData.tags.length === 0) missingFields.push('标签 (逗号分割)');
-    if (bookData.topics.length === 0) missingFields.push('阅读专题 (逗号分割)');
-    if (!bookData.readingStatus) missingFields.push('Reading Status');
-    if (!bookData.readingProgress) missingFields.push('阅读进度 (%)');
-    if (!bookData.publisherInfo) missingFields.push('出版信息');
-    if (!bookData.isbn) missingFields.push('ISBN');
-    if (bookData.reviews.length === 0) missingFields.push('书评');
-    if (bookData.excerpts.length === 0) missingFields.push('书摘');
-    if (!bookData.purchaseYear) missingFields.push('购买日期');
-    if (!bookData.publicationYear) missingFields.push('出版日期');
-    if (!bookData.pic) missingFields.push('图片');
+    if (!title) missingFields.push('书名');
+    if (authors.length === 0) missingFields.push('作者 (逗号分割)');
+    if (tags.length === 0) missingFields.push('标签 (逗号分割)');
+    if (topics.length === 0) missingFields.push('阅读专题 (逗号分割)');
+    if (!readingStatus) missingFields.push('Reading Status');
+    if (!readingProgress) missingFields.push('阅读进度 (%)');
+    if (!publisherInfo) missingFields.push('出版信息');
+    if (!isbn) missingFields.push('ISBN');
+    if (reviews.length === 0) missingFields.push('书评');
+    if (excerpts.length === 0) missingFields.push('书摘');
+    if (!purchaseYear) missingFields.push('购买日期');
+    if (!publicationYear) missingFields.push('出版日期');
+    if (!selectedImage) missingFields.push('图片');
 
     if (missingFields.length > 0) {
       setError(`请填写以下必填字段: ${missingFields.join(', ')}`);
@@ -109,51 +147,41 @@ const BookForm = () => {
 
     setError(null);
     try {
-      const authorsArray = convertToArray(bookData.authors);
-      const tagsArray = convertToArray(bookData.tags);
-      const topicsArray = convertToArray(bookData.topics);
-      const reviewsArray = convertToArray(bookData.reviews);
-      const excerptsArray = convertToArray(bookData.excerpts);
-
-      bookData.authors = authorsArray;
-      bookData.tags = tagsArray;
-      bookData.topics = topicsArray;
-      bookData.reviews = reviewsArray;
-      bookData.excerpts = excerptsArray;
-
-      const picFile = bookData.pic; // Assuming bookData.pic is a File object from a file input
-
-      if (picFile) {
-        try {
-          const picData = await readFileAsDataURL(picFile);
-          bookData.pic = picData; // Now pic is converted to a base64-encoded string
-        } catch (error) {
-          console.error('Error converting pic to string:', error);
-          setError('图片转换失败，请重试');
-          return;
-        }
+      let picData = null;
+      if (selectedImage) {
+        picData = await readFileAsDataURL(selectedImage);
       }
 
-      const response = await axios.post('/api/books', bookData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
+      const response = await axios.post('/api/books', {
+        title,
+        authors,
+        tags,
+        topics,
+        readingStatus,
+        readingProgress,
+        publisherInfo,
+        isbn,
+        reviews,
+        excerpts,
+        purchaseYear,
+        publicationYear,
+        pic: picData,
       });
       console.log('书籍信息添加成功:', response.data);
       setError(null);
-      setBookData({
-        title: '',
-        authors: [],
-        tags: [],
-        topics: [],
-        readingStatus: '想读',
-        readingProgress: '',
-        publisherInfo: '',
-        isbn: '',
-        reviews: [],
-        excerpts: [],
-        purchaseYear: '',
-        publicationYear: '',
-        pic: null,
-      });
+      setTitle('');
+      setAuthors([]);
+      setTags([]);
+      setTopics([]);
+      setReadingStatus('想读');
+      setReadingProgress('');
+      setPublisherInfo('');
+      setIsbn('');
+      setReviews([]);
+      setExcerpts([]);
+      setPurchaseYear('');
+      setPublicationYear('');
+      setSelectedImage(null);
       setRefreshList(true);
     } catch (error) {
       console.error('书籍信息添加失败:', error);
@@ -170,7 +198,7 @@ const BookForm = () => {
             <TextField
               label="书名"
               name="title"
-              value={bookData.title}
+              value={title}
               onChange={handleInputChange}
               margin="normal"
               fullWidth
@@ -181,7 +209,7 @@ const BookForm = () => {
             <TextField
               label="作者 (逗号分割)"
               name="authors"
-              value={bookData.authors}
+              value={authors}
               onChange={handleInputChange}
               margin="normal"
               fullWidth
@@ -193,7 +221,7 @@ const BookForm = () => {
               label="标签 (逗号分割)"
               name="tags"
               margin="normal"
-              value={bookData.tags}
+              value={tags}
               onChange={handleInputChange}
               fullWidth
             />
@@ -203,7 +231,7 @@ const BookForm = () => {
               margin="normal"
               label="阅读专题 (逗号分割)"
               name="topics"
-              value={bookData.topics}
+              value={topics}
               onChange={handleInputChange}
               fullWidth
             />
@@ -213,7 +241,7 @@ const BookForm = () => {
           <Grid item xs={6} sm={3}>
             <FormControl fullWidth required margin="normal">
               <InputLabel>Reading Status</InputLabel>
-              <Select name="readingStatus" value={bookData.readingStatus} onChange={handleInputChange}>
+              <Select name="readingStatus" value={readingStatus} onChange={handleInputChange}>
                 <MenuItem value="已读">已读</MenuItem>
                 <MenuItem value="在阅读">在阅读</MenuItem>
                 <MenuItem value="想读">想读</MenuItem>
@@ -226,7 +254,7 @@ const BookForm = () => {
               label="阅读进度 (%)"
               name="readingProgress"
               type="number"
-              value={bookData.readingProgress}
+              value={readingProgress}
               onChange={handleInputChange}
               fullWidth
               inputProps={{ min: 0, max: 100 }}
@@ -237,7 +265,7 @@ const BookForm = () => {
             <TextField
               label="出版信息"
               name="publisherInfo"
-              value={bookData.publisherInfo}
+              value={publisherInfo}
               onChange={handleInputChange}
               margin="normal"
               fullWidth
@@ -248,7 +276,7 @@ const BookForm = () => {
               label="ISBN"
               name="isbn"
               margin="normal"
-              value={bookData.isbn}
+              value={isbn}
               onChange={handleInputChange}
               fullWidth
               required
@@ -260,7 +288,7 @@ const BookForm = () => {
             label="书摘"
             margin="normal"
             name="excerpts"
-            value={bookData.excerpts}
+            value={excerpts}
             onChange={handleInputChange}
             fullWidth
           />
@@ -270,7 +298,7 @@ const BookForm = () => {
             label="书评"
             margin="normal"
             name="reviews"
-            value={bookData.reviews}
+            value={reviews}
             onChange={handleInputChange}
             fullWidth
           />
@@ -285,7 +313,7 @@ const BookForm = () => {
                 label="购买日期"
                 name="purchaseYear"
                 views={['year', 'month', 'day']}
-                value={bookData.purchaseYear}
+                value={purchaseYear}
                 onChange={(date) => handleDateChange('purchaseYear', date)}
                 renderInput={(params) => <TextField {...params} margin="normal" />}
               />
@@ -301,7 +329,7 @@ const BookForm = () => {
                 name="publicationYear"
                 views={['year', 'month', 'day']}
                 defaultValue={new Date(2022, 1, 1)}
-                value={bookData.publicationYear}
+                value={publicationYear}
                 onChange={(date) => handleDateChange('publicationYear', date)}
                 renderInput={(params) => <TextField {...params} margin="normal" />}
               />
@@ -309,7 +337,7 @@ const BookForm = () => {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <UploadImage onImageSelect={(file) => handleImageSelect(file)} />
+          <UploadImage onImageSelect={(file) => setSelectedImage(file)} />
         </Grid>
         <Button variant="contained" color="primary" type="submit">
           新增图书信息
