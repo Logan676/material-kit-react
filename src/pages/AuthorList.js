@@ -30,20 +30,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PublisherList = ({ refresh }) => {
+const AuthorList = ({ refresh }) => {
   const classes = useStyles();
-  const [publishers, setPublishers] = useState([]);
+  const [authors, setAuthors] = useState([]);
 
   useEffect(() => {
-    fetchPublishers();
+    fetchAuthors();
   }, [refresh]);
 
-  const fetchPublishers = async () => {
+  const fetchAuthors = async () => {
     try {
-      const response = await axios.get('/api/publishers');
-      setPublishers(response.data);
+      const response = await axios.get('/api/authors');
+      setAuthors(response.data);
     } catch (error) {
-      console.error('Error fetching publishers:', error);
+      console.error('获取作者信息失败:', error);
     }
   };
 
@@ -51,16 +51,16 @@ const PublisherList = ({ refresh }) => {
     const encodedName = encodeURIComponent(name);
     try {
       console.log(`handleDelete:${name}`);
-      await axios.delete(`/api/publishers/${encodedName}`);
+      await axios.delete(`/api/authors/${encodedName}`);
       console.log(`delete:${name}`);
-      fetchPublishers();
+      fetchAuthors();
     } catch (error) {
-      console.error('Failed to delete publisher:', error);
+      console.error('删除作者信息失败:', error);
     }
   };
 
   const handleEdit = (id) => {
-    console.log('Editing publisher with ID:', id);
+    console.log('编辑作者信息ID:', id);
   };
 
   const imageHost = 'http://localhost:5555';
@@ -68,37 +68,37 @@ const PublisherList = ({ refresh }) => {
   return (
     <div>
       <Typography variant="h5" gutterBottom>
-        出版社列表
+        作者列表
       </Typography>
       <Typography variant="body1" gutterBottom>
-        总共有 {publishers.length} 家出版社
+        总共有 {authors.length} 位作者
       </Typography>
-      {publishers.map((publisher, index) => {
-        const imageUrl = `${imageHost}/${publisher.pic}`;
+      {authors.map((author, index) => {
+        const imageUrl = `${imageHost}/${author.pic}`;
         return (
-          <Card key={publisher._id} className={classes.card}>
+          <Card key={author._id} className={classes.card}>
             <CardActionArea className={classes.actionArea}>
               <div className={classes.cardContent}>
                 <Typography variant="h5" component="h2">
-                  {publisher.name}
+                  {author.name}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
                   编号：{index + 1}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  重要出版作品：{publisher.representativeWork}
+                  代表作品：{author.representativeWork}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  出版社简介：{publisher.introduction}
+                  作者生平：{author.introduction}
                 </Typography>
               </div>
-              <CardMedia className={classes.cardMedia} image={imageUrl} title={publisher.name} />
+              <CardMedia className={classes.cardMedia} image={imageUrl} title={author.name} />
             </CardActionArea>
             <CardContent>
-              <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(publisher.name)}>
+              <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(author.name)}>
                 <DeleteIcon />
               </IconButton>
-              <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(publisher.name)}>
+              <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(author.name)}>
                 <EditIcon />
               </IconButton>
             </CardContent>
@@ -109,4 +109,4 @@ const PublisherList = ({ refresh }) => {
   );
 };
 
-export default PublisherList;
+export default AuthorList;
