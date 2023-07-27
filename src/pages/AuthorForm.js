@@ -6,7 +6,7 @@ import AuthorList from './AuthorList';
 
 const AuthorForm = () => {
   const [name, setName] = useState('');
-  const [pic, setPic] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
   const [nationality, setNationality] = useState('');
   const [representativeWork, setRepresentativeWork] = useState('');
   const [bio, setBio] = useState('');
@@ -16,7 +16,7 @@ const AuthorForm = () => {
   const handleAuthorSubmit = async (e) => {
     e.preventDefault();
 
-    if (!name || !pic || !nationality || !representativeWork || !bio) {
+    if (!name || !selectedImage || !nationality || !representativeWork || !bio) {
       setError('请填写所有必填字段');
       return;
     }
@@ -30,7 +30,7 @@ const AuthorForm = () => {
     setError(null);
     const formData = new FormData();
     formData.append('name', encodeURIComponent(name));
-    formData.append('pic', pic);
+    formData.append('pic', selectedImage);
     formData.append('nationality', encodeURIComponent(nationality));
     formData.append('representativeWork', encodeURIComponent(representativeWork));
     formData.append('bio', encodeURIComponent(bio));
@@ -43,7 +43,7 @@ const AuthorForm = () => {
       console.log('作者信息提交成功:', response.data);
       setError(null);
       setName('');
-      setPic(null);
+      setSelectedImage(null);
       setNationality('');
       setRepresentativeWork('');
       setBio('');
@@ -80,11 +80,11 @@ const AuthorForm = () => {
           </Grid>
           <Grid item xs={12}>
             <TextField
-              label="代表作" // New attribute
+              label="代表作"
               variant="outlined"
               fullWidth
               value={representativeWork}
-              onChange={(e) => setRepresentativeWork(e.target.value)} // New attribute
+              onChange={(e) => setRepresentativeWork(e.target.value)}
             />
           </Grid>
           <Grid item xs={12}>
@@ -99,7 +99,7 @@ const AuthorForm = () => {
             />
           </Grid>
           <Grid item xs={12}>
-            <UploadImage onImageSelect={(file) => setPic(file)} />
+            <UploadImage onImageSelect={(file) => setSelectedImage(file)} />
           </Grid>
           <Grid item xs={12}>
             <Button variant="contained" color="primary" type="submit">

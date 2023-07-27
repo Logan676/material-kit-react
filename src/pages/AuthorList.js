@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     display: 'flex',
     width: 500,
-    height: 130,
+    height: 200,
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
@@ -42,6 +42,7 @@ const AuthorList = ({ refresh }) => {
     try {
       const response = await axios.get('/api/authors');
       setAuthors(response.data);
+      console.log(response.data);
     } catch (error) {
       console.error('获取作者信息失败:', error);
     }
@@ -89,7 +90,10 @@ const AuthorList = ({ refresh }) => {
                   代表作品：{author.representativeWork}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  作者生平：{author.introduction}
+                  国家：{author.nationality}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  作者生平：{author.bio}
                 </Typography>
               </div>
               <CardMedia className={classes.cardMedia} image={imageUrl} title={author.name} />
