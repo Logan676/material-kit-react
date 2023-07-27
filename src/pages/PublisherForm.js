@@ -8,6 +8,7 @@ const PublisherForm = () => {
   const [name, setName] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
   const [representativeWork, setRepresentativeWork] = useState('');
+  const [introduction, setIntroduction] = useState('');
   const [error, setError] = useState(null); // 添加异常信息状态变量
   const [imagePreview, setImagePreview] = useState(null);
   const [refreshList, setRefreshList] = useState(false);
@@ -25,8 +26,8 @@ const PublisherForm = () => {
   };
 
   const handleSubmit = async () => {
-    if (!name || !selectedImage || !representativeWork) {
-      setError('请填写出版社名称、上传出版社图片和重要出版作品');
+    if (!name || !selectedImage || !representativeWork || !introduction) {
+      setError('请填写出版社名称、上传出版社图片、重要出版作品和简介');
       return;
     }
 
@@ -41,6 +42,7 @@ const PublisherForm = () => {
     formData.append('name', name);
     formData.append('pic', selectedImage);
     formData.append('representativeWork', representativeWork);
+    formData.append('introduction', introduction);
 
     try {
       const response = await axios.post('/api/publishers', formData, {
@@ -52,6 +54,7 @@ const PublisherForm = () => {
       setName('');
       setSelectedImage(null);
       setRepresentativeWork('');
+      setIntroduction('');
       setImagePreview(null);
       setRefreshList(true);
     } catch (error) {
@@ -81,6 +84,15 @@ const PublisherForm = () => {
             name="importantWorks"
             value={representativeWork}
             onChange={(e) => setRepresentativeWork(e.target.value)}
+            fullWidth
+          />
+        </Box>
+        <Box mt={2}>
+          <TextField
+            label="简介"
+            name="introduction"
+            value={introduction}
+            onChange={(e) => setIntroduction(e.target.value)}
             fullWidth
           />
         </Box>
