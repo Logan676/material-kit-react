@@ -6,27 +6,35 @@ import EditIcon from '@mui/icons-material/Edit';
 import axios from './axiosInstance';
 
 const useStyles = makeStyles((theme) => ({
-  card: {
+  bookCard: {
     display: 'flex',
+    alignItems: 'flex-start',
     width: 500,
-    height: 400,
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
-  cardContent: {
-    flex: '1 0 auto',
-  },
-  cardMedia: {
+  bookCover: {
+    flex: '0 0 auto',
+    marginRight: theme.spacing(2),
     width: 100,
-    height: 100,
+    height: 'auto',
     borderRadius: 10,
     border: '1px solid #ccc',
     padding: 5,
   },
-  actionArea: {
+  bookDetails: {
+    flex: '1 1 auto',
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: 'column',
+  },
+  bookActions: {
+    flex: '0 0 auto',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-end',
+  },
+  bookReview: {
+    marginTop: theme.spacing(2),
   },
 }));
 
@@ -76,57 +84,46 @@ const BookList = ({ refresh }) => {
       {books.map((book, index) => {
         const imageUrl = `${imageHost}/${book.pic}`;
         return (
-          <Card key={book._id} className={classes.card}>
-            <CardActionArea className={classes.actionArea}>
-              <div className={classes.cardContent}>
-                <Typography variant="h5" component="h2">
-                  {book.title}
-                </Typography>
-                <CardMedia className={classes.cardMedia} image={imageUrl} title={book.name} />
-                <Typography variant="body2" gutterBottom>
-                  编号：{index + 1}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  作者：{book.authors}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  标签：{book.tags}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  专题：{book.topics}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  阅读进度：{book.readingProgress}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  出版信息：{book.publisherInfo}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  isbn：{book.isbn}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  书评：{book.reviews}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  书摘：{book.excerpts}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  购买日期：{book.purchaseYear}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  出版日期：{book.publicationYear}
-                </Typography>
-              </div>
-            </CardActionArea>
-            <CardContent>
+          <div key={book._id} className={classes.bookCard}>
+            <img className={classes.bookCover} src={imageUrl} alt={book.name} />
+            <div className={classes.bookDetails}>
+              <Typography variant="h5" component="h2">
+                {book.title}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                作者：{book.authors}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                标签：{book.tags}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                专题：{book.topics}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                阅读进度：{book.readingProgress}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" className={classes.bookReview}>
+                书评：{book.reviews}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                书摘：{book.excerpts}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                购买日期：{book.purchaseYear}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                出版日期：{book.publicationYear}
+              </Typography>
+            </div>
+            <div className={classes.bookActions}>
               <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(book.name)}>
                 <DeleteIcon />
               </IconButton>
               <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(book.name)}>
                 <EditIcon />
               </IconButton>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         );
       })}
     </div>
