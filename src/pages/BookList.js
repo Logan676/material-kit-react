@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     display: 'flex',
     width: 500,
-    height: 200,
+    height: 400,
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
@@ -78,14 +78,11 @@ const BookList = ({ refresh }) => {
         return (
           <Card key={book._id} className={classes.card}>
             <CardActionArea className={classes.actionArea}>
-              <CardMedia className={classes.cardMedia} image={imageUrl} title={book.name} />
               <div className={classes.cardContent}>
                 <Typography variant="h5" component="h2">
                   {book.title}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  图片：{book.pic}
-                </Typography>
+                <CardMedia className={classes.cardMedia} image={imageUrl} title={book.name} />
                 <Typography variant="body2" gutterBottom>
                   编号：{index + 1}
                 </Typography>

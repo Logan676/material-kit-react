@@ -6,10 +6,11 @@ const UploadImage = ({ onImageSelect }) => {
   const [imagePreview, setImagePreview] = useState(null);
 
   const handleImageChange = (e) => {
+    console.log('handleImageChange');
     const file = e.target.files[0];
+    console.log(`handleImageChange -> ${file}`);
     onImageSelect(file);
-
-    // Display image preview
+    console.log(`handleImageChange -> onImageSelect${file}`);
     const reader = new FileReader();
     reader.onloadend = () => {
       setImagePreview(reader.result);
