@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Button, Box, Grid, Typography, Divider } from '@mui/material';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
-import axios from './axiosInstance'; // Import the global Axios instance
+import axios from './axiosInstance';
 import PublisherList from './PublisherList';
 
 const PublisherForm = () => {
@@ -12,6 +12,26 @@ const PublisherForm = () => {
   const [error, setError] = useState(null); // 添加异常信息状态变量
   const [imagePreview, setImagePreview] = useState(null);
   const [refreshList, setRefreshList] = useState(false);
+  const [selectedPublisher, setSelectedPublisher] = useState(null);
+
+  const imageHost = 'http://localhost:5555';
+
+  const handleSelectedPublisher = (publisher) => {
+    setSelectedPublisher(publisher);
+  };
+  useEffect(() => {
+    if (selectedPublisher) {
+      setName(selectedPublisher.name);
+      setRepresentativeWork(selectedPublisher.representativeWork);
+      setIntroduction(selectedPublisher.introduction);
+      // You may need to handle the image preview separately, depending on how you store the image data
+      if (selectedPublisher.pic) {
+        setImagePreview(`${imageHost}/${selectedPublisher.pic}`);
+        // 下载图片并且设置
+        // setSelectedImage();
+      }
+    }
+  }, [selectedPublisher]);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -26,15 +46,14 @@ const PublisherForm = () => {
   };
 
   const handleSubmit = async () => {
-    if (!name || !selectedImage || !representativeWork || !introduction) {
-      setError('请填写出版社名称、上传出版社图片、重要出版作品和简介');
-      return;
-    }
+    const missingFields = [];
+    if (!name) missingFields.push('出版社名称');
+    if (!selectedImage) missingFields.push('出版社图片');
+    if (!representativeWork) missingFields.push('重要出版作品');
+    if (!introduction) missingFields.push('出版社简介');
 
-    const response = await axios.get('/api/publishers');
-    const existingPublishers = response.data;
-    if (existingPublishers.some((publisher) => publisher.name === name)) {
-      setError('该出版社已存在');
+    if (missingFields.length > 0) {
+      setError(`请填写以下必填字段: ${missingFields.join(', ')}`);
       return;
     }
 
@@ -45,9 +64,25 @@ const PublisherForm = () => {
     formData.append('introduction', introduction);
 
     try {
-      const response = await axios.post('/api/publishers', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
+      let response;
+      if (selectedPublisher) {
+        // If selectedPublisher is not null, it means we are in edit mode and should use PUT request
+        const formData = new FormData();
+        formData.append('name', name);
+        if (selectedImage) {
+          formData.append('pic', selectedImage);
+        }
+        formData.append('representativeWork', representativeWork);
+        formData.append('introduction', introduction);
+
+        response = await axios.put(`/api/publishers/${selectedPublisher._id}`, formData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
+        });
+      } else {
+        response = await axios.post('/api/publishers', formData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
+        });
+      }
 
       console.log('出版社信息提交成功:', response.data);
       setError(null); // 清除错误信息
@@ -57,6 +92,7 @@ const PublisherForm = () => {
       setIntroduction('');
       setImagePreview(null);
       setRefreshList(true);
+      setSelectedPublisher(null);
     } catch (error) {
       console.error('出版社信息提交出错:', error);
       // 添加错误处理逻辑
@@ -98,7 +134,6 @@ const PublisherForm = () => {
         </Box>
         <Box mt={2}>
           <Grid container spacing={3}>
-            {/* Other input fields */}
             <Grid item xs={12} sm={6}>
               <label htmlFor="upload-image">
                 {imagePreview ? (
@@ -139,7 +174,7 @@ const PublisherForm = () => {
         </Box>
         <Box mt={2}>
           <Button variant="contained" color="primary" onClick={handleSubmit}>
-            提交
+            {selectedPublisher ? '更新' : '提交'}
           </Button>
         </Box>
 
@@ -155,7 +190,7 @@ const PublisherForm = () => {
       <Box my={3}>
         <Divider />
       </Box>
-      <PublisherList refresh={refreshList} />
+      <PublisherList refresh={refreshList} onEdit={handleSelectedPublisher} />
     </Box>
   );
 };

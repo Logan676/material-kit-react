@@ -69,8 +69,8 @@ const BookForm = () => {
     if (!selectedImage) missingFields.push('图片');
 
     if (missingFields.length > 0) {
-      setError(`请填写以下必填字段: ${missingFields.join(', ')}`);
-      return;
+      // setError(`请填写以下必填字段: ${missingFields.join(', ')}`);
+      // return;
     }
 
     // const response = await axios.get(`/api/books?name=${bookData.title}`);
@@ -98,9 +98,22 @@ const BookForm = () => {
         formData.append('pic', selectedImage);
       }
 
+      const resTags = addTags(tags);
+      console.log('标签信息添加成功:', resTags.data);
+
+      const resTopics = addTopics(topics);
+      console.log('专题信息添加成功:', resTopics.data);
+
+      const resPublisher = addPublishers(publisherInfo);
+      console.log('出版信息添加成功:', resPublisher.data);
+
+      const resAuthor = addAuthors(authors);
+      console.log('作者信息添加成功:', resAuthor.data);
+
       const response = await axios.post('/api/books', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
+
       console.log('书籍信息添加成功:', response.data);
       setError(null);
       setRefreshList(true);
@@ -293,3 +306,30 @@ const BookForm = () => {
 };
 
 export default BookForm;
+
+async function addTags(tags) {
+  const requestData = { tag: tags };
+  const response = await axios.post('/api/tags', requestData);
+  return response;
+}
+
+async function addTopics(topics) {
+  const requestData = { topic: topics };
+  const response = await axios.post('/api/topics', requestData);
+  return response;
+}
+
+async function addPublishers(publishers) {
+  const requestData = { name: publishers };
+  const response = await axios.post('/api/publishers', requestData);
+  return response;
+}
+
+async function addAuthors(authors) {
+  const formData = new FormData();
+  formData.append('name', encodeURIComponent(authors));
+  const response = await axios.post('/api/authors', formData, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  });
+  return response;
+}

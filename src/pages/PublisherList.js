@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PublisherList = ({ refresh }) => {
+const PublisherList = ({ refresh, onEdit }) => {
   const classes = useStyles();
   const [publishers, setPublishers] = useState([]);
 
@@ -47,20 +47,20 @@ const PublisherList = ({ refresh }) => {
     }
   };
 
-  const handleDelete = async (name) => {
-    const encodedName = encodeURIComponent(name);
+  const handleDelete = async (publisher) => {
     try {
-      console.log(`handleDelete:${name}`);
-      await axios.delete(`/api/publishers/${encodedName}`);
-      console.log(`delete:${name}`);
+      console.log('删除出版社', publisher);
+      await axios.delete(`/api/publishers/${publisher._id}`);
+      console.log('删除出版社成功:', publisher);
       fetchPublishers();
     } catch (error) {
-      console.error('Failed to delete publisher:', error);
+      console.error('删除出版社失败:', error);
     }
   };
 
-  const handleEdit = (id) => {
-    console.log('Editing publisher with ID:', id);
+  const handleEdit = (publisher) => {
+    console.log('编辑', publisher);
+    onEdit(publisher);
   };
 
   const imageHost = 'http://localhost:5555';
@@ -95,10 +95,10 @@ const PublisherList = ({ refresh }) => {
               <CardMedia className={classes.cardMedia} image={imageUrl} title={publisher.name} />
             </CardActionArea>
             <CardContent>
-              <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(publisher.name)}>
+              <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(publisher)}>
                 <DeleteIcon />
               </IconButton>
-              <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(publisher.name)}>
+              <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(publisher)}>
                 <EditIcon />
               </IconButton>
             </CardContent>
