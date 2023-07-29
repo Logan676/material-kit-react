@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import axios from './axiosInstance';
+import './App.css';
 
 const TopicForm = () => {
   const [topicInput, setTopicInput] = useState('');
@@ -20,22 +21,56 @@ const TopicForm = () => {
   const handleInputChange = (event) => {
     setTopicInput(event.target.value);
   };
+  // 随机专题阅读标签数组
+  const randomSpecialTags = [
+    '科技前沿',
+    '历史人物',
+    '自然生态',
+    '未来趋势',
+    '创意设计',
+    '人文社科',
+    '职业发展',
+    '健康养生',
+    '美食烹饪',
+    '旅行探险',
+    '灵感心情',
+    '影视娱乐',
+    '时尚潮流',
+    '文学艺术',
+    '音乐乐评',
+    '体育竞技',
+    '家居装饰',
+    '汽车机械',
+    '宠物养护',
+    '星座运势',
+  ];
 
   const handleSubmit = async () => {
-    if (topicInput.trim() === '') {
-      // 不允许空标签
-      return;
+    const numOfTagsToAdd = 200; // 要添加的标签数量
+    const tagPrefix = '专题标签_'; // 标签文本前缀
+
+    // 创建一个用于存储请求的数组
+    const requests = [];
+
+    for (let i = 0; i < numOfTagsToAdd; i += 1) {
+      // Use '+=' instead of '++'
+      // 随机选择专题阅读标签文本
+      const randomIndex = Math.floor(Math.random() * randomSpecialTags.length);
+      const randomTag = `${tagPrefix}${randomSpecialTags[randomIndex]}`;
+
+      // 准备请求数据
+      const requestData = { topic: randomTag };
+      requests.push(axios.post('/api/topics', requestData));
     }
-    const requestData = { topic: topicInput };
+
     try {
-      const response = await axios.post('/api/topics', requestData);
-      console.log('Topic saved:', response.data); // 服务器返回的保存成功信息
-      setTopicInput(''); // 清空输入框
-      fetchSavedTopics(); // 获取最新的已保存专题
+      // 使用 Promise.all 同时执行所有请求
+      await Promise.all(requests);
+      console.log('专题阅读标签保存成功');
       setError(null);
     } catch (error) {
-      console.error('专题提交出错:', error);
-      setError(`专题提交失败：${error.message}`);
+      console.error('专题阅读标签提交出错:', error);
+      setError(`专题阅读标签提交失败：${error.message}`);
     }
   };
 
@@ -89,11 +124,13 @@ const TopicForm = () => {
           <Typography variant="body2" gutterBottom>
             总共有 {savedTopics.length} 个专题
           </Typography>
-          {savedTopics.map((topic) => (
-            <Grid item key={topic._id}>
-              <Typography>{topic.topic}</Typography>
-            </Grid>
-          ))}
+          <div className="tag-container">
+            {savedTopics.map((topic) => (
+              <Grid item key={topic._id} className="tag">
+                <Typography>{topic.topic}</Typography>
+              </Grid>
+            ))}
+          </div>
         </Grid>
       </Box>
     </Box>

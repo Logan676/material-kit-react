@@ -146,3 +146,12 @@ h1 {
 .read-progress {
   font-weight: bold;
 }
+.tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 8px;
+  border: 1px solid #ccc;
+}
