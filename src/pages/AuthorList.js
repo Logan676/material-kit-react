@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AuthorList = ({ refresh }) => {
+const AuthorList = ({ refresh, onEdit }) => {
   const classes = useStyles();
   const [authors, setAuthors] = useState([]);
 
@@ -40,6 +40,7 @@ const AuthorList = ({ refresh }) => {
 
   const fetchAuthors = async () => {
     try {
+      console.log('获取作者信息');
       const response = await axios.get('/api/authors');
       setAuthors(response.data);
       console.log(response.data);
@@ -48,20 +49,20 @@ const AuthorList = ({ refresh }) => {
     }
   };
 
-  const handleDelete = async (name) => {
-    const encodedName = encodeURIComponent(name);
+  const handleDelete = async (author) => {
     try {
-      console.log(`handleDelete:${name}`);
-      await axios.delete(`/api/authors/${encodedName}`);
-      console.log(`delete:${name}`);
+      console.log('删除作者信息:', author);
+      await axios.delete(`/api/authors/${author._id}`);
+      console.log('删除作者信息成功:', author);
       fetchAuthors();
     } catch (error) {
       console.error('删除作者信息失败:', error);
     }
   };
 
-  const handleEdit = (id) => {
-    console.log('编辑作者信息ID:', id);
+  const handleEdit = (author) => {
+    console.log('编辑作者信息:', author);
+    onEdit(author);
   };
 
   const imageHost = 'http://localhost:5555';
@@ -99,10 +100,10 @@ const AuthorList = ({ refresh }) => {
               <CardMedia className={classes.cardMedia} image={imageUrl} title={author.name} />
             </CardActionArea>
             <CardContent>
-              <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(author.name)}>
+              <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(author)}>
                 <DeleteIcon />
               </IconButton>
-              <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(author.name)}>
+              <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(author)}>
                 <EditIcon />
               </IconButton>
             </CardContent>

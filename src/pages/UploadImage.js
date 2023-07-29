@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Button, Box, Grid, Typography, Divider } from '@mui/material';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 
-const UploadImage = ({ onImageSelect }) => {
+const UploadImage = ({ onImageSelect, imageUrl }) => {
   const [imagePreview, setImagePreview] = useState(null);
+
+  useEffect(() => {
+    if (imageUrl) {
+      setImagePreview(imageUrl);
+    } else {
+      setImagePreview(null);
+    }
+  }, [imageUrl]);
 
   const handleImageChange = (e) => {
     console.log('handleImageChange');

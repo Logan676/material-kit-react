@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Button, Box, Divider, Grid, Typography } from '@mui/material';
 import axios from './axiosInstance';
 import UploadImage from './UploadImage';
@@ -12,33 +12,65 @@ const AuthorForm = () => {
   const [bio, setBio] = useState('');
   const [refreshList, setRefreshList] = useState(false);
   const [error, setError] = useState(null);
+  const [selectedAuthor, setSelectedAuthor] = useState(null);
+
+  const handleSelectedAuthor = (author) => {
+    setSelectedAuthor(author);
+  };
+
+  useEffect(() => {
+    if (selectedAuthor) {
+      setName(selectedAuthor.name === 'undefined' ? '' : selectedAuthor.name || '');
+      setNationality(selectedAuthor.nationality === 'undefined' ? '' : selectedAuthor.nationality || '');
+      setRepresentativeWork(
+        selectedAuthor.representativeWork === 'undefined' ? '' : selectedAuthor.representativeWork || ''
+      );
+      setBio(selectedAuthor.bio === 'undefined' ? '' : selectedAuthor.bio || '');
+      // You may need to handle the image preview separately, depending on how you store the image data
+      console.log('编辑的图片url', selectedAuthor.pic);
+    }
+  }, [selectedAuthor]);
 
   const handleAuthorSubmit = async (e) => {
     e.preventDefault();
-
-    if (!name || !selectedImage || !nationality || !representativeWork || !bio) {
-      setError('请填写所有必填字段');
+    const missingFields = [];
+    if (!name) missingFields.push('作者名称');
+    // if (!selectedImage) missingFields.push('作者图片');
+    if (!nationality) missingFields.push('作者国籍');
+    if (!representativeWork) missingFields.push('作者代表作');
+    if (!bio) missingFields.push('作者生平');
+    if (missingFields.length > 0) {
+      setError(`请填写以下必填字段: ${missingFields.join(', ')}`);
       return;
     }
 
-    const response = await axios.get(`/api/authors?name=${encodeURIComponent(name)}`);
-    if (response.data.length > 0) {
-      setError('Author with the same name already exists.');
-      return;
-    }
+    // const response = await axios.get(`/api/authors?name=${encodeURIComponent(name)}`);
+    // if (response.data.length > 0) {
+    //   setError('Author with the same name already exists.');
+    //   return;
+    // }
 
     setError(null);
     const formData = new FormData();
-    formData.append('name', encodeURIComponent(name));
-    formData.append('pic', selectedImage);
-    formData.append('nationality', encodeURIComponent(nationality));
-    formData.append('representativeWork', encodeURIComponent(representativeWork));
-    formData.append('bio', encodeURIComponent(bio));
+    formData.append('name', name);
+    if (selectedImage) {
+      formData.append('pic', selectedImage);
+    }
+    formData.append('nationality', nationality);
+    formData.append('representativeWork', representativeWork);
+    formData.append('bio', bio);
 
     try {
-      const response = await axios.post('/api/authors', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
+      let response;
+      if (selectedAuthor) {
+        response = await axios.put(`/api/authors/${selectedAuthor._id}`, formData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
+        });
+      } else {
+        response = await axios.post('/api/authors', formData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
+        });
+      }
 
       console.log('作者信息提交成功:', response.data);
       setError(null);
@@ -48,6 +80,7 @@ const AuthorForm = () => {
       setRepresentativeWork('');
       setBio('');
       setRefreshList(true);
+      setSelectedAuthor(null);
     } catch (error) {
       console.error('作者信息提交出错:', error);
       // Handle error
@@ -99,11 +132,14 @@ const AuthorForm = () => {
             />
           </Grid>
           <Grid item xs={12}>
-            <UploadImage onImageSelect={(file) => setSelectedImage(file)} />
+            <UploadImage
+              imageUrl={selectedAuthor ? selectedAuthor.pic : ''}
+              onImageSelect={(file) => setSelectedImage(file)}
+            />
           </Grid>
           <Grid item xs={12}>
             <Button variant="contained" color="primary" type="submit">
-              新增作者信息
+              {selectedAuthor ? '更新作者信息' : '新增作者信息'}
             </Button>
           </Grid>
         </Grid>
@@ -117,7 +153,7 @@ const AuthorForm = () => {
       </form>
       <Box my={3}>
         <Divider />
-        <AuthorList refresh={refreshList} />
+        <AuthorList refresh={refreshList} onEdit={handleSelectedAuthor} />
       </Box>
     </Box>
   );

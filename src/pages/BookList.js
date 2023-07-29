@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BookList = ({ refresh }) => {
+const BookList = ({ refresh, onEdit }) => {
   const classes = useStyles();
   const [books, setBooks] = useState([]);
 
@@ -62,19 +62,20 @@ const BookList = ({ refresh }) => {
     }
   };
 
-  const handleDelete = async (name) => {
+  const handleDelete = async (book) => {
     try {
-      console.log(`handleDelete:${name}`);
-      await axios.delete(`/api/authors/${name}`);
-      console.log(`delete:${name}`);
+      console.log('删除书籍信息:', book);
+      await axios.delete(`/api/books/${book._id}`);
+      console.log('删除书籍信息成功:', book);
       fetchBooks();
     } catch (error) {
       console.error('删除书籍信息失败:', error);
     }
   };
 
-  const handleEdit = (id) => {
-    console.log('编辑书籍信息ID:', id);
+  const handleEdit = (book) => {
+    console.log('编辑书籍信息:', book);
+    onEdit(book);
   };
 
   const imageHost = 'http://localhost:5555';
@@ -125,10 +126,10 @@ const BookList = ({ refresh }) => {
                     </Typography>
                   </div>
                   <div className={classes.bookActions}>
-                    <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(book.name)}>
+                    <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(book)}>
                       <DeleteIcon />
                     </IconButton>
-                    <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(book.name)}>
+                    <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(book)}>
                       <EditIcon />
                     </IconButton>
                   </div>

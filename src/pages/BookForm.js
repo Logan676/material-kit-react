@@ -1,5 +1,5 @@
 // BookForm.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   TextField,
   Button,
@@ -42,6 +42,7 @@ const BookForm = () => {
 
   const [error, setError] = useState(null);
   const [refreshList, setRefreshList] = useState(false);
+  const [selectedBook, setSelectedBook] = useState(null);
 
   const formatDateToString = (date) => {
     if (!date) return '';
@@ -50,6 +51,30 @@ const BookForm = () => {
     const day = String(date.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   };
+
+  const handleSelectedBook = (book) => {
+    setSelectedBook(book);
+  };
+
+  useEffect(() => {
+    if (selectedBook) {
+      setTitle(selectedBook.title === 'undefined' ? '' : selectedBook.title || '');
+      setAuthors(selectedBook.authors === 'undefined' ? '' : selectedBook.authors || '');
+      setTags(selectedBook.tags === 'undefined' ? '' : selectedBook.tags || '');
+      setTopics(selectedBook.topics === 'undefined' ? '' : selectedBook.topics || '');
+      setReadingStatus(selectedBook.readingStatus === 'undefined' ? '' : selectedBook.readingStatus || '想读');
+      setReadingProgress(selectedBook.readingProgress === 'undefined' ? 0 : selectedBook.readingProgress || 0);
+      setPublisherInfo(selectedBook.publisherInfo === 'undefined' ? '' : selectedBook.publisherInfo || '');
+      setIsbn(selectedBook.isbn === 'undefined' ? '' : selectedBook.isbn || '');
+      setReviews(selectedBook.reviews === 'undefined' ? '' : selectedBook.reviews || '');
+      setExcerpts(selectedBook.excerpts === 'undefined' ? '' : selectedBook.excerpts || '');
+      setPurchaseYear(selectedBook.purchaseYear === 'undefined' ? null : selectedBook.purchaseYear || null);
+      setPublicationYear(selectedBook.publicationYear === 'undefined' ? null : selectedBook.publicationYear || null);
+      // setSelectedImage(selectedBook.pic === 'undefined' ? null : selectedBook.pic || null);
+
+      console.log('编辑的图片url', selectedBook.pic);
+    }
+  }, [selectedBook]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -99,16 +124,16 @@ const BookForm = () => {
       }
 
       const resTags = addTags(tags);
-      console.log('标签信息添加成功:', resTags.data);
+      console.log('标签信息添加成功:', resTags);
 
       const resTopics = addTopics(topics);
-      console.log('专题信息添加成功:', resTopics.data);
+      console.log('专题信息添加成功:', resTopics);
 
       const resPublisher = addPublishers(publisherInfo);
-      console.log('出版信息添加成功:', resPublisher.data);
+      console.log('出版信息添加成功:', resPublisher);
 
       const resAuthor = addAuthors(authors);
-      console.log('作者信息添加成功:', resAuthor.data);
+      console.log('作者信息添加成功:', resAuthor);
 
       const response = await axios.post('/api/books', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
@@ -130,6 +155,7 @@ const BookForm = () => {
       setPurchaseYear(null);
       setPublicationYear(null);
       setSelectedImage(null);
+      setSelectedBook(null);
     } catch (error) {
       console.error('书籍信息添加失败:', error);
       setError(`书籍信息提交失败：${error.message}`);
@@ -260,7 +286,7 @@ const BookForm = () => {
                 label="购买日期"
                 name="purchaseYear"
                 views={['year', 'month', 'day']}
-                value={purchaseYear}
+                value={new Date(purchaseYear)}
                 onChange={(date) => setPurchaseYear(date)}
                 renderInput={(params) => <TextField {...params} margin="normal" />}
               />
@@ -276,7 +302,7 @@ const BookForm = () => {
                 name="publicationYear"
                 views={['year', 'month', 'day']}
                 defaultValue={new Date(2022, 1, 1)}
-                value={publicationYear}
+                value={new Date(publicationYear)}
                 onChange={(date) => setPublicationYear(date)}
                 renderInput={(params) => <TextField {...params} margin="normal" />}
               />
@@ -286,20 +312,23 @@ const BookForm = () => {
         <Grid item xs={12}>
           <UploadImage onImageSelect={(file) => setSelectedImage(file)} />
         </Grid>
-        <Button variant="contained" color="primary" type="submit">
-          新增图书信息
-        </Button>
-        {error && (
-          <Box mt={2}>
-            <Typography variant="body1" color="error">
-              {error}
-            </Typography>
-          </Box>
-        )}
+        <Divider />
+        <Grid mt={5}>
+          <Button variant="contained" color="primary" type="submit">
+            新增图书信息
+          </Button>
+          {error && (
+            <Box mt={2}>
+              <Typography variant="body1" color="error">
+                {error}
+              </Typography>
+            </Box>
+          )}
+        </Grid>
       </form>
       <Box my={3}>
         <Divider />
-        <BookList refresh={refreshList} />
+        <BookList refresh={refreshList} onEdit={handleSelectedBook} />
       </Box>
     </Box>
   );
@@ -308,28 +337,100 @@ const BookForm = () => {
 export default BookForm;
 
 async function addTags(tags) {
-  const requestData = { tag: tags };
-  const response = await axios.post('/api/tags', requestData);
-  return response;
+  // 将逗号分隔的多个tag字符串转换为数组
+  const tagArray = tags.split(',');
+
+  // 依次请求接口并等待每个请求的完成
+  const promises = tagArray.map(async (tag) => {
+    const requestData = { tag: tag.trim() }; // 去除tag前后的空格
+    try {
+      const response = await axios.post('/api/tags', requestData);
+      return response;
+    } catch (error) {
+      // 处理请求错误，你可以选择抛出异常或者进行其他错误处理
+      console.error(`Error adding tag "${tag}":`, error);
+      return null;
+    }
+  });
+
+  // 用来保存每个tag请求的结果
+  const responses = await Promise.all(promises);
+
+  // 返回所有请求的结果数组
+  return responses;
 }
 
 async function addTopics(topics) {
-  const requestData = { topic: topics };
-  const response = await axios.post('/api/topics', requestData);
-  return response;
+  // 将逗号分隔的多个topic字符串转换为数组
+  const topicArray = topics.split(',');
+
+  // 依次请求接口并等待每个请求的完成
+  const promises = topicArray.map(async (topic) => {
+    const requestData = { topic: topic.trim() }; // 去除topic前后的空格
+    try {
+      const response = await axios.post('/api/topics', requestData);
+      return response;
+    } catch (error) {
+      // 处理请求错误，你可以选择抛出异常或者进行其他错误处理
+      console.error(`Error adding topic "${topic}":`, error);
+      return null;
+    }
+  });
+
+  // 用来保存每个topic请求的结果
+  const responses = await Promise.all(promises);
+
+  // 返回所有请求的结果数组
+  return responses;
 }
 
 async function addPublishers(publishers) {
-  const requestData = { name: publishers };
-  const response = await axios.post('/api/publishers', requestData);
-  return response;
+  // 将逗号分隔的多个出版商名称字符串转换为数组
+  const publisherArray = publishers.split(',');
+
+  // 依次请求接口并等待每个请求的完成
+  const promises = publisherArray.map(async (publisher) => {
+    const requestData = { name: publisher.trim() }; // 去除出版商名称前后的空格
+    try {
+      const response = await axios.post('/api/publishers', requestData);
+      return response;
+    } catch (error) {
+      // 处理请求错误，你可以选择抛出异常或者进行其他错误处理
+      console.error(`Error adding publisher "${publisher}":`, error);
+      return null;
+    }
+  });
+
+  // 用来保存每个出版商请求的结果
+  const responses = await Promise.all(promises);
+
+  // 返回所有请求的结果数组
+  return responses;
 }
 
 async function addAuthors(authors) {
-  const formData = new FormData();
-  formData.append('name', encodeURIComponent(authors));
-  const response = await axios.post('/api/authors', formData, {
-    headers: { 'Content-Type': 'multipart/form-data' },
+  // 将逗号分隔的多个作者名称字符串转换为数组
+  const authorArray = authors.split(',');
+
+  // 依次请求接口并等待每个请求的完成
+  const promises = authorArray.map(async (author) => {
+    const formData = new FormData();
+    formData.append('name', author.trim()); // 去除作者名称前后的空格
+    try {
+      const response = await axios.post('/api/authors', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+      return response;
+    } catch (error) {
+      // 处理请求错误，你可以选择抛出异常或者进行其他错误处理
+      console.error(`Error adding author "${author}":`, error);
+      return null;
+    }
   });
-  return response;
+
+  // 用来保存每个作者请求的结果
+  const responses = await Promise.all(promises);
+
+  // 返回所有请求的结果数组
+  return responses;
 }

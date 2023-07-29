@@ -21,9 +21,11 @@ const PublisherForm = () => {
   };
   useEffect(() => {
     if (selectedPublisher) {
-      setName(selectedPublisher.name);
-      setRepresentativeWork(selectedPublisher.representativeWork);
-      setIntroduction(selectedPublisher.introduction);
+      setName(selectedPublisher.name === 'undefined' ? '' : selectedPublisher.name || '');
+      setRepresentativeWork(
+        selectedPublisher.representativeWork === 'undefined' ? '' : selectedPublisher.representativeWork || ''
+      );
+      setIntroduction(selectedPublisher.introduction === 'undefined' ? '' : selectedPublisher.introduction || '');
       // You may need to handle the image preview separately, depending on how you store the image data
       if (selectedPublisher.pic) {
         setImagePreview(`${imageHost}/${selectedPublisher.pic}`);
