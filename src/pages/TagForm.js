@@ -74,6 +74,13 @@ const TagForm = () => {
         <Button variant="contained" onClick={handleTagSubmit} fullWidth>
           保存标签
         </Button>
+        {error && (
+          <Box mt={2}>
+            <Typography variant="body1" color="error">
+              {error}
+            </Typography>
+          </Box>
+        )}
         <Divider style={{ margin: '16px 0' }} />
         <Grid container direction="column" alignItems="flex-start">
           <Grid item>
