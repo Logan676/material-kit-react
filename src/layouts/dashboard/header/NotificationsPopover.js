@@ -31,8 +31,8 @@ import Scrollbar from '../../../components/scrollbar';
 const NOTIFICATIONS = [
   {
     id: faker.datatype.uuid(),
-    title: 'Your order is placed',
-    description: 'waiting for shipping',
+    title: '您的订单已下达',
+    description: '等待发货',
     avatar: null,
     type: 'order_placed',
     createdAt: set(new Date(), { hours: 10, minutes: 30 }),
@@ -41,7 +41,7 @@ const NOTIFICATIONS = [
   {
     id: faker.datatype.uuid(),
     title: faker.name.fullName(),
-    description: 'answered to your comment on the Minimal',
+    description: '回复了您在 Minimal 上的评论',
     avatar: '/assets/images/avatars/avatar_2.jpg',
     type: 'friend_interactive',
     createdAt: sub(new Date(), { hours: 3, minutes: 30 }),
@@ -49,8 +49,8 @@ const NOTIFICATIONS = [
   },
   {
     id: faker.datatype.uuid(),
-    title: 'You have new message',
-    description: '5 unread messages',
+    title: '您有新消息',
+    description: '5 条未读消息',
     avatar: null,
     type: 'chat_message',
     createdAt: sub(new Date(), { days: 1, hours: 3, minutes: 30 }),
@@ -58,8 +58,8 @@ const NOTIFICATIONS = [
   },
   {
     id: faker.datatype.uuid(),
-    title: 'You have new mail',
-    description: 'sent from Guido Padberg',
+    title: '您有新邮件',
+    description: '由 Guido Padberg 发送',
     avatar: null,
     type: 'mail',
     createdAt: sub(new Date(), { days: 2, hours: 3, minutes: 30 }),
@@ -67,8 +67,8 @@ const NOTIFICATIONS = [
   },
   {
     id: faker.datatype.uuid(),
-    title: 'Delivery processing',
-    description: 'Your order is being shipped',
+    title: '交付处理中',
+    description: '您的订单正在发货',
     avatar: null,
     type: 'order_shipped',
     createdAt: sub(new Date(), { days: 3, hours: 3, minutes: 30 }),
@@ -124,14 +124,14 @@ export default function NotificationsPopover() {
       >
         <Box sx={{ display: 'flex', alignItems: 'center', py: 2, px: 2.5 }}>
           <Box sx={{ flexGrow: 1 }}>
-            <Typography variant="subtitle1">Notifications</Typography>
+            <Typography variant="subtitle1">通知</Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              You have {totalUnRead} unread messages
+              您有 {totalUnRead} 条未读消息
             </Typography>
           </Box>
 
           {totalUnRead > 0 && (
-            <Tooltip title=" Mark all as read">
+            <Tooltip title="全部标记为已读">
               <IconButton color="primary" onClick={handleMarkAllAsRead}>
                 <Iconify icon="eva:done-all-fill" />
               </IconButton>
@@ -146,7 +146,7 @@ export default function NotificationsPopover() {
             disablePadding
             subheader={
               <ListSubheader disableSticky sx={{ py: 1, px: 2.5, typography: 'overline' }}>
-                New
+                新消息
               </ListSubheader>
             }
           >
@@ -159,7 +159,7 @@ export default function NotificationsPopover() {
             disablePadding
             subheader={
               <ListSubheader disableSticky sx={{ py: 1, px: 2.5, typography: 'overline' }}>
-                Before that
+                之前的消息
               </ListSubheader>
             }
           >
@@ -173,7 +173,7 @@ export default function NotificationsPopover() {
 
         <Box sx={{ p: 1 }}>
           <Button fullWidth disableRipple>
-            View All
+            查看全部
           </Button>
         </Box>
       </Popover>

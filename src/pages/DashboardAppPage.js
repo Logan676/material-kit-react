@@ -26,35 +26,35 @@ export default function DashboardAppPage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard | Minimal UI </title>
+        <title>仪表盘 | Minimal UI</title>
       </Helmet>
 
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, Welcome back
+          您好，欢迎回来
         </Typography>
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
+            <AppWidgetSummary title="每周销售额" total={714000} icon={'ant-design:android-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="New Users" total={1352831} color="info" icon={'ant-design:apple-filled'} />
+            <AppWidgetSummary title="新用户" total={1352831} color="info" icon={'ant-design:apple-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Item Orders" total={1723315} color="warning" icon={'ant-design:windows-filled'} />
+            <AppWidgetSummary title="项目订单" total={1723315} color="warning" icon={'ant-design:windows-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
+            <AppWidgetSummary title="漏洞报告" total={234} color="error" icon={'ant-design:bug-filled'} />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits
-              title="Website Visits"
-              subheader="(+43%) than last year"
+              title="网站访问量"
+              subheader="比去年增长 (+43%)"
               chartLabels={[
                 '01/01/2003',
                 '02/01/2003',
@@ -70,19 +70,19 @@ export default function DashboardAppPage() {
               ]}
               chartData={[
                 {
-                  name: 'Team A',
+                  name: 'A团队',
                   type: 'column',
                   fill: 'solid',
                   data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
                 },
                 {
-                  name: 'Team B',
+                  name: 'B团队',
                   type: 'area',
                   fill: 'gradient',
                   data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
                 },
                 {
-                  name: 'Team C',
+                  name: 'C团队',
                   type: 'line',
                   fill: 'solid',
                   data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
@@ -93,12 +93,12 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
-              title="Current Visits"
+              title="当前访问量"
               chartData={[
-                { label: 'America', value: 4344 },
-                { label: 'Asia', value: 5435 },
-                { label: 'Europe', value: 1443 },
-                { label: 'Africa', value: 4443 },
+                { label: '美洲', value: 4344 },
+                { label: '亚洲', value: 5435 },
+                { label: '欧洲', value: 1443 },
+                { label: '非洲', value: 4443 },
               ]}
               chartColors={[
                 theme.palette.primary.main,
@@ -111,31 +111,31 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppConversionRates
-              title="Conversion Rates"
-              subheader="(+43%) than last year"
+              title="转化率"
+              subheader="比去年增长 (+43%)"
               chartData={[
-                { label: 'Italy', value: 400 },
-                { label: 'Japan', value: 430 },
-                { label: 'China', value: 448 },
-                { label: 'Canada', value: 470 },
-                { label: 'France', value: 540 },
-                { label: 'Germany', value: 580 },
-                { label: 'South Korea', value: 690 },
-                { label: 'Netherlands', value: 1100 },
-                { label: 'United States', value: 1200 },
-                { label: 'United Kingdom', value: 1380 },
+                { label: '意大利', value: 400 },
+                { label: '日本', value: 430 },
+                { label: '中国', value: 448 },
+                { label: '加拿大', value: 470 },
+                { label: '法国', value: 540 },
+                { label: '德国', value: 580 },
+                { label: '韩国', value: 690 },
+                { label: '荷兰', value: 1100 },
+                { label: '美国', value: 1200 },
+                { label: '英国', value: 1380 },
               ]}
             />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentSubject
-              title="Current Subject"
-              chartLabels={['English', 'History', 'Physics', 'Geography', 'Chinese', 'Math']}
+              title="当前学科"
+              chartLabels={['英语', '历史', '物理', '地理', '中文', '数学']}
               chartData={[
-                { name: 'Series 1', data: [80, 50, 30, 40, 100, 20] },
-                { name: 'Series 2', data: [20, 30, 40, 80, 20, 80] },
-                { name: 'Series 3', data: [44, 76, 78, 13, 43, 10] },
+                { name: '系列1', data: [80, 50, 30, 40, 100, 20] },
+                { name: '系列2', data: [20, 30, 40, 80, 20, 80] },
+                { name: '系列3', data: [44, 76, 78, 13, 43, 10] },
               ]}
               chartColors={[...Array(6)].map(() => theme.palette.text.secondary)}
             />
@@ -143,7 +143,7 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppNewsUpdate
-              title="News Update"
+              title="新闻更新"
               list={[...Array(5)].map((_, index) => ({
                 id: faker.datatype.uuid(),
                 title: faker.name.jobTitle(),
@@ -156,15 +156,15 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppOrderTimeline
-              title="Order Timeline"
+              title="订单时间线"
               list={[...Array(5)].map((_, index) => ({
                 id: faker.datatype.uuid(),
                 title: [
-                  '1983, orders, $4220',
-                  '12 Invoices have been paid',
-                  'Order #37745 from September',
-                  'New order placed #XF-2356',
-                  'New order placed #XF-2346',
+                  '1983年，订单，$4220',
+                  '有12张发票已付款',
+                  '9月份订单 #37745',
+                  '新订单放置 #XF-2356',
+                  '新订单放置 #XF-2346',
                 ][index],
                 type: `order${index + 1}`,
                 time: faker.date.past(),
@@ -174,7 +174,7 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppTrafficBySite
-              title="Traffic by Site"
+              title="网站流量"
               list={[
                 {
                   name: 'FaceBook',
@@ -202,13 +202,13 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppTasks
-              title="Tasks"
+              title="任务"
               list={[
-                { id: '1', label: 'Create FireStone Logo' },
-                { id: '2', label: 'Add SCSS and JS files if required' },
-                { id: '3', label: 'Stakeholder Meeting' },
-                { id: '4', label: 'Scoping & Estimations' },
-                { id: '5', label: 'Sprint Showcase' },
+                { id: '1', label: '创建FireStone徽标' },
+                { id: '2', label: '如果需要，添加SCSS和JS文件' },
+                { id: '3', label: '利益相关者会议' },
+                { id: '4', label: '范围和估算' },
+                { id: '5', label: 'Sprint展示' },
               ]}
             />
           </Grid>
