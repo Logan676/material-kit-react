@@ -1,8 +1,45 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Container, Grid, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { Box, Button, Grid, Typography, Card, CardActionArea, CardContent, IconButton } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 import axios from './axiosInstance';
 
+const useStyles = makeStyles((theme) => ({
+  card: {
+    display: 'flex',
+    // height: 200,
+    padding: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    alignItems: 'center', // Align items vertically in the card
+  },
+  cardTitle: {
+    fontWeight: 'bold',
+    fontSize: '1.2rem', // Increase font size for the title
+    marginBottom: theme.spacing(1), // Add some space below the title
+  },
+  cardContent: {
+    flex: 1,
+    fontSize: '1rem', // Adjust font size for the content
+    marginBottom: theme.spacing(1),
+  },
+  cardMedia: {
+    width: 100,
+    height: 100,
+    borderRadius: 10,
+    border: '1px solid #ccc',
+    padding: 5,
+  },
+  actionArea: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+}));
+
 const Reviews = () => {
+  const classes = useStyles();
+
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
@@ -30,27 +67,35 @@ const Reviews = () => {
   };
 
   return (
-    <Container>
-      <Typography variant="h4" gutterBottom>
-        书评列表
-      </Typography>
-      <Grid container spacing={2}>
-        {reviews?.map((review, index) => {
-          return (
-            <Grid item xs={12} md={6} key={review._id}>
-              <div>
-                <Typography variant="h6">{review.bookId}</Typography>
-                <Typography>{review.bookTitle}</Typography>
-                <Typography>{review.content}</Typography>
-                <Button variant="outlined" color="primary" onClick={() => handleDeleteReview(review._id)}>
-                  删除
-                </Button>
-              </div>
-            </Grid>
-          );
-        })}
-      </Grid>
-    </Container>
+    <Box p={3}>
+      <Typography variant="h4">书评列表</Typography>
+      <div>
+        <Typography variant="body1" gutterBottom>
+          总共有 {reviews.length} 条书评，已过滤的无效内容
+        </Typography>
+        {reviews
+          ?.filter((review) => {
+            return review.content !== '没写';
+          })
+          .map((review, index) => {
+            return (
+              <Card key={review._id} className={classes.card}>
+                <CardActionArea className={classes.actionArea}>
+                  <CardContent>
+                    <Typography className={classes.cardTitle}>{`《${review.bookTitle}》`}</Typography>
+                    <Typography className={classes.cardContent}>{review.content}</Typography>
+                    <Typography className={classes.cardContent}>创建时间: {review.createdAt}</Typography>
+                    <Typography className={classes.cardContent}>更新时间: {review.updatedAt}</Typography>
+                  </CardContent>
+                  <IconButton aria-label="删除" color="secondary" onClick={() => handleDeleteReview(review._id)}>
+                    <DeleteIcon />
+                  </IconButton>
+                </CardActionArea>
+              </Card>
+            );
+          })}
+      </div>
+    </Box>
   );
 };
 

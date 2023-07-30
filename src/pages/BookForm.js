@@ -252,7 +252,7 @@ const BookForm = () => {
         <Grid container spacing={2}>
           <Grid item xs={6} sm={3}>
             <FormControl fullWidth required margin="normal">
-              <InputLabel>Reading Status</InputLabel>
+              <InputLabel>阅读状态</InputLabel>
               <Select name="readingStatus" value={readingStatus} onChange={(e) => setReadingStatus(e.target.value)}>
                 <MenuItem value="读过">读过</MenuItem>
                 <MenuItem value="在读">在读</MenuItem>
@@ -342,7 +342,7 @@ const BookForm = () => {
               localeText={deDE.components.MuiLocalizationProvider.defaultProps.localeText}
             >
               <DatePicker
-                label="购买日期"
+                label="阅读日期"
                 name="purchaseYear"
                 views={['year', 'month', 'day']}
                 value={purchaseYear}

@@ -157,7 +157,7 @@ const BookList = ({ refresh, onEdit }) => {
                       书摘：{book.excerpts}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
-                      购买日期：{book.purchaseYear}
+                      阅读日期：{book.purchaseYear}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
                       出版日期：{book.publicationYear}
