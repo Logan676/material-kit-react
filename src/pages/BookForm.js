@@ -11,6 +11,7 @@ import {
   Divider,
   Grid,
   Typography,
+  Rating,
 } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -21,23 +22,44 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { format, isValid } from 'date-fns';
 import { v4 as uuidv4 } from 'uuid';
+import { makeStyles } from '@mui/styles';
 import axios from './axiosInstance';
 import UploadImage from './UploadImage';
 import BookList from './BookList';
 
+const useStyles = makeStyles((theme) => ({
+  formContainer: {
+    padding: theme.spacing(3),
+  },
+  ratingContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.spacing(1),
+    marginTop: theme.spacing(2), // Increase the top margin
+    marginBottom: theme.spacing(2), // Increase the bottom margin
+  },
+  submitButton: {
+    marginTop: theme.spacing(3),
+  },
+}));
+
 const BookForm = () => {
-  const [title, setTitle] = useState('论语');
-  const [authors, setAuthors] = useState('孔子');
-  const [tags, setTags] = useState('文学经典');
-  const [topics, setTopics] = useState('经典阅读');
+  const classes = useStyles();
+
+  const defaultDate = new Date(2000, 0, 1);
+  const [title, setTitle] = useState('');
+  const [authors, setAuthors] = useState('');
+  const [tags, setTags] = useState('');
+  const [topics, setTopics] = useState('');
   const [readingStatus, setReadingStatus] = useState('想读');
   const [readingProgress, setReadingProgress] = useState(0);
-  const [publisherInfo, setPublisherInfo] = useState('中华书局');
-  const [isbn, setIsbn] = useState('111');
-  const [reviews, setReviews] = useState('经典');
-  const [excerpts, setExcerpts] = useState('学而时习之不亦说乎');
-  const [purchaseYear, setPurchaseYear] = useState(null);
-  const [publicationYear, setPublicationYear] = useState(null);
+  const [publisherInfo, setPublisherInfo] = useState('');
+  const [isbn, setIsbn] = useState('');
+  const [reviews, setReviews] = useState('');
+  const [excerpts, setExcerpts] = useState('');
+  const [purchaseYear, setPurchaseYear] = useState(defaultDate);
+  const [publicationYear, setPublicationYear] = useState(defaultDate);
+  const [rating, setRating] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const [error, setError] = useState(null);
@@ -70,6 +92,7 @@ const BookForm = () => {
       setExcerpts(selectedBook.excerpts === 'undefined' ? '' : selectedBook.excerpts || '');
       setPurchaseYear(selectedBook.purchaseYear === 'undefined' ? null : selectedBook.purchaseYear || null);
       setPublicationYear(selectedBook.publicationYear === 'undefined' ? null : selectedBook.publicationYear || null);
+      setRating(selectedBook.rating === 'undefined' ? 0 : selectedBook.rating || 0);
       // setSelectedImage(selectedBook.pic === 'undefined' ? null : selectedBook.pic || null);
 
       console.log('编辑的图片url', selectedBook.pic);
@@ -85,7 +108,7 @@ const BookForm = () => {
     if (!tags) missingFields.push('标签 (逗号分割)');
     if (!topics) missingFields.push('阅读专题 (逗号分割)');
     if (!readingStatus) missingFields.push('阅读状态');
-    if (!publisherInfo) missingFields.push('出版信息');
+    if (!publisherInfo) missingFields.push('出版社');
     if (!isbn) missingFields.push('ISBN');
     if (!reviews) missingFields.push('书评');
     if (!excerpts) missingFields.push('书摘');
@@ -119,14 +142,28 @@ const BookForm = () => {
       formData.append('publicationYear', formatDateToString(publicationYear));
       formData.append('reviews', reviews);
       formData.append('excerpts', excerpts);
+      formData.append('rating', rating);
       if (selectedImage) {
         formData.append('pic', selectedImage);
       }
 
-      const resTags = addTags(tags);
+      let response;
+      if (selectedBook) {
+        response = await axios.put('/api/books', formData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
+        });
+      } else {
+        response = await axios.post('/api/books', formData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
+        });
+      }
+
+      console.log('书籍信息添加成功:', response.data);
+
+      const resTags = addTags(tags, response.data._id);
       console.log('标签信息添加成功:', resTags);
 
-      const resTopics = addTopics(topics);
+      const resTopics = addTopics(topics, response.data._id);
       console.log('专题信息添加成功:', resTopics);
 
       const resPublisher = addPublishers(publisherInfo);
@@ -135,11 +172,6 @@ const BookForm = () => {
       const resAuthor = addAuthors(authors);
       console.log('作者信息添加成功:', resAuthor);
 
-      const response = await axios.post('/api/books', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
-
-      console.log('书籍信息添加成功:', response.data);
       setError(null);
       setRefreshList(true);
       setTitle('');
@@ -154,6 +186,7 @@ const BookForm = () => {
       setExcerpts('');
       setPurchaseYear(null);
       setPublicationYear(null);
+      setRating(0);
       setSelectedImage(null);
       setSelectedBook(null);
     } catch (error) {
@@ -215,8 +248,8 @@ const BookForm = () => {
             <FormControl fullWidth required margin="normal">
               <InputLabel>Reading Status</InputLabel>
               <Select name="readingStatus" value={readingStatus} onChange={(e) => setReadingStatus(e.target.value)}>
-                <MenuItem value="已读">已读</MenuItem>
-                <MenuItem value="在阅读">在阅读</MenuItem>
+                <MenuItem value="读过">读过</MenuItem>
+                <MenuItem value="在读">在读</MenuItem>
                 <MenuItem value="想读">想读</MenuItem>
               </Select>
             </FormControl>
@@ -236,7 +269,7 @@ const BookForm = () => {
 
           <Grid item xs={6} sm={3}>
             <TextField
-              label="出版信息"
+              label="出版社"
               name="publisherInfo"
               value={publisherInfo}
               onChange={(e) => setPublisherInfo(e.target.value)}
@@ -254,6 +287,11 @@ const BookForm = () => {
               fullWidth
               required
             />
+          </Grid>
+
+          <Grid item xs={6} sm={3} className={classes.ratingContainer}>
+            <Typography component="legend">评分:</Typography>
+            <Rating name="rating" value={rating} precision={0.5} onChange={(event, newValue) => setRating(newValue)} />
           </Grid>
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -283,11 +321,11 @@ const BookForm = () => {
               localeText={deDE.components.MuiLocalizationProvider.defaultProps.localeText}
             >
               <DatePicker
-                label="购买日期"
-                name="purchaseYear"
+                label="出版日期"
+                name="publicationYear"
                 views={['year', 'month', 'day']}
-                value={new Date(purchaseYear)}
-                onChange={(date) => setPurchaseYear(date)}
+                value={publicationYear}
+                onChange={(date) => setPublicationYear(date)}
                 renderInput={(params) => <TextField {...params} margin="normal" />}
               />
             </LocalizationProvider>
@@ -298,24 +336,26 @@ const BookForm = () => {
               localeText={deDE.components.MuiLocalizationProvider.defaultProps.localeText}
             >
               <DatePicker
-                label="出版日期"
-                name="publicationYear"
+                label="购买日期"
+                name="purchaseYear"
                 views={['year', 'month', 'day']}
-                defaultValue={new Date(2022, 1, 1)}
-                value={new Date(publicationYear)}
-                onChange={(date) => setPublicationYear(date)}
+                value={purchaseYear}
+                onChange={(date) => setPurchaseYear(date)}
                 renderInput={(params) => <TextField {...params} margin="normal" />}
               />
             </LocalizationProvider>
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <UploadImage onImageSelect={(file) => setSelectedImage(file)} />
+          <UploadImage
+            imageUrl={selectedBook ? selectedBook.pic : ''}
+            onImageSelect={(file) => setSelectedImage(file)}
+          />
         </Grid>
         <Divider />
         <Grid mt={5}>
           <Button variant="contained" color="primary" type="submit">
-            新增图书信息
+            {selectedBook ? '更新图书信息' : '新增图书信息'}
           </Button>
           {error && (
             <Box mt={2}>
@@ -336,13 +376,13 @@ const BookForm = () => {
 
 export default BookForm;
 
-async function addTags(tags) {
+async function addTags(tags, bookId) {
   // 将逗号分隔的多个tag字符串转换为数组
   const tagArray = tags.split(',');
 
   // 依次请求接口并等待每个请求的完成
   const promises = tagArray.map(async (tag) => {
-    const requestData = { tag: tag.trim() }; // 去除tag前后的空格
+    const requestData = { tag: tag.trim(), bookId }; // 去除tag前后的空格
     try {
       const response = await axios.post('/api/tags', requestData);
       return response;
@@ -360,13 +400,13 @@ async function addTags(tags) {
   return responses;
 }
 
-async function addTopics(topics) {
+async function addTopics(topics, bookId) {
   // 将逗号分隔的多个topic字符串转换为数组
   const topicArray = topics.split(',');
 
   // 依次请求接口并等待每个请求的完成
   const promises = topicArray.map(async (topic) => {
-    const requestData = { topic: topic.trim() }; // 去除topic前后的空格
+    const requestData = { topic: topic.trim(), bookId }; // 去除topic前后的空格
     try {
       const response = await axios.post('/api/topics', requestData);
       return response;

@@ -104,6 +104,9 @@ const BookList = ({ refresh, onEdit }) => {
                       编号：{index + 1}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
+                      书籍id{book._id}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
                       作者：{book.authors}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
@@ -112,11 +115,9 @@ const BookList = ({ refresh, onEdit }) => {
                     <Typography variant="body2" color="textSecondary">
                       ISBN：{book.isbn}
                     </Typography>
+
                     <Typography variant="body2" color="textSecondary">
-                      标签：{book.tags}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      专题：{book.topics}
+                      评分：{book.rating}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
                       阅读状态：{book.readingStatus}
@@ -136,6 +137,12 @@ const BookList = ({ refresh, onEdit }) => {
                 </div>
                 <div key={book._id} className={classes.bookCard}>
                   <div className={classes.bookDetails}>
+                    <Typography variant="body2" color="textSecondary">
+                      标签：{book.tags}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      专题：{book.topics}
+                    </Typography>
                     <Typography variant="body2" color="textSecondary">
                       书评：{book.reviews}
                     </Typography>
