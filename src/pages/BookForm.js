@@ -166,10 +166,10 @@ const BookForm = () => {
       const resTopics = addTopics(topics, response.data._id);
       console.log('专题信息添加成功:', resTopics);
 
-      const resPublisher = addPublishers(publisherInfo);
+      const resPublisher = addPublishers(publisherInfo, response.data._id);
       console.log('出版信息添加成功:', resPublisher);
 
-      const resAuthor = addAuthors(authors);
+      const resAuthor = addAuthors(authors, response.data._id);
       console.log('作者信息添加成功:', resAuthor);
 
       setError(null);
@@ -424,13 +424,13 @@ async function addTopics(topics, bookId) {
   return responses;
 }
 
-async function addPublishers(publishers) {
+async function addPublishers(publishers, bookId) {
   // 将逗号分隔的多个出版商名称字符串转换为数组
   const publisherArray = publishers.split(',');
 
   // 依次请求接口并等待每个请求的完成
   const promises = publisherArray.map(async (publisher) => {
-    const requestData = { name: publisher.trim() }; // 去除出版商名称前后的空格
+    const requestData = { name: publisher.trim(), bookId }; // 去除出版商名称前后的空格
     try {
       const response = await axios.post('/api/publishers', requestData);
       return response;
@@ -448,7 +448,7 @@ async function addPublishers(publishers) {
   return responses;
 }
 
-async function addAuthors(authors) {
+async function addAuthors(authors, bookId) {
   // 将逗号分隔的多个作者名称字符串转换为数组
   const authorArray = authors.split(',');
 
@@ -456,6 +456,8 @@ async function addAuthors(authors) {
   const promises = authorArray.map(async (author) => {
     const formData = new FormData();
     formData.append('name', author.trim()); // 去除作者名称前后的空格
+    formData.append('bookId', bookId);
+
     try {
       const response = await axios.post('/api/authors', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },

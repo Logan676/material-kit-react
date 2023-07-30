@@ -7,15 +7,16 @@ import axios from './axiosInstance';
 
 const useStyles = makeStyles((theme) => ({
   bookCardContainer: {
-    maxWidth: 600,
+    // maxWidth: 600,
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
     borderRadius: 10, // Set the desired border radius value
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Add a subtle box shadow
   },
   bookCard: {
     display: 'flex',
     alignItems: 'flex-start',
-    width: 500,
+    // width: 100,
     padding: theme.spacing(0),
     marginBottom: theme.spacing(2),
   },
@@ -40,7 +41,13 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'flex-end',
   },
   bookReview: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(2), // Increase the top margin
+    marginBottom: theme.spacing(2), // Increase the bottom margin
+  },
+  bookExcerpts: {
+    marginTop: theme.spacing(2), // Increase the top margin
+    marginBottom: theme.spacing(2), // Increase the bottom margin
+    fontStyle: 'italic', // Add italic style to the excerpts text
   },
 }));
 
@@ -104,7 +111,7 @@ const BookList = ({ refresh, onEdit }) => {
                       编号：{index + 1}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
-                      书籍id{book._id}
+                      书籍id：{book._id}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
                       作者：{book.authors}
@@ -143,10 +150,10 @@ const BookList = ({ refresh, onEdit }) => {
                     <Typography variant="body2" color="textSecondary">
                       专题：{book.topics}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary">
+                    <Typography variant="body2" color="textSecondary" className={classes.bookReview}>
                       书评：{book.reviews}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary">
+                    <Typography variant="body2" color="textSecondary" className={classes.bookExcerpts}>
                       书摘：{book.excerpts}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
