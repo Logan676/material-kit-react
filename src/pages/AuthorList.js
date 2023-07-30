@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 const AuthorList = ({ refresh, onEdit }) => {
   const classes = useStyles();
+
   const [authors, setAuthors] = useState([]);
 
   useEffect(() => {
