@@ -172,10 +172,10 @@ const BookForm = () => {
       const resAuthor = addAuthors(authors, response.data._id);
       console.log('作者信息添加成功:', resAuthor);
 
-      const resExcerpt = addExcerpts(excerpts, response.data._id);
+      const resExcerpt = addExcerpts(excerpts, response.data._id, title);
       console.log('书摘添加成功:', resExcerpt);
 
-      const resReview = addReviews(reviews, response.data._id);
+      const resReview = addReviews(reviews, response.data._id, title);
       console.log('书评添加成功:', resReview);
 
       setError(null);
@@ -483,10 +483,11 @@ async function addAuthors(authors, bookId) {
   return responses;
 }
 
-async function addReviews(review, bookId) {
+async function addReviews(review, bookId, bookTitle) {
   try {
     const newReviewData = {
       bookId,
+      bookTitle,
       content: review,
     };
     const response = await axios.post('/api/reviews', newReviewData);
@@ -496,10 +497,11 @@ async function addReviews(review, bookId) {
   }
 }
 
-async function addExcerpts(excerpt, bookId) {
+async function addExcerpts(excerpt, bookId, bookTitle) {
   try {
     const newExcerptData = {
       bookId,
+      bookTitle,
       content: excerpt,
     };
     const response = await axios.post('/api/excerpts', newExcerptData);

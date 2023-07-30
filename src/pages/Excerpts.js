@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Button, Container, Grid, Typography } from '@mui/material';
+import axios from './axiosInstance';
 
 const Excerpts = () => {
   const [excerpts, setExcerpts] = useState([]);
@@ -33,10 +33,11 @@ const Excerpts = () => {
         书摘列表
       </Typography>
       <Grid container spacing={2}>
-        {excerpts.map((excerpt) => (
+        {excerpts.map((excerpt, index) => (
           <Grid item xs={12} md={6} key={excerpt._id}>
             <div>
               <Typography variant="h6">{excerpt.bookId}</Typography>
+              <Typography>{excerpt.bookTitle}</Typography>
               <Typography>{excerpt.content}</Typography>
               <Button variant="outlined" color="primary" onClick={() => handleDeleteExcerpt(excerpt._id)}>
                 删除

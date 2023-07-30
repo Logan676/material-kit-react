@@ -101,7 +101,7 @@ const BookList = ({ refresh, onEdit }) => {
           <Card key={book._id} className={classes.bookCardContainer}>
             <CardActionArea className={classes.actionArea}>
               <div>
-                <div key={book._id} className={classes.bookCard}>
+                <div key={`div1_${book._id}`} className={classes.bookCard}>
                   <img className={classes.bookCover} src={imageUrl} alt={book.name} />
                   <div className={classes.bookDetails}>
                     <Typography variant="h5" component="h2">
@@ -142,7 +142,7 @@ const BookList = ({ refresh, onEdit }) => {
                     </IconButton>
                   </div>
                 </div>
-                <div key={book._id} className={classes.bookCard}>
+                <div key={`div2_${book._id}`} className={classes.bookCard}>
                   <div className={classes.bookDetails}>
                     <Typography variant="body2" color="textSecondary">
                       标签：{book.tags}
