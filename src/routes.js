@@ -15,6 +15,8 @@ import TagForm from './pages/TagForm';
 import TopicForm from './pages/TopicForm';
 import BookForm from './pages/BookForm';
 import Dev from './pages/Dev';
+import Reviews from './pages/Reviews';
+import Excerpts from './pages/Excerpts';
 
 // ----------------------------------------------------------------------
 
@@ -35,6 +37,8 @@ export default function Router() {
         { path: 'tags', element: <TagForm /> },
         { path: 'topics', element: <TopicForm /> },
         { path: 'dev', element: <Dev /> },
+        { path: 'reviews', element: <Reviews /> },
+        { path: 'excerpts', element: <Excerpts /> },
       ],
     },
     {

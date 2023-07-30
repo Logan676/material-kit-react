@@ -42,6 +42,16 @@ const navConfig = [
     icon: icon('ic_cart'),
   },
   {
+    title: '书摘',
+    path: '/dashboard/excerpts',
+    icon: icon('ic_cart'),
+  },
+  {
+    title: '书评',
+    path: '/dashboard/reviews',
+    icon: icon('ic_cart'),
+  },
+  {
     title: 'dev',
     path: '/dashboard/dev',
     icon: icon('ic_cart'),

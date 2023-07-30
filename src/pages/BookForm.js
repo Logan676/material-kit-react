@@ -172,6 +172,12 @@ const BookForm = () => {
       const resAuthor = addAuthors(authors, response.data._id);
       console.log('作者信息添加成功:', resAuthor);
 
+      const resExcerpt = addExcerpts(excerpts, response.data._id);
+      console.log('书摘添加成功:', resExcerpt);
+
+      const resReview = addReviews(reviews, response.data._id);
+      console.log('书评添加成功:', resReview);
+
       setError(null);
       setRefreshList(true);
       setTitle('');
@@ -475,4 +481,30 @@ async function addAuthors(authors, bookId) {
 
   // 返回所有请求的结果数组
   return responses;
+}
+
+async function addReviews(review, bookId) {
+  try {
+    const newReviewData = {
+      bookId,
+      content: review,
+    };
+    const response = await axios.post('/api/reviews', newReviewData);
+    console.log('添加书评成功', response.data);
+  } catch (error) {
+    console.error('添加书评失败：', error);
+  }
+}
+
+async function addExcerpts(excerpt, bookId) {
+  try {
+    const newExcerptData = {
+      bookId,
+      content: excerpt,
+    };
+    const response = await axios.post('/api/excerpts', newExcerptData);
+    console.log('添加书摘成功', response.data);
+  } catch (error) {
+    console.error('添加书摘失败：', error);
+  }
 }

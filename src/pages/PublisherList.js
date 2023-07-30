@@ -4,6 +4,7 @@ import { Card, CardActionArea, CardContent, CardMedia, Typography, IconButton, B
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from './axiosInstance';
+import { countBookIds } from './utils';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -84,6 +85,9 @@ const PublisherList = ({ refresh, onEdit }) => {
                 </Typography>
                 <Typography variant="body2" gutterBottom>
                   编号：{index + 1}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  引用次数 {countBookIds(publisher.bookId)}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
                   重要出版作品：{publisher.representativeWork}
