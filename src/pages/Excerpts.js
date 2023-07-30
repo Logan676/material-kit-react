@@ -1,8 +1,45 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Container, Grid, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { Box, Button, Grid, Typography, Card, CardActionArea, CardContent, IconButton } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 import axios from './axiosInstance';
 
+const useStyles = makeStyles((theme) => ({
+  card: {
+    display: 'flex',
+    // height: 200,
+    padding: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    alignItems: 'center', // Align items vertically in the card
+  },
+  cardTitle: {
+    fontWeight: 'bold',
+    fontSize: '1.2rem', // Increase font size for the title
+    marginBottom: theme.spacing(2), // Add some space below the title
+  },
+  cardContent: {
+    flex: 1,
+    fontSize: '1rem', // Adjust font size for the content
+    marginBottom: theme.spacing(1),
+  },
+  cardMedia: {
+    width: 100,
+    height: 100,
+    borderRadius: 10,
+    border: '1px solid #ccc',
+    padding: 5,
+  },
+  actionArea: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+}));
+
 const Excerpts = () => {
+  const classes = useStyles();
+
   const [excerpts, setExcerpts] = useState([]);
 
   useEffect(() => {
@@ -28,25 +65,33 @@ const Excerpts = () => {
   };
 
   return (
-    <Container>
-      <Typography variant="h4" gutterBottom>
-        书摘列表
-      </Typography>
-      <Grid container spacing={2}>
-        {excerpts.map((excerpt, index) => (
-          <Grid item xs={12} md={6} key={excerpt._id}>
-            <div>
-              <Typography variant="h6">{excerpt.bookId}</Typography>
-              <Typography>{excerpt.bookTitle}</Typography>
-              <Typography>{excerpt.content}</Typography>
-              <Button variant="outlined" color="primary" onClick={() => handleDeleteExcerpt(excerpt._id)}>
-                删除
-              </Button>
-            </div>
-          </Grid>
+    <Box p={3}>
+      <Typography variant="h4">书摘列表</Typography>
+      <div>
+        <Typography variant="body1" gutterBottom>
+          总共有 {excerpts.length} 条书摘，已过滤的无效内容
+        </Typography>
+      </div>
+      {excerpts
+        .filter((excerpt) => {
+          return excerpt.content !== '无';
+        })
+        .map((excerpt, index) => (
+          <Card key={excerpt._id} className={classes.card}>
+            <CardActionArea className={classes.actionArea}>
+              <CardContent>
+                <Typography className={classes.cardTitle}>{`《${excerpt.bookTitle}》`}</Typography>
+                <Typography className={classes.cardContent}>{excerpt.content}</Typography>
+                <Typography className={classes.cardContent}>创建时间: {excerpt.createdAt}</Typography>
+                <Typography className={classes.cardContent}>更新时间: {excerpt.updatedAt}</Typography>
+              </CardContent>
+            </CardActionArea>
+            <IconButton aria-label="删除" color="secondary" onClick={() => handleDeleteExcerpt(excerpt._id)}>
+              <DeleteIcon />
+            </IconButton>
+          </Card>
         ))}
-      </Grid>
-    </Container>
+    </Box>
   );
 };
 
