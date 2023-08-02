@@ -14,52 +14,52 @@ const navConfig = [
   {
     title: '博客',
     path: '/dashboard/blog',
-    icon: icon('ic_blog'),
+    icon: icon('ic_blog2'),
   },
   {
     title: '书籍',
     path: '/dashboard/books',
-    icon: icon('ic_blog'),
+    icon: icon('ic_book'),
   },
   {
     title: '出版社',
     path: '/dashboard/publisher',
-    icon: icon('ic_cart'),
+    icon: icon('ic_publisher'),
   },
   {
     title: '作者',
     path: '/dashboard/authors',
-    icon: icon('ic_user'),
+    icon: icon('ic_author'),
   },
   {
     title: '标签',
     path: '/dashboard/tags',
-    icon: icon('ic_cart'),
+    icon: icon('ic_tags'),
   },
   {
     title: '主题阅读',
     path: '/dashboard/topics',
-    icon: icon('ic_cart'),
+    icon: icon('ic_topic'),
   },
   {
     title: '书摘',
     path: '/dashboard/excerpts',
-    icon: icon('ic_cart'),
+    icon: icon('ic_excerpt'),
   },
   {
     title: '书评',
     path: '/dashboard/reviews',
-    icon: icon('ic_cart'),
+    icon: icon('ic_review'),
   },
   {
     title: 'dev',
     path: '/dashboard/dev',
-    icon: icon('ic_cart'),
+    icon: icon('ic_dev'),
   },
   {
     title: 'login',
     path: '/login',
-    icon: icon('ic_lock'),
+    icon: icon('ic_login'),
   },
   {
     title: 'Not found',
