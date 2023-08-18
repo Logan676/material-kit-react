@@ -17,6 +17,7 @@ import BookForm from './pages/BookForm';
 import Dev from './pages/Dev';
 import Reviews from './pages/Reviews';
 import Excerpts from './pages/Excerpts';
+import BookDetail from './pages/BookDetail';
 
 // ----------------------------------------------------------------------
 
@@ -39,6 +40,7 @@ export default function Router() {
         { path: 'dev', element: <Dev /> },
         { path: 'reviews', element: <Reviews /> },
         { path: 'excerpts', element: <Excerpts /> },
+        { path: 'books/:id', element: <BookDetail /> },
       ],
     },
     {
