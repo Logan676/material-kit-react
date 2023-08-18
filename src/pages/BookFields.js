@@ -97,32 +97,6 @@ const BookFields = ({ selectedBook }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // const missingFields = [];
-    // if (!title) missingFields.push('书名');
-    // if (!authors) missingFields.push('作者 (逗号分割)');
-    // if (!tags) missingFields.push('标签 (逗号分割)');
-    // if (!topics) missingFields.push('阅读专题 (逗号分割)');
-    // if (!readingStatus) missingFields.push('阅读状态');
-    // if (!publisherInfo) missingFields.push('出版社');
-    // if (!isbn) missingFields.push('ISBN');
-    // if (!reviews) missingFields.push('书评');
-    // if (!excerpts) missingFields.push('书摘');
-    // if (!purchaseYear) missingFields.push('购买日期');
-    // if (!publicationYear) missingFields.push('出版日期');
-    // if (!selectedImage) missingFields.push('图片');
-
-    // if (missingFields.length > 0) {
-    // setError(`请填写以下必填字段: ${missingFields.join(', ')}`);
-    // return;
-    // }
-
-    // const response = await axios.get(`/api/books?name=${bookData.title}`);
-    // if (response.data.length > 0) {
-    //   setError('已经存在同名书.');
-    //   return;
-    // }
-
     setError(null);
     try {
       let response;
@@ -311,7 +285,7 @@ const BookFields = ({ selectedBook }) => {
         </Grid>
         <Grid item xs={6} sm={3}>
           <TextField
-            label="书摘"
+            label="书摘（只允许新增，不允许编辑）"
             margin="normal"
             name="excerpts"
             value={excerpts}
@@ -321,7 +295,7 @@ const BookFields = ({ selectedBook }) => {
         </Grid>
         <Grid item xs={6} sm={3}>
           <TextField
-            label="书评"
+            label="书评（只允许新增，不允许编辑）"
             margin="normal"
             name="reviews"
             value={reviews}
