@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'flex-start',
     // width: 100,
     padding: theme.spacing(0),
-    marginBottom: theme.spacing(2),
+    // marginBottom: theme.spacing(2),
   },
   link: {
     textDecoration: 'none',
@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
   bookCover: {
     flex: '0 0 auto',
     marginRight: theme.spacing(2),
-    width: 153.6, // Set the width of the book cover based on 1536 × 2048 aspect ratio
-    height: 204.8, // Set the height of the book cover based on 1536 × 2048 aspect ratio
+    width: 60, // Set the width of the book cover based on 1536 × 2048 aspect ratio
+    height: 80, // Set the height of the book cover based on 1536 × 2048 aspect ratio
     borderRadius: 10,
     border: '1px solid #ccc',
     padding: 5,
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BookList = ({ refresh, onEdit }) => {
+const BookList = ({ refresh }) => {
   const classes = useStyles();
   const [books, setBooks] = useState([]);
 
@@ -86,26 +86,22 @@ const BookList = ({ refresh, onEdit }) => {
 
   const handleEdit = (book) => {
     console.log('编辑书籍信息:', book);
-    onEdit(book);
+    // 这里的编辑是空实现，通过整个卡片的link来跳转到编辑页面
   };
 
   const imageHost = 'http://localhost:5555';
 
   return (
     <div>
-      <Typography variant="h5" gutterBottom>
-        书籍列表
-      </Typography>
       <Typography variant="body1" gutterBottom>
         总共有 {books.length} 本书
       </Typography>
       {books.map((book, index) => {
         const imageUrl = `${imageHost}/${book.pic}`;
-        const bookDetailsPath = `/dashboard/books/${book._id}`;
+        const bookDetailsPath = `/dashboard/bookbrowse/${book._id}`;
         return (
           <Link key={book._id} to={bookDetailsPath} className={classes.link}>
             <Card key={book._id} className={classes.bookCardContainer}>
-              {book.title}
               <CardActionArea className={classes.actionArea}>
                 <div>
                   <div key={`div1_${book._id}`} className={classes.bookCard}>
@@ -115,29 +111,10 @@ const BookList = ({ refresh, onEdit }) => {
                         {book.title}
                       </Typography>
                       <Typography variant="body2" color="textSecondary">
-                        编号：{index + 1}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        书籍id：{book._id}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
                         作者：{book.authors}
                       </Typography>
                       <Typography variant="body2" color="textSecondary">
                         出版信息：{book.publisherInfo}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        ISBN：{book.isbn}
-                      </Typography>
-
-                      <Typography variant="body2" color="textSecondary">
-                        评分：{book.rating}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        阅读状态：{book.readingStatus}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        阅读进度：{book.readingProgress}
                       </Typography>
                     </div>
                     <div className={classes.bookActions}>
@@ -147,28 +124,6 @@ const BookList = ({ refresh, onEdit }) => {
                       <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(book)}>
                         <EditIcon />
                       </IconButton>
-                    </div>
-                  </div>
-                  <div key={`div2_${book._id}`} className={classes.bookCard}>
-                    <div className={classes.bookDetails}>
-                      <Typography variant="body2" color="textSecondary">
-                        标签：{book.tags}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        专题：{book.topics}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary" className={classes.bookReview}>
-                        书评：{book.reviews}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary" className={classes.bookExcerpts}>
-                        书摘：{book.excerpts}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        阅读日期：{book.purchaseYear}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        出版日期：{book.publicationYear}
-                      </Typography>
                     </div>
                   </div>
                 </div>

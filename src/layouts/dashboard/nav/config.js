@@ -17,8 +17,13 @@ const navConfig = [
     icon: icon('ic_blog2'),
   },
   {
-    title: '书籍',
+    title: '书籍管理',
     path: '/dashboard/books',
+    icon: icon('ic_add_book'),
+  },
+  {
+    title: '书籍列表',
+    path: '/dashboard/bookbrowse',
     icon: icon('ic_book'),
   },
   {

@@ -18,6 +18,7 @@ import Dev from './pages/Dev';
 import Reviews from './pages/Reviews';
 import Excerpts from './pages/Excerpts';
 import BookDetail from './pages/BookDetail';
+import BookBrowse from './pages/BookBrowse';
 
 // ----------------------------------------------------------------------
 
@@ -40,7 +41,8 @@ export default function Router() {
         { path: 'dev', element: <Dev /> },
         { path: 'reviews', element: <Reviews /> },
         { path: 'excerpts', element: <Excerpts /> },
-        { path: 'books/:id', element: <BookDetail /> },
+        { path: 'bookbrowse/:id', element: <BookDetail /> },
+        { path: 'bookbrowse', element: <BookBrowse /> },
       ],
     },
     {
