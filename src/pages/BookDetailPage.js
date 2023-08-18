@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import { Card, CardActionArea, CardContent, CardMedia, Typography, IconButton, Button, Box, Grid } from '@mui/material';
-import BookFields from './BookFields';
+import BookForm from './BookForm';
 import axios from './axiosInstance';
 
 const useStyles = makeStyles((theme) => ({
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BookDetail = () => {
+const BookDetailPage = () => {
   const classes = useStyles();
   const { id } = useParams();
   const [bookDetail, setBookDetails] = useState(null);
@@ -76,16 +76,15 @@ const BookDetail = () => {
   if (!bookDetail) {
     return <div>Loading...</div>;
   }
-  const imageHost = 'http://localhost:5555';
-  const imageUrl = `${imageHost}/${bookDetail.pic}`;
+
   return (
     <Box p={3}>
       <Typography variant="h4">书籍详情</Typography>
       <Box my={3}>
-        <BookFields selectedBook={bookDetail} />
+        <BookForm selectedBook={bookDetail} />
       </Box>
     </Box>
   );
 };
 
-export default BookDetail;
+export default BookDetailPage;

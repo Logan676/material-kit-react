@@ -9,16 +9,17 @@ import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
 import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
-import PublisherForm from './pages/PublisherForm';
+import PublisherPage from './pages/PublisherPage';
+import PublisherDetailPage from './pages/PublisherDetailPage';
 import AuthorForm from './pages/AuthorForm';
 import TagForm from './pages/TagForm';
 import TopicForm from './pages/TopicForm';
-import BookForm from './pages/BookForm';
+import BookShelfPage from './pages/BookShelfPage';
 import Dev from './pages/Dev';
 import Reviews from './pages/Reviews';
 import Excerpts from './pages/Excerpts';
-import BookDetail from './pages/BookDetail';
-import BookBrowse from './pages/BookBrowse';
+import BookDetailPage from './pages/BookDetailPage';
+import BookListPage from './pages/BookListPage';
 
 // ----------------------------------------------------------------------
 
@@ -33,16 +34,17 @@ export default function Router() {
         // { path: 'user', element: <UserPage /> },
         // { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
-        { path: 'publisher', element: <PublisherForm /> },
+        { path: 'publisher', element: <PublisherPage /> },
+        { path: 'publisher/:id', element: <PublisherDetailPage /> },
         { path: 'authors', element: <AuthorForm /> },
-        { path: 'books', element: <BookForm /> },
+        { path: 'books', element: <BookShelfPage /> },
         { path: 'tags', element: <TagForm /> },
         { path: 'topics', element: <TopicForm /> },
         { path: 'dev', element: <Dev /> },
         { path: 'reviews', element: <Reviews /> },
         { path: 'excerpts', element: <Excerpts /> },
-        { path: 'bookbrowse/:id', element: <BookDetail /> },
-        { path: 'bookbrowse', element: <BookBrowse /> },
+        { path: 'bookbrowse/:id', element: <BookDetailPage /> },
+        { path: 'bookbrowse', element: <BookListPage /> },
       ],
     },
     {

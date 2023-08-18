@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@mui/styles';
 import { Card, CardActionArea, CardContent, CardMedia, Typography, IconButton, Button, Box, Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from './axiosInstance';
-import { countBookIds } from './utils';
+import { countBookIds, imageHost } from './utils';
 
 const useStyles = makeStyles((theme) => ({
   card: {
     display: 'flex',
     width: 500,
-    height: 130,
+    height: 150,
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
@@ -28,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  link: {
+    textDecoration: 'none',
   },
 }));
 
@@ -64,49 +68,44 @@ const PublisherList = ({ refresh, onEdit }) => {
     onEdit(publisher);
   };
 
-  const imageHost = 'http://localhost:5555';
-
   return (
     <div>
-      <Typography variant="h5" gutterBottom>
-        出版社列表
-      </Typography>
       <Typography variant="body1" gutterBottom>
         总共有 {publishers.length} 家出版社
       </Typography>
       {publishers.map((publisher, index) => {
         const imageUrl = `${imageHost}/${publisher.pic}`;
+        const publisherPath = `/dashboard/publisher/${publisher._id}`;
         return (
-          <Card key={publisher._id} className={classes.card}>
-            <CardActionArea className={classes.actionArea}>
-              <div className={classes.cardContent}>
-                <Typography variant="h5" component="h2">
-                  {publisher.name}
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  编号：{index + 1}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  引用次数 {countBookIds(publisher.bookId)}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  重要出版作品：{publisher.representativeWork}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  出版社简介：{publisher.introduction}
-                </Typography>
-              </div>
-              <CardMedia className={classes.cardMedia} image={imageUrl} title={publisher.name} />
-            </CardActionArea>
-            <CardContent>
-              <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(publisher)}>
-                <DeleteIcon />
-              </IconButton>
-              <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(publisher)}>
-                <EditIcon />
-              </IconButton>
-            </CardContent>
-          </Card>
+          <Link key={publisher._id} to={publisherPath} className={classes.link}>
+            <Card key={publisher._id} className={classes.card}>
+              <CardActionArea className={classes.actionArea}>
+                <div className={classes.cardContent}>
+                  <Typography variant="h5" component="h2">
+                    {publisher.name}
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    编号：{index + 1}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    引用次数 {countBookIds(publisher.bookId)}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    重要出版作品：{publisher.representativeWork}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    出版社简介：{publisher.introduction}
+                  </Typography>
+                </div>
+                <CardMedia className={classes.cardMedia} image={imageUrl} title={publisher.name} />
+                <CardContent>
+                  <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(publisher)}>
+                    <DeleteIcon />
+                  </IconButton>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Link>
         );
       })}
     </div>

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from './axiosInstance';
+import { imageHost } from './utils';
 
 const useStyles = makeStyles((theme) => ({
   bookCardContainer: {
@@ -88,8 +89,6 @@ const BookList = ({ refresh }) => {
     console.log('编辑书籍信息:', book);
     // 这里的编辑是空实现，通过整个卡片的link来跳转到编辑页面
   };
-
-  const imageHost = 'http://localhost:5555';
 
   return (
     <div>

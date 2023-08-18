@@ -24,7 +24,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { makeStyles } from '@mui/styles';
 import axios from './axiosInstance';
 import UploadImage from './UploadImage';
-import { imageHost } from './utils';
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -42,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BookFields = ({ selectedBook }) => {
+const BookShelfPage = () => {
   const classes = useStyles();
 
   const defaultDate = new Date(2000, 0, 1);
@@ -63,7 +62,7 @@ const BookFields = ({ selectedBook }) => {
 
   const [error, setError] = useState(null);
   const [refreshList, setRefreshList] = useState(false);
-  //   const [selectedBook, setSelectedBook] = useState(null);
+  const [selectedBook, setSelectedBook] = useState(null);
 
   const formatDateToString = (date) => {
     if (!date) return '';
@@ -72,6 +71,7 @@ const BookFields = ({ selectedBook }) => {
     const day = String(date.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   };
+
   useEffect(() => {
     if (selectedBook) {
       setTitle(selectedBook.title === 'undefined' ? '' : selectedBook.title || '');
@@ -84,83 +84,93 @@ const BookFields = ({ selectedBook }) => {
       setIsbn(selectedBook.isbn === 'undefined' ? '' : selectedBook.isbn || '');
       setReviews(selectedBook.reviews === 'undefined' ? '' : selectedBook.reviews || '');
       setExcerpts(selectedBook.excerpts === 'undefined' ? '' : selectedBook.excerpts || '');
-      setPurchaseYear(selectedBook.purchaseYear === 'undefined' ? null : new Date(selectedBook.purchaseYear) || null);
-      setPublicationYear(
-        selectedBook.publicationYear === 'undefined' ? null : new Date(selectedBook.publicationYear) || null
-      );
+      setPurchaseYear(selectedBook.purchaseYear === 'undefined' ? null : selectedBook.purchaseYear || null);
+      setPublicationYear(selectedBook.publicationYear === 'undefined' ? null : selectedBook.publicationYear || null);
       setRating(selectedBook.rating === 'undefined' ? 0 : selectedBook.rating || 0);
-      setSelectedImage(selectedBook.pic === 'undefined' ? null : `${imageHost}/${selectedBook.pic}` || null);
+      // setSelectedImage(selectedBook.pic === 'undefined' ? null : selectedBook.pic || null);
 
-      console.log('rating', rating);
+      console.log('编辑的图片url', selectedBook.pic);
     }
   }, [selectedBook]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const missingFields = [];
+    if (!title) missingFields.push('书名');
+    if (!authors) missingFields.push('作者 (逗号分割)');
+    if (!tags) missingFields.push('标签 (逗号分割)');
+    if (!topics) missingFields.push('阅读专题 (逗号分割)');
+    if (!readingStatus) missingFields.push('阅读状态');
+    if (!publisherInfo) missingFields.push('出版社');
+    if (!isbn) missingFields.push('ISBN');
+    if (!reviews) missingFields.push('书评');
+    if (!excerpts) missingFields.push('书摘');
+    if (!purchaseYear) missingFields.push('购买日期');
+    if (!publicationYear) missingFields.push('出版日期');
+    if (!selectedImage) missingFields.push('图片');
+
+    if (missingFields.length > 0) {
+      setError(`请填写以下必填字段: ${missingFields.join(', ')}`);
+      return;
+    }
+
+    const response = await axios.get(`/api/books?name=${title}`);
+    if (response.data.length > 0) {
+      setError('已经存在同名书.');
+      return;
+    }
+
     setError(null);
     try {
+      const formData = new FormData();
+      formData.append('title', title);
+      formData.append('authors', authors);
+      formData.append('tags', tags);
+      formData.append('topics', topics);
+      formData.append('readingStatus', readingStatus);
+      formData.append('readingProgress', readingProgress);
+      formData.append('publisherInfo', publisherInfo);
+      formData.append('isbn', isbn);
+      formData.append('purchaseYear', formatDateToString(purchaseYear));
+      formData.append('publicationYear', formatDateToString(publicationYear));
+      formData.append('reviews', reviews);
+      formData.append('excerpts', excerpts);
+      formData.append('rating', rating);
+      if (selectedImage) {
+        formData.append('pic', selectedImage);
+      }
+
       let response;
       if (selectedBook) {
-        const requestData = {
-          title,
-          authors,
-          tags,
-          topics,
-          readingStatus,
-          readingProgress,
-          publisherInfo,
-          isbn,
-          purchaseYear: formatDateToString(purchaseYear),
-          publicationYear: formatDateToString(publicationYear),
-          reviews,
-          excerpts,
-          rating,
-        };
-        response = await axios.put(`/api/books/${selectedBook._id}`, requestData, {
-          headers: { 'Content-Type': 'application/json' },
+        response = await axios.put('/api/books', formData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
         });
       } else {
-        const formData = new FormData();
-        formData.append('title', title);
-        formData.append('authors', authors);
-        formData.append('tags', tags);
-        formData.append('topics', topics);
-        formData.append('readingStatus', readingStatus);
-        formData.append('readingProgress', readingProgress);
-        formData.append('publisherInfo', publisherInfo);
-        formData.append('isbn', isbn);
-        formData.append('purchaseYear', formatDateToString(purchaseYear));
-        formData.append('publicationYear', formatDateToString(publicationYear));
-        formData.append('reviews', reviews);
-        formData.append('excerpts', excerpts);
-        formData.append('rating', rating);
-        if (selectedImage) {
-          // formData.append('pic', selectedImage);
-        }
         response = await axios.post('/api/books', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
       }
 
-      console.log('书籍信息更新成功:', response.data);
+      console.log('书籍信息添加成功:', response.data);
 
       const resTags = addTags(tags, response.data._id);
-      console.log('标签信息更新成功:', resTags);
+      console.log('标签信息添加成功:', resTags);
 
       const resTopics = addTopics(topics, response.data._id);
-      console.log('专题信息更新成功:', resTopics);
+      console.log('专题信息添加成功:', resTopics);
 
       const resPublisher = addPublishers(publisherInfo, response.data._id);
-      console.log('出版信息更新成功:', resPublisher);
+      console.log('出版信息添加成功:', resPublisher);
 
       const resAuthor = addAuthors(authors, response.data._id);
-      console.log('作者信息更新成功:', resAuthor);
+      console.log('作者信息添加成功:', resAuthor);
 
       const resExcerpt = addExcerpts(excerpts, response.data._id, title);
-      console.log('书摘更新成功:', resExcerpt);
+      console.log('书摘添加成功:', resExcerpt);
 
       const resReview = addReviews(reviews, response.data._id, title);
-      console.log('书评更新成功:', resReview);
+      console.log('书评添加成功:', resReview);
 
       setError(null);
       setRefreshList(true);
@@ -178,7 +188,7 @@ const BookFields = ({ selectedBook }) => {
       setPublicationYear(null);
       setRating(0);
       setSelectedImage(null);
-      //   setSelectedBook(null);
+      setSelectedBook(null);
     } catch (error) {
       console.error('书籍信息添加失败:', error);
       setError(`书籍信息提交失败：${error.message}`);
@@ -186,7 +196,8 @@ const BookFields = ({ selectedBook }) => {
   };
 
   return (
-    <Box p={0}>
+    <Box p={3}>
+      <Typography variant="h4">书架管理</Typography>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={6} sm={3}>
@@ -285,7 +296,7 @@ const BookFields = ({ selectedBook }) => {
         </Grid>
         <Grid item xs={6} sm={3}>
           <TextField
-            label="书摘（只允许新增，不允许编辑）"
+            label="书摘"
             margin="normal"
             name="excerpts"
             value={excerpts}
@@ -295,7 +306,7 @@ const BookFields = ({ selectedBook }) => {
         </Grid>
         <Grid item xs={6} sm={3}>
           <TextField
-            label="书评（只允许新增，不允许编辑）"
+            label="书评"
             margin="normal"
             name="reviews"
             value={reviews}
@@ -336,7 +347,10 @@ const BookFields = ({ selectedBook }) => {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <UploadImage imageUrl={selectedImage} onImageSelect={(file) => setSelectedImage(file)} />
+          <UploadImage
+            imageUrl={selectedBook ? selectedBook.pic : ''}
+            onImageSelect={(file) => setSelectedImage(file)}
+          />
         </Grid>
         <Divider />
         <Grid mt={5}>
@@ -356,7 +370,7 @@ const BookFields = ({ selectedBook }) => {
   );
 };
 
-export default BookFields;
+export default BookShelfPage;
 
 async function addTags(tags, bookId) {
   // 将逗号分隔的多个tag字符串转换为数组
