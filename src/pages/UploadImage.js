@@ -31,7 +31,7 @@ const UploadImage = ({ onImageSelect, imageUrl }) => {
       <Grid container spacing={3}>
         {/* Other input fields */}
         <Grid item xs={12} sm={6}>
-          <label htmlFor="upload-image">
+          <label htmlFor="upload-image" style={{ width: '100px', height: 'auto', display: 'inline-block' }}>
             {imagePreview ? (
               <img
                 src={imagePreview}
