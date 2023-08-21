@@ -88,7 +88,7 @@ const PublisherList = ({ refresh, onEdit }) => {
                     编号：{index + 1}
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    引用次数 {countBookIds(publisher.bookId)}
+                    关联书籍 {countBookIds(publisher.bookId)} 本
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
                     重要出版作品：{publisher.representativeWork}

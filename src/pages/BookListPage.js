@@ -7,7 +7,7 @@ const BookListPage = () => {
     <Box p={3}>
       <Typography variant="h4">书籍列表</Typography>
       <Box my={3}>
-        <BookList />
+        <BookList type={'all'} entityId={''} />
       </Box>
     </Box>
   );

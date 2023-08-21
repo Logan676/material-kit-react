@@ -46,31 +46,53 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'flex-end',
   },
   bookReview: {
-    marginTop: theme.spacing(2), // Increase the top margin
-    marginBottom: theme.spacing(2), // Increase the bottom margin
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
   bookExcerpts: {
-    marginTop: theme.spacing(2), // Increase the top margin
-    marginBottom: theme.spacing(2), // Increase the bottom margin
-    fontStyle: 'italic', // Add italic style to the excerpts text
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    fontStyle: 'italic',
   },
 }));
 
-const BookList = ({ refresh }) => {
+const BookList = ({ refresh, type, entityId }) => {
   const classes = useStyles();
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
     fetchBooks();
-  }, [refresh]);
+  }, [refresh, type, entityId]);
 
   const fetchBooks = async () => {
     try {
+      if (type === 'publishers' || type === 'authors' || type === 'tags' || type === 'topics') {
+        const response = await axios.get(`/api/${type}/${entityId}`);
+        const bookIds = response.data.bookIds.split(',');
+        const bookObjects = await fetchBookObjects(bookIds);
+        setBooks(bookObjects);
+        return;
+      }
+
       const response = await axios.get('/api/books');
       setBooks(response.data);
-      console.log(response.data);
     } catch (error) {
       console.error('获取书籍信息失败:', error);
+    }
+  };
+
+  const fetchBookObjects = async (bookIds) => {
+    const bookObjects = await Promise.all(bookIds.map((id) => fetchBookDetails(id)));
+    return bookObjects.filter((book) => book !== null);
+  };
+
+  const fetchBookDetails = async (bookId) => {
+    try {
+      const response = await axios.get(`/api/books/${bookId}`);
+      return response.data;
+    } catch (error) {
+      console.error('获取书籍详情失败:', error);
+      return null;
     }
   };
 

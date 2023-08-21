@@ -11,7 +11,8 @@ import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
 import PublisherPage from './pages/PublisherPage';
 import PublisherDetailPage from './pages/PublisherDetailPage';
-import AuthorForm from './pages/AuthorForm';
+import AuthorListPage from './pages/AuthorListPage';
+import AuthorDetailPage from './pages/AuthorDetailPage';
 import TagForm from './pages/TagForm';
 import TopicForm from './pages/TopicForm';
 import BookShelfPage from './pages/BookShelfPage';
@@ -36,7 +37,8 @@ export default function Router() {
         { path: 'blog', element: <BlogPage /> },
         { path: 'publisher', element: <PublisherPage /> },
         { path: 'publisher/:id', element: <PublisherDetailPage /> },
-        { path: 'authors', element: <AuthorForm /> },
+        { path: 'authors', element: <AuthorListPage /> },
+        { path: 'authors/:id', element: <AuthorDetailPage /> },
         { path: 'books', element: <BookShelfPage /> },
         { path: 'tags', element: <TagForm /> },
         { path: 'topics', element: <TopicForm /> },

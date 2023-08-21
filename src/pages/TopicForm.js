@@ -121,7 +121,7 @@ const TopicForm = () => {
             {savedTopics.map((topic) => (
               <Grid item key={topic._id} className={classes.tag}>
                 <Typography className={classes.tagText}>{topic.topic}</Typography>
-                <Typography>引用次数 {countBookIds(topic.bookId)}</Typography>
+                <Typography>关联书籍 {countBookIds(topic.bookId)} 本</Typography>
               </Grid>
             ))}
           </div>

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Box, Divider, Grid, Typography } from '@mui/material';
-import axios from './axiosInstance';
 import UploadImage from './UploadImage';
-import AuthorList from './AuthorList';
+import axios from './axiosInstance';
+import { imageHost } from './utils';
 
-const AuthorForm = () => {
+const AuthorForm = ({ selectedAuthor }) => {
   const [name, setName] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
   const [nationality, setNationality] = useState('');
@@ -12,11 +12,6 @@ const AuthorForm = () => {
   const [bio, setBio] = useState('');
   const [refreshList, setRefreshList] = useState(false);
   const [error, setError] = useState(null);
-  const [selectedAuthor, setSelectedAuthor] = useState(null);
-
-  const handleSelectedAuthor = (author) => {
-    setSelectedAuthor(author);
-  };
 
   useEffect(() => {
     if (selectedAuthor) {
@@ -26,8 +21,7 @@ const AuthorForm = () => {
         selectedAuthor.representativeWork === 'undefined' ? '' : selectedAuthor.representativeWork || ''
       );
       setBio(selectedAuthor.bio === 'undefined' ? '' : selectedAuthor.bio || '');
-      // You may need to handle the image preview separately, depending on how you store the image data
-      console.log('编辑的图片url', selectedAuthor.pic);
+      setSelectedImage(selectedAuthor ? `${imageHost}/${selectedAuthor.pic}` : '');
     }
   }, [selectedAuthor]);
 
@@ -80,82 +74,64 @@ const AuthorForm = () => {
       setRepresentativeWork('');
       setBio('');
       setRefreshList(true);
-      setSelectedAuthor(null);
     } catch (error) {
       console.error('作者信息提交出错:', error);
-      // Handle error
       setError(`作者信息提交失败：${error.message}`);
     }
   };
 
   return (
-    <Box p={3}>
-      <Typography variant="h4">作者信息管理</Typography>
-      <form onSubmit={handleAuthorSubmit}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} mt={2}>
-            <TextField
-              label="名字"
-              variant="outlined"
-              fullWidth
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              label="国籍"
-              variant="outlined"
-              fullWidth
-              value={nationality}
-              onChange={(e) => setNationality(e.target.value)}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              label="代表作"
-              variant="outlined"
-              fullWidth
-              value={representativeWork}
-              onChange={(e) => setRepresentativeWork(e.target.value)}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              label="生平简介"
-              variant="outlined"
-              multiline
-              rows={4}
-              fullWidth
-              value={bio}
-              onChange={(e) => setBio(e.target.value)}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <UploadImage
-              imageUrl={selectedAuthor ? selectedAuthor.pic : ''}
-              onImageSelect={(file) => setSelectedImage(file)}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Button variant="contained" color="primary" type="submit">
-              {selectedAuthor ? '更新作者信息' : '新增作者信息'}
-            </Button>
-          </Grid>
+    <form onSubmit={handleAuthorSubmit}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} mt={2}>
+          <TextField label="名字" variant="outlined" fullWidth value={name} onChange={(e) => setName(e.target.value)} />
         </Grid>
-        {error && (
-          <Box mt={2}>
-            <Typography variant="body1" color="error">
-              {error}
-            </Typography>
-          </Box>
-        )}
-      </form>
-      <Box my={3}>
-        <Divider />
-        <AuthorList refresh={refreshList} onEdit={handleSelectedAuthor} />
-      </Box>
-    </Box>
+        <Grid item xs={12}>
+          <TextField
+            label="国籍"
+            variant="outlined"
+            fullWidth
+            value={nationality}
+            onChange={(e) => setNationality(e.target.value)}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            label="代表作"
+            variant="outlined"
+            fullWidth
+            value={representativeWork}
+            onChange={(e) => setRepresentativeWork(e.target.value)}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            label="生平简介"
+            variant="outlined"
+            multiline
+            rows={4}
+            fullWidth
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <UploadImage imageUrl={selectedImage} onImageSelect={(file) => setSelectedImage(file)} />
+        </Grid>
+        <Grid item xs={12}>
+          <Button variant="contained" color="primary" type="submit">
+            {selectedAuthor ? '更新作者信息' : '新增作者信息'}
+          </Button>
+        </Grid>
+      </Grid>
+      {error && (
+        <Box mt={2}>
+          <Typography variant="body1" color="error">
+            {error}
+          </Typography>
+        </Box>
+      )}
+    </form>
   );
 };
 

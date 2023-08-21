@@ -16,7 +16,7 @@ const PublisherDetailPage = () => {
   const fetchPublisherDetails = async () => {
     try {
       const response = await axios.get(`/api/publishers/${id}`);
-      console.log('获取出版社详情:', response);
+      console.log('获取出版社详情成功:', response);
       setPublisherDetails(response.data);
     } catch (error) {
       console.error('获取出版社详情失败:', error);

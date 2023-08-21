@@ -121,7 +121,7 @@ const TagForm = () => {
             {savedTags.map((tag) => (
               <div key={tag._id} className={classes.tag}>
                 <Typography className={classes.tagText}>{tag.tag}</Typography>
-                <Typography>引用次数 {countBookIds(tag.bookId)}</Typography>
+                <Typography>关联书籍 {countBookIds(tag.bookId)} 本</Typography>
               </div>
             ))}
           </div>

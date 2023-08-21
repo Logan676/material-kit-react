@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@mui/styles';
 import { Card, CardActionArea, CardContent, CardMedia, Typography, IconButton, Button, Box, Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from './axiosInstance';
-import { countBookIds } from './utils';
+import { countBookIds, imageHost } from './utils';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -28,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  link: {
+    textDecoration: 'none',
   },
 }));
 
@@ -66,53 +70,50 @@ const AuthorList = ({ refresh, onEdit }) => {
     console.log('编辑作者信息:', author);
     onEdit(author);
   };
-
-  const imageHost = 'http://localhost:5555';
-
   return (
     <div>
-      <Typography variant="h5" gutterBottom>
-        作者列表
-      </Typography>
       <Typography variant="body1" gutterBottom>
         总共有 {authors.length} 位作者
       </Typography>
       {authors.map((author, index) => {
         const imageUrl = `${imageHost}/${author.pic}`;
+        const authorPath = `/dashboard/authors/${author._id}`;
         return (
-          <Card key={author._id} className={classes.card}>
-            <CardActionArea className={classes.actionArea}>
-              <div className={classes.cardContent}>
-                <Typography variant="h5" component="h2">
-                  {author.name}
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  编号：{index + 1}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  代表作品：{author.representativeWork}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  引用次数 {countBookIds(author.bookId)}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  国家：{author.nationality}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  作者生平：{author.bio}
-                </Typography>
-              </div>
-              <CardMedia className={classes.cardMedia} image={imageUrl} title={author.name} />
-            </CardActionArea>
-            <CardContent>
-              <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(author)}>
-                <DeleteIcon />
-              </IconButton>
-              <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(author)}>
-                <EditIcon />
-              </IconButton>
-            </CardContent>
-          </Card>
+          <Link key={author._id} to={authorPath} className={classes.link}>
+            <Card key={author._id} className={classes.card}>
+              <CardActionArea className={classes.actionArea}>
+                <div className={classes.cardContent}>
+                  <Typography variant="h5" component="h2">
+                    {author.name}
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    编号：{index + 1}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    代表作品：{author.representativeWork}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    关联书籍 {countBookIds(author.bookId)} 本
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    国家：{author.nationality}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    作者生平：{author.bio}
+                  </Typography>
+                </div>
+                <CardMedia className={classes.cardMedia} image={imageUrl} title={author.name} />
+                <CardContent>
+                  <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(author)}>
+                    <DeleteIcon />
+                  </IconButton>
+                  <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(author)}>
+                    <EditIcon />
+                  </IconButton>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Link>
         );
       })}
     </div>
