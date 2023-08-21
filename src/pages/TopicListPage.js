@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: theme.spacing(1, 2),
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#fff',
     borderRadius: theme.spacing(1),
     marginBottom: theme.spacing(1),
     width: '100%',

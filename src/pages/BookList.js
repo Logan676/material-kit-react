@@ -8,6 +8,19 @@ import axios from './axiosInstance';
 import { imageHost } from './utils';
 
 const useStyles = makeStyles((theme) => ({
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: theme.spacing(2),
+  },
+  lineStyle: {
+    display: 'flex',
+    color: 'black',
+    // justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: theme.spacing(2),
+  },
   bookCardContainer: {
     // maxWidth: 600,
     padding: theme.spacing(2),
@@ -39,6 +52,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
   },
+  bookTextContainer: {
+    color: 'black',
+    marginBottom: theme.spacing(2),
+  },
   bookActions: {
     flex: '0 0 auto',
     display: 'flex',
@@ -59,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
 const BookList = ({ refresh, entityId, from }) => {
   const classes = useStyles();
   const [books, setBooks] = useState([]);
+  const [listStyle, setListStyle] = useState('card'); // 默认是卡片样式
 
   useEffect(() => {
     fetchBooks();
@@ -112,45 +130,64 @@ const BookList = ({ refresh, entityId, from }) => {
     console.log('编辑书籍信息:', book);
     // 这里的编辑是空实现，通过整个卡片的link来跳转到编辑页面
   };
+  const toggleListStyle = () => {
+    setListStyle(listStyle === 'card' ? 'text' : 'card');
+  };
 
   return (
     <div>
-      <Typography variant="body1" gutterBottom>
-        总共有 {books.length} 本书
-      </Typography>
+      <div className={classes.header}>
+        <Typography variant="body1" gutterBottom>
+          总共有 {books.length} 本书
+        </Typography>
+        <Button variant="outlined" onClick={toggleListStyle}>
+          切换列表样式
+        </Button>
+      </div>
       {books.map((book, index) => {
         const imageUrl = `${imageHost}/${book.pic}`;
         const bookDetailsPath = `/dashboard/bookbrowse/${book._id}`;
         return (
           <Link key={book._id} to={bookDetailsPath} className={classes.link}>
-            <Card key={book._id} className={classes.bookCardContainer}>
-              <CardActionArea className={classes.actionArea}>
-                <div>
-                  <div key={`div1_${book._id}`} className={classes.bookCard}>
-                    <img className={classes.bookCover} src={imageUrl} alt={book.name} />
-                    <div className={classes.bookDetails}>
-                      <Typography variant="h5" component="h2">
-                        {book.title}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        作者：{book.authors}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        出版信息：{book.publisherInfo}
-                      </Typography>
-                    </div>
-                    <div className={classes.bookActions}>
-                      <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(book)}>
-                        <DeleteIcon />
-                      </IconButton>
-                      <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(book)}>
-                        <EditIcon />
-                      </IconButton>
+            {listStyle === 'card' ? (
+              <Card key={book._id} className={classes.bookCardContainer}>
+                <CardActionArea className={classes.actionArea}>
+                  <div>
+                    <div key={`div1_${book._id}`} className={classes.bookCard}>
+                      <img className={classes.bookCover} src={imageUrl} alt={book.name} />
+                      <div className={classes.bookDetails}>
+                        <Typography variant="h5" component="h2">
+                          {index + 1}. 《{book.title}》
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary">
+                          作者：{book.authors}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary">
+                          书评：{book.reviews}
+                        </Typography>
+                      </div>
+                      <div className={classes.bookActions}>
+                        <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(book)}>
+                          <DeleteIcon />
+                        </IconButton>
+                        <IconButton aria-label="编辑" color="primary" onClick={() => handleEdit(book)}>
+                          <EditIcon />
+                        </IconButton>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </CardActionArea>
-            </Card>
+                </CardActionArea>
+              </Card>
+            ) : (
+              <div key={book._id} className={classes.lineStyle}>
+                <Typography variant="body2" component="body2">
+                  {index + 1}.
+                </Typography>
+                <Typography variant="body2" component="body2">
+                  《{book.title}》
+                </Typography>
+              </div>
+            )}
           </Link>
         );
       })}
