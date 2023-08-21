@@ -125,9 +125,9 @@ const TagListPage = () => {
           </Typography>
           <div className={classes.tagContainer}>
             {savedTags.map((tag) => {
-              const bookDetailsPath = `/dashboard/booklist/${tag._id}?from=tags`;
+              const bookListPath = `/dashboard/booklist/${tag._id}?from=tags`;
               return (
-                <Link key={tag._id} to={bookDetailsPath} className={classes.link}>
+                <Link key={tag._id} to={bookListPath} className={classes.link}>
                   <div key={tag._id} className={classes.tag}>
                     <Typography className={classes.tagText}>{tag.tag}</Typography>
                     <Typography>关联书籍 {countBookIds(tag.bookId)} 本</Typography>

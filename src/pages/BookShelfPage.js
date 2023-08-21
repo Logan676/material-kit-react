@@ -197,7 +197,7 @@ const BookShelfPage = () => {
 
   return (
     <Box p={3}>
-      <Typography variant="h4">书架管理</Typography>
+      <Typography variant="h4">录入书籍信息</Typography>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={6} sm={3}>

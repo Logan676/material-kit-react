@@ -14,7 +14,7 @@ import PublisherDetailPage from './pages/PublisherDetailPage';
 import AuthorListPage from './pages/AuthorListPage';
 import AuthorDetailPage from './pages/AuthorDetailPage';
 import TagListPage from './pages/TagListPage';
-import TopicForm from './pages/TopicForm';
+import TopicListPage from './pages/TopicListPage';
 import BookShelfPage from './pages/BookShelfPage';
 import Dev from './pages/Dev';
 import Reviews from './pages/Reviews';
@@ -41,7 +41,7 @@ export default function Router() {
         { path: 'authors/:id', element: <AuthorDetailPage /> },
         { path: 'books', element: <BookShelfPage /> },
         { path: 'tags', element: <TagListPage /> },
-        { path: 'topics', element: <TopicForm /> },
+        { path: 'topics', element: <TopicListPage /> },
         { path: 'dev', element: <Dev /> },
         { path: 'reviews', element: <Reviews /> },
         { path: 'excerpts', element: <Excerpts /> },

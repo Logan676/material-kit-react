@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 import axios from './axiosInstance';
 import './App.css';
 import { countBookIds } from './utils';
@@ -28,12 +29,17 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
     },
+    color: 'black',
   },
   tagText: {
     marginRight: theme.spacing(2),
+    color: 'black',
+  },
+  link: {
+    textDecoration: 'none',
   },
 }));
-const TopicForm = () => {
+const TopicListPage = () => {
   const classes = useStyles();
 
   const [topicInput, setTopicInput] = useState('');
@@ -118,12 +124,17 @@ const TopicForm = () => {
             总共有 {savedTopics.length} 个专题
           </Typography>
           <div className={classes.tagContainer}>
-            {savedTopics.map((topic) => (
-              <Grid item key={topic._id} className={classes.tag}>
-                <Typography className={classes.tagText}>{topic.topic}</Typography>
-                <Typography>关联书籍 {countBookIds(topic.bookId)} 本</Typography>
-              </Grid>
-            ))}
+            {savedTopics.map((topic) => {
+              const bookListPath = `/dashboard/booklist/${topic._id}?from=topics`;
+              return (
+                <Link key={topic._id} to={bookListPath} className={classes.link}>
+                  <Grid item key={topic._id} className={classes.tag}>
+                    <Typography className={classes.tagText}>{topic.topic}</Typography>
+                    <Typography>关联书籍 {countBookIds(topic.bookId)} 本</Typography>
+                  </Grid>
+                </Link>
+              );
+            })}
           </div>
         </Grid>
       </Box>
@@ -131,4 +142,4 @@ const TopicForm = () => {
   );
 };
 
-export default TopicForm;
+export default TopicListPage;

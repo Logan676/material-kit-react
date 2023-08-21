@@ -17,24 +17,19 @@ const navConfig = [
     icon: icon('ic_blog2'),
   },
   {
-    title: '书籍管理',
-    path: '/dashboard/books',
-    icon: icon('ic_add_book'),
+    title: '书摘',
+    path: '/dashboard/excerpts',
+    icon: icon('ic_excerpt'),
+  },
+  {
+    title: '书评',
+    path: '/dashboard/reviews',
+    icon: icon('ic_review'),
   },
   {
     title: '书籍列表',
     path: '/dashboard/bookbrowse',
     icon: icon('ic_book'),
-  },
-  {
-    title: '出版社',
-    path: '/dashboard/publisher',
-    icon: icon('ic_publisher'),
-  },
-  {
-    title: '作者',
-    path: '/dashboard/authors',
-    icon: icon('ic_author'),
   },
   {
     title: '标签',
@@ -47,14 +42,19 @@ const navConfig = [
     icon: icon('ic_topic'),
   },
   {
-    title: '书摘',
-    path: '/dashboard/excerpts',
-    icon: icon('ic_excerpt'),
+    title: '录入书籍',
+    path: '/dashboard/books',
+    icon: icon('ic_add_book'),
   },
   {
-    title: '书评',
-    path: '/dashboard/reviews',
-    icon: icon('ic_review'),
+    title: '出版社列表',
+    path: '/dashboard/publisher',
+    icon: icon('ic_publisher'),
+  },
+  {
+    title: '作者列表',
+    path: '/dashboard/authors',
+    icon: icon('ic_author'),
   },
   {
     title: 'dev',
