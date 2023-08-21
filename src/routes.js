@@ -1,4 +1,4 @@
-import { Navigate, useRoutes } from 'react-router-dom';
+import { Navigate, useRoutes, useNavigate } from 'react-router-dom';
 // layouts
 import DashboardLayout from './layouts/dashboard';
 import SimpleLayout from './layouts/simple';
@@ -13,7 +13,7 @@ import PublisherPage from './pages/PublisherPage';
 import PublisherDetailPage from './pages/PublisherDetailPage';
 import AuthorListPage from './pages/AuthorListPage';
 import AuthorDetailPage from './pages/AuthorDetailPage';
-import TagForm from './pages/TagForm';
+import TagListPage from './pages/TagListPage';
 import TopicForm from './pages/TopicForm';
 import BookShelfPage from './pages/BookShelfPage';
 import Dev from './pages/Dev';
@@ -40,13 +40,14 @@ export default function Router() {
         { path: 'authors', element: <AuthorListPage /> },
         { path: 'authors/:id', element: <AuthorDetailPage /> },
         { path: 'books', element: <BookShelfPage /> },
-        { path: 'tags', element: <TagForm /> },
+        { path: 'tags', element: <TagListPage /> },
         { path: 'topics', element: <TopicForm /> },
         { path: 'dev', element: <Dev /> },
         { path: 'reviews', element: <Reviews /> },
         { path: 'excerpts', element: <Excerpts /> },
         { path: 'bookbrowse/:id', element: <BookDetailPage /> },
         { path: 'bookbrowse', element: <BookListPage /> },
+        { path: 'booklist/:id', element: <BookListPage /> },
       ],
     },
     {

@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 import axios from './axiosInstance';
 import './App.css';
 import { countBookIds } from './utils';
@@ -28,12 +29,17 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
     },
+    color: 'black',
   },
   tagText: {
     marginRight: theme.spacing(2),
+    color: 'black',
+  },
+  link: {
+    textDecoration: 'none',
   },
 }));
-const TagForm = () => {
+const TagListPage = () => {
   const classes = useStyles();
 
   const [tagInput, setTagInput] = useState('');
@@ -118,12 +124,17 @@ const TagForm = () => {
             总共有 {savedTags.length} 个标签
           </Typography>
           <div className={classes.tagContainer}>
-            {savedTags.map((tag) => (
-              <div key={tag._id} className={classes.tag}>
-                <Typography className={classes.tagText}>{tag.tag}</Typography>
-                <Typography>关联书籍 {countBookIds(tag.bookId)} 本</Typography>
-              </div>
-            ))}
+            {savedTags.map((tag) => {
+              const bookDetailsPath = `/dashboard/booklist/${tag._id}?from=tags`;
+              return (
+                <Link key={tag._id} to={bookDetailsPath} className={classes.link}>
+                  <div key={tag._id} className={classes.tag}>
+                    <Typography className={classes.tagText}>{tag.tag}</Typography>
+                    <Typography>关联书籍 {countBookIds(tag.bookId)} 本</Typography>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </Grid>
       </Box>
@@ -131,4 +142,4 @@ const TagForm = () => {
   );
 };
 
-export default TagForm;
+export default TagListPage;

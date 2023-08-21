@@ -56,20 +56,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BookList = ({ refresh, type, entityId }) => {
+const BookList = ({ refresh, entityId, from }) => {
   const classes = useStyles();
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
     fetchBooks();
-  }, [refresh, type, entityId]);
+  }, [refresh, from, entityId]);
 
   const fetchBooks = async () => {
     try {
-      if (type === 'publishers' || type === 'authors' || type === 'tags' || type === 'topics') {
-        const response = await axios.get(`/api/${type}/${entityId}`);
-        const bookIds = response.data.bookIds.split(',');
+      if (from === 'publishers' || from === 'authors' || from === 'tags' || from === 'topics') {
+        const response = await axios.get(`/api/${from}/${entityId}`);
+        const bookIds = response.data.bookId.split(',');
         const bookObjects = await fetchBookObjects(bookIds);
+        console.log('bookObjects:', bookObjects);
         setBooks(bookObjects);
         return;
       }
