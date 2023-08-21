@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
   },
 }));
-const TagListPage = () => {
+const TagManagePage = () => {
   const classes = useStyles();
 
   const [tagInput, setTagInput] = useState('');
@@ -92,31 +92,32 @@ const TagListPage = () => {
   };
   return (
     <Box p={3}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         标签管理
       </Typography>
-      <Box my={3}>
-        <Grid container direction="column" alignItems="flex-start">
-          <Typography variant="body1" gutterBottom>
-            总共有 {savedTags.length} 个标签
-          </Typography>
-          <div className={classes.tagContainer}>
-            {savedTags.map((tag) => {
-              const bookListPath = `/dashboard/booklist/${tag._id}?from=tags`;
-              return (
-                <Link key={tag._id} to={bookListPath} className={classes.link}>
-                  <div key={tag._id} className={classes.tag}>
-                    <Typography className={classes.tagText}>{tag.tag}</Typography>
-                    <Typography>关联书籍 {countBookIds(tag.bookId)} 本</Typography>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </Grid>
+      <Box>
+        <TextField
+          label="输入标签"
+          value={tagInput}
+          onChange={handleTagInputChange}
+          onKeyPress={handleKeyPress}
+          fullWidth
+          variant="outlined"
+          margin="normal"
+        />
+        <Button variant="contained" onClick={handleTagSubmit} fullWidth>
+          增加标签
+        </Button>
+        {error && (
+          <Box mt={2}>
+            <Typography variant="body1" color="error">
+              {error}
+            </Typography>
+          </Box>
+        )}
       </Box>
     </Box>
   );
 };
 
-export default TagListPage;
+export default TagManagePage;

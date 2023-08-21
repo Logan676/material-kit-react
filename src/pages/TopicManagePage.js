@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
   },
 }));
-const TopicListPage = () => {
+const TopicManagePage = () => {
   const classes = useStyles();
 
   const [topicInput, setTopicInput] = useState('');
@@ -92,31 +92,32 @@ const TopicListPage = () => {
   };
   return (
     <Box p={3}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         专题管理
       </Typography>
-      <Box my={3}>
-        <Grid container direction="column" alignItems="flex-start">
-          <Typography variant="body1" gutterBottom>
-            总共有 {savedTopics.length} 个专题
-          </Typography>
-          <div className={classes.tagContainer}>
-            {savedTopics.map((topic) => {
-              const bookListPath = `/dashboard/booklist/${topic._id}?from=topics`;
-              return (
-                <Link key={topic._id} to={bookListPath} className={classes.link}>
-                  <Grid item key={topic._id} className={classes.tag}>
-                    <Typography className={classes.tagText}>{topic.topic}</Typography>
-                    <Typography>关联书籍 {countBookIds(topic.bookId)} 本</Typography>
-                  </Grid>
-                </Link>
-              );
-            })}
-          </div>
-        </Grid>
+      <Box>
+        <TextField
+          label="输入专题"
+          value={topicInput}
+          onChange={handleInputChange}
+          onKeyPress={handleKeyPress}
+          fullWidth
+          variant="outlined"
+          margin="normal"
+        />
+        <Button variant="contained" onClick={handleSubmit} fullWidth>
+          添加专题
+        </Button>
+        {error && (
+          <Box mt={2}>
+            <Typography variant="body1" color="error">
+              {error}
+            </Typography>
+          </Box>
+        )}
       </Box>
     </Box>
   );
 };
 
-export default TopicListPage;
+export default TopicManagePage;

@@ -32,7 +32,7 @@ const navConfig = [
     icon: icon('ic_book'),
   },
   {
-    title: '标签',
+    title: '标签列表',
     path: '/dashboard/tags',
     icon: icon('ic_tags'),
   },
@@ -60,6 +60,16 @@ const navConfig = [
     title: 'dev',
     path: '/dashboard/dev',
     icon: icon('ic_dev'),
+  },
+  {
+    title: '标签录入',
+    path: '/dashboard/tagmanage',
+    icon: icon('ic_tags'),
+  },
+  {
+    title: '主题录入',
+    path: '/dashboard/topicmanage',
+    icon: icon('ic_topic'),
   },
   {
     title: 'login',
