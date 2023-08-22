@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Reviews = () => {
+const ReviewListPage = () => {
   const classes = useStyles();
 
   const [reviews, setReviews] = useState([]);
@@ -99,4 +99,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default ReviewListPage;
