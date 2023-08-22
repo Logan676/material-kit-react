@@ -1,39 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@mui/styles';
 import { Box, Button, Grid, Typography, Card, CardActionArea, CardContent, IconButton } from '@mui/material';
+import { format } from 'date-fns';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import QuoteCard from '../components/QuoteCard';
 import axios from './axiosInstance';
 
 const useStyles = makeStyles((theme) => ({
   card: {
     display: 'flex',
-    // height: 200,
-    padding: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-    alignItems: 'center', // Align items vertically in the card
-  },
-  cardTitle: {
-    fontWeight: 'bold',
-    fontSize: '1.2rem', // Increase font size for the title
-    marginBottom: theme.spacing(1), // Add some space below the title
+    flexDirection: 'column',
+    position: 'relative',
+    marginBottom: '1rem',
   },
   cardContent: {
-    flex: 1,
-    fontSize: '1rem', // Adjust font size for the content
-    marginBottom: theme.spacing(1),
+    position: 'absolute',
+    bottom: 0,
+    right: 50,
+    fontStyle: 'italic',
+    color: 'gray',
+    fontSize: '0.5rem',
+    marginBottom: '1rem',
   },
-  cardMedia: {
-    width: 100,
-    height: 100,
-    borderRadius: 10,
-    border: '1px solid #ccc',
-    padding: 5,
-  },
-  actionArea: {
+  cardActions: {
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    justifyContent: 'space-between', // Horizontal space between items
+    alignItems: 'flex-start',
+    marginTop: '1rem',
+    marginBottom: '3rem',
+  },
+  quoteCardContainer: {
+    flex: 1, // Take available space
+  },
+  deleteButton: {
+    alignSelf: 'flex-end',
+  },
+  locationTag: {
+    alignSelf: 'flex-end', // Align to the right
+    color: 'gray',
+    fontSize: '0.8rem',
+    marginBottom: '1rem',
+    right: 50,
+  },
+  smallText: {
+    fontSize: '10px', // Adjust the font size as needed
   },
 }));
 
@@ -78,19 +89,26 @@ const ReviewListPage = () => {
             return review.content !== '没写';
           })
           .map((review, index) => {
+            const formattedUpdatedAt = format(new Date(review.updatedAt), 'yyyy-MM-dd HH:mm:ss');
             return (
-              <Card key={review._id} className={classes.card}>
-                <CardActionArea className={classes.actionArea}>
-                  <CardContent>
-                    <Typography className={classes.cardTitle}>{`《${review.bookTitle}》`}</Typography>
-                    <Typography className={classes.cardContent}>{review.content}</Typography>
-                    <Typography className={classes.cardContent}>创建时间: {review.createdAt}</Typography>
-                    <Typography className={classes.cardContent}>更新时间: {review.updatedAt}</Typography>
-                  </CardContent>
-                  <IconButton aria-label="删除" color="secondary" onClick={() => handleDeleteReview(review._id)}>
+              <Card className={classes.card} key={review._id}>
+                <div className={classes.cardActions}>
+                  <div className={classes.quoteCardContainer}>
+                    <QuoteCard text={review.content} author={`《${review.bookTitle}》`} />
+                  </div>
+                  <IconButton
+                    aria-label="删除"
+                    color="secondary"
+                    onClick={() => handleDeleteReview(review._id)}
+                    className={classes.deleteButton}
+                  >
                     <DeleteIcon />
                   </IconButton>
-                </CardActionArea>
+                </div>
+                <div className={classes.cardContent}>
+                  <Typography className={classes.smallText}>所在位置: {review.location}</Typography>
+                  <Typography className={classes.smallText}>更新时间: {formattedUpdatedAt}</Typography>
+                </div>
               </Card>
             );
           })}
