@@ -18,7 +18,7 @@ import TopicListPage from './pages/TopicListPage';
 import BookShelfPage from './pages/BookShelfPage';
 import Dev from './pages/Dev';
 import Reviews from './pages/Reviews';
-import Excerpts from './pages/Excerpts';
+import ExcerptListPage from './pages/ExcerptListPage';
 import BookDetailPage from './pages/BookDetailPage';
 import BookListPage from './pages/BookListPage';
 import TagManagePage from './pages/TagManagePage';
@@ -47,7 +47,7 @@ export default function Router() {
         { path: 'topicmanage', element: <TopicManagePage /> },
         { path: 'dev', element: <Dev /> },
         { path: 'reviews', element: <Reviews /> },
-        { path: 'excerpts', element: <Excerpts /> },
+        { path: 'excerpts', element: <ExcerptListPage /> },
         { path: 'bookbrowse/:id', element: <BookDetailPage /> },
         { path: 'bookbrowse', element: <BookListPage /> },
         { path: 'booklist/:id', element: <BookListPage /> },
