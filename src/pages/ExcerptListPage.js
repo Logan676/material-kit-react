@@ -104,7 +104,9 @@ const ExcerptListPage = () => {
                 </IconButton>
               </div>
               <div className={classes.cardContent}>
-                <Typography className={classes.smallText}>所在位置: {excerpt.location}</Typography>
+                <Typography className={classes.smallText}>
+                  {excerpt.chapter} 页码: {excerpt.page}
+                </Typography>
                 <Typography className={classes.smallText}>更新时间: {formattedUpdatedAt}</Typography>
               </div>
             </Card>

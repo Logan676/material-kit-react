@@ -24,6 +24,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { makeStyles } from '@mui/styles';
 import axios from './axiosInstance';
 import UploadImage from './UploadImage';
+import { imageHost } from './utils';
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -49,12 +50,14 @@ const BookShelfPage = () => {
   const [authors, setAuthors] = useState('');
   const [tags, setTags] = useState('');
   const [topics, setTopics] = useState('');
-  const [readingStatus, setReadingStatus] = useState('想读');
+  const [readingStatus, setReadingStatus] = useState('读过');
   const [readingProgress, setReadingProgress] = useState(0);
   const [publisherInfo, setPublisherInfo] = useState('');
   const [isbn, setIsbn] = useState('');
   const [reviews, setReviews] = useState('');
   const [excerpts, setExcerpts] = useState('');
+  const [page, setPage] = useState(0);
+  const [chapter, setChapter] = useState('');
   const [purchaseYear, setPurchaseYear] = useState(defaultDate);
   const [publicationYear, setPublicationYear] = useState(defaultDate);
   const [rating, setRating] = useState(0);
@@ -87,11 +90,18 @@ const BookShelfPage = () => {
       setPurchaseYear(selectedBook.purchaseYear === 'undefined' ? null : selectedBook.purchaseYear || null);
       setPublicationYear(selectedBook.publicationYear === 'undefined' ? null : selectedBook.publicationYear || null);
       setRating(selectedBook.rating === 'undefined' ? 0 : selectedBook.rating || 0);
-      // setSelectedImage(selectedBook.pic === 'undefined' ? null : selectedBook.pic || null);
+      setSelectedImage(selectedBook.pic === 'undefined' ? null : `${imageHost}/${selectedBook.pic}` || null);
 
       console.log('编辑的图片url', selectedBook.pic);
     }
   }, [selectedBook]);
+
+  const handlePageChange = (e) => {
+    const input = e.target.value;
+    if (!Number.isNaN(Number(input))) {
+      setPage(input);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -100,12 +110,12 @@ const BookShelfPage = () => {
     if (!title) missingFields.push('书名');
     if (!authors) missingFields.push('作者 (逗号分割)');
     if (!tags) missingFields.push('标签 (逗号分割)');
-    if (!topics) missingFields.push('阅读专题 (逗号分割)');
+    // if (!topics) missingFields.push('阅读专题 (逗号分割)');
     if (!readingStatus) missingFields.push('阅读状态');
     if (!publisherInfo) missingFields.push('出版社');
     if (!isbn) missingFields.push('ISBN');
-    if (!reviews) missingFields.push('书评');
-    if (!excerpts) missingFields.push('书摘');
+    // if (!reviews) missingFields.push('书评');
+    // if (!excerpts) missingFields.push('书摘');
     if (!purchaseYear) missingFields.push('购买日期');
     if (!publicationYear) missingFields.push('出版日期');
     if (!selectedImage) missingFields.push('图片');
@@ -115,11 +125,11 @@ const BookShelfPage = () => {
       return;
     }
 
-    const response = await axios.get(`/api/books?name=${title}`);
-    if (response.data.length > 0) {
-      setError('已经存在同名书.');
-      return;
-    }
+    // const response = await axios.get(`/api/books?name=${title}`);
+    // if (response.data.length > 0) {
+    //   setError('已经存在同名书.');
+    //   return;
+    // }
 
     setError(null);
     try {
@@ -166,7 +176,7 @@ const BookShelfPage = () => {
       const resAuthor = addAuthors(authors, response.data._id);
       console.log('作者信息添加成功:', resAuthor);
 
-      const resExcerpt = addExcerpts(excerpts, response.data._id, title);
+      const resExcerpt = addExcerpts(excerpts, response.data._id, title, chapter, page);
       console.log('书摘添加成功:', resExcerpt);
 
       const resReview = addReviews(reviews, response.data._id, title);
@@ -296,23 +306,44 @@ const BookShelfPage = () => {
         </Grid>
         <Grid item xs={6} sm={3}>
           <TextField
-            label="书摘"
-            margin="normal"
-            name="excerpts"
-            value={excerpts}
-            onChange={(e) => setExcerpts(e.target.value)}
-            fullWidth
-          />
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <TextField
             label="书评"
             margin="normal"
             name="reviews"
             value={reviews}
             onChange={(e) => setReviews(e.target.value)}
             fullWidth
+            multiline
+            rows={3}
           />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <TextField
+              label="书摘"
+              margin="normal"
+              name="excerpts"
+              value={excerpts}
+              onChange={(e) => setExcerpts(e.target.value)}
+              fullWidth
+            />
+            <TextField
+              label="章节"
+              margin="normal"
+              name="chapter"
+              value={chapter}
+              onChange={(e) => setChapter(e.target.value)}
+              style={{ marginLeft: '10px', width: '350px' }}
+            />
+            <TextField
+              label="页码"
+              margin="normal"
+              name="page"
+              value={page}
+              onChange={handlePageChange}
+              style={{ marginLeft: '10px', width: '150px' }}
+              inputProps={{ inputMode: 'numeric' }}
+            />
+          </div>
         </Grid>
         <Grid container spacing={2}>
           <Grid item xs={6} sm={3} mt={3}>
@@ -347,10 +378,7 @@ const BookShelfPage = () => {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <UploadImage
-            imageUrl={selectedBook ? selectedBook.pic : ''}
-            onImageSelect={(file) => setSelectedImage(file)}
-          />
+          <UploadImage imageUrl={selectedImage} onImageSelect={(file) => setSelectedImage(file)} />
         </Grid>
         <Divider />
         <Grid mt={5}>
@@ -487,12 +515,14 @@ async function addReviews(review, bookId, bookTitle) {
   }
 }
 
-async function addExcerpts(excerpt, bookId, bookTitle) {
+async function addExcerpts(excerpt, bookId, bookTitle, chapter, page) {
   try {
     const newExcerptData = {
       bookId,
       bookTitle,
       content: excerpt,
+      chapter,
+      page,
     };
     const response = await axios.post('/api/excerpts', newExcerptData);
     console.log('添加书摘成功', response.data);
