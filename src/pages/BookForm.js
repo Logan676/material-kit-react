@@ -60,6 +60,8 @@ const BookForm = ({ selectedBook }) => {
   const [publicationYear, setPublicationYear] = useState(defaultDate);
   const [rating, setRating] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [page, setPage] = useState(0);
+  const [chapter, setChapter] = useState('');
 
   const [error, setError] = useState(null);
   const [refreshList, setRefreshList] = useState(false);
@@ -94,6 +96,13 @@ const BookForm = ({ selectedBook }) => {
       console.log('rating', rating);
     }
   }, [selectedBook]);
+
+  const handlePageChange = (e) => {
+    const input = e.target.value;
+    if (!Number.isNaN(Number(input))) {
+      setPage(input);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -156,7 +165,7 @@ const BookForm = ({ selectedBook }) => {
       const resAuthor = addAuthors(authors, response.data._id);
       console.log('作者信息更新成功:', resAuthor);
 
-      const resExcerpt = addExcerpts(excerpts, response.data._id, title);
+      const resExcerpt = addExcerpts(excerpts, response.data._id, title, chapter, page);
       console.log('书摘更新成功:', resExcerpt);
 
       const resReview = addReviews(reviews, response.data._id, title);
@@ -285,16 +294,6 @@ const BookForm = ({ selectedBook }) => {
         </Grid>
         <Grid item xs={6} sm={3}>
           <TextField
-            label="书摘（只允许新增，不允许编辑）"
-            margin="normal"
-            name="excerpts"
-            value={excerpts}
-            onChange={(e) => setExcerpts(e.target.value)}
-            fullWidth
-          />
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <TextField
             label="书评（只允许新增，不允许编辑）"
             margin="normal"
             name="reviews"
@@ -302,6 +301,35 @@ const BookForm = ({ selectedBook }) => {
             onChange={(e) => setReviews(e.target.value)}
             fullWidth
           />
+        </Grid>
+        <Grid item xs={6} sm={3}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <TextField
+              label="书摘（只允许新增，不允许编辑）"
+              margin="normal"
+              name="excerpts"
+              value={excerpts}
+              onChange={(e) => setExcerpts(e.target.value)}
+              fullWidth
+            />
+            <TextField
+              label="章节"
+              margin="normal"
+              name="chapter"
+              value={chapter}
+              onChange={(e) => setChapter(e.target.value)}
+              style={{ marginLeft: '10px', width: '350px' }}
+            />
+            <TextField
+              label="页码"
+              margin="normal"
+              name="page"
+              value={page}
+              onChange={handlePageChange}
+              style={{ marginLeft: '10px', width: '150px' }}
+              inputProps={{ inputMode: 'numeric' }}
+            />
+          </div>
         </Grid>
         <Grid container spacing={2}>
           <Grid item xs={6} sm={3} mt={3}>
@@ -473,12 +501,14 @@ async function addReviews(review, bookId, bookTitle) {
   }
 }
 
-async function addExcerpts(excerpt, bookId, bookTitle) {
+async function addExcerpts(excerpt, bookId, bookTitle, chapter, page) {
   try {
     const newExcerptData = {
       bookId,
       bookTitle,
       content: excerpt,
+      chapter,
+      page,
     };
     const response = await axios.post('/api/excerpts', newExcerptData);
     console.log('添加书摘成功', response.data);
