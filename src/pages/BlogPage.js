@@ -21,7 +21,7 @@ export default function BlogPage() {
   return (
     <>
       <Helmet>
-        <title>仪表盘：博客 | Minimal UI </title>
+        <title>电子助手</title>
       </Helmet>
 
       <Container>
