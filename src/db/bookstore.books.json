@@ -1,0 +1,1260 @@
+[{
+  "_id": {
+    "$oid": "64e5a31754f1b48a3c8c5ec4"
+  },
+  "title": "自我突围",
+  "authors": "施一公",
+  "tags": "施一公",
+  "topics": "名人传记",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版集团",
+  "isbn": "9787521752908",
+  "reviews": "",
+  "excerpts": "我这辈子从来没有觉得，我哪一天要找一份工作，要为工作担心。因为我觉得人如果成了衣食住行的奴隶，这辈子就太难受了",
+  "purchaseYear": "2023-08-09",
+  "publicationYear": "2023-04-01",
+  "rating": 5,
+  "pic": "uploads/1692771095339-777030519.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5a4a754f1b48a3c8c5f05"
+  },
+  "title": "冷场",
+  "authors": "李诞",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "四川文艺出版社",
+  "isbn": "9787541151460",
+  "reviews": "不太能欣赏的了这样的写作风格，以至于内容部分多数看不懂，无感",
+  "excerpts": "",
+  "purchaseYear": "2023-07-23",
+  "publicationYear": "2018-11-20",
+  "rating": 3,
+  "pic": "uploads/1692771495490-117433687.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5a5c654f1b48a3c8c5f35"
+  },
+  "title": "亲爱的三毛",
+  "authors": "三毛",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "南海出版公司",
+  "isbn": "9787573502636",
+  "reviews": "这本书影照出我内心的残缺，同时抚慰了我内心的伤痛，我不禁想要去看她全部的文字了。另外，朋友那一片，对于如何对待朋友的看法击中了我，我要做一个自己的网站并把这一段放到第一个书摘明信片中。",
+  "excerpts": "",
+  "purchaseYear": "2023-07-23",
+  "publicationYear": "2023-02-01",
+  "rating": 5,
+  "pic": "uploads/1692771782705-989225882.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5a6c954f1b48a3c8c5f58"
+  },
+  "title": "陌生的经验",
+  "authors": "陈丹青",
+  "tags": "艺术,文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "广西师范大学出版社",
+  "isbn": "9787549573196",
+  "reviews": "翻过 已经没有印象了",
+  "excerpts": "",
+  "purchaseYear": "2023-06-14",
+  "publicationYear": "2015-11-01",
+  "rating": 0,
+  "pic": "uploads/1692772041332-374390452.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5a75054f1b48a3c8c5f71"
+  },
+  "title": "斯坦福大学创业成长课",
+  "authors": "李笑来",
+  "tags": "管理,经济",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "天津人民出版社",
+  "isbn": "9787201100036",
+  "reviews": "一翻",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2016-04-01",
+  "rating": 0,
+  "pic": "uploads/1692772176981-560478709.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5a7df54f1b48a3c8c5f8c"
+  },
+  "title": "好妈妈胜过好老师",
+  "authors": "尹建莉",
+  "tags": "生活,教育,育儿",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "作家出版社",
+  "isbn": "9787506345040",
+  "reviews": "翻过",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2009-01-01",
+  "rating": 0,
+  "pic": "uploads/1692772319825-502025761.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5a8e354f1b48a3c8c5fa3"
+  },
+  "title": "正面管教",
+  "authors": "简·尼尔森 (Jane Nelsen)",
+  "tags": "育儿,家庭，生活",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "京华出版社",
+  "isbn": "9787807246176",
+  "reviews": "翻过",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2009-01-01",
+  "rating": 4,
+  "pic": "uploads/1692772579094-841095906.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5a99554f1b48a3c8c5fb5"
+  },
+  "title": "我们仨",
+  "authors": "杨绛",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "三联书店",
+  "isbn": "9787108042453",
+  "reviews": "买过 翻过 忘了 算读过吗",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2012-09-01",
+  "rating": 0,
+  "pic": "uploads/1692772757439-562289815.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5aa7a54f1b48a3c8c5fc4"
+  },
+  "title": "人·地·城",
+  "authors": "徐远",
+  "tags": "房地产",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京大学出版社",
+  "isbn": "9787301274941",
+  "reviews": "还行 翻过 没啥吸引力",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2016-10-01",
+  "rating": 3,
+  "pic": "uploads/1692772986968-326883083.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5ab1b54f1b48a3c8c5fdd"
+  },
+  "title": "断舍离",
+  "authors": "山下英子",
+  "tags": "生活",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "广西科学技术出版社",
+  "isbn": "9787807639817",
+  "reviews": "一个人如何使用自己的时间才是高效的呢，每天都有做不完的事情，而时间有限，需要选择什么事情可以做，什么事情不能做。提高自己管理时间的效率的方法就是舍弃一些事情，而把更多的时间分摊个重要的那几件事情上。吴军老师说，一个人想过什么样的生活就要去做生么样的事情，而放弃去做不相关的事，这样慢慢的这个人就可以过上自己想要的生活了。而吴军老师说他这个观点就是从这本书中看到的。update2023.06.13只记得书架上有这本书，内容没印象了",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2013-07-30",
+  "rating": 3,
+  "pic": "uploads/1692773147923-771631611.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5ac1454f1b48a3c8c5fef"
+  },
+  "title": "JavaScript高级程序设计（第4版）",
+  "authors": "[美] 马特·弗里斯比",
+  "tags": "JavaScript",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115545381",
+  "reviews": "JavaScript的书看一本足够了，这本就不看了",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2020-08-01",
+  "rating": 5,
+  "pic": "uploads/1692773396191-668133447.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5ad3e54f1b48a3c8c5fff"
+  },
+  "title": "Diplomacy",
+  "authors": "Henry Kissinger",
+  "tags": "外交",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "Simon & Schuster",
+  "isbn": "9780671510992",
+  "reviews": "中文版的看过了",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "1995-04-04",
+  "rating": 5,
+  "pic": "uploads/1692773694099-825881389.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5adca54f1b48a3c8c600f"
+  },
+  "title": "筚路蓝缕",
+  "authors": "张国宝",
+  "tags": "大国工程,当代中国",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民出版社",
+  "isbn": "9787010197531",
+  "reviews": "从未接触过的领域，长长见识",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2018-09-01",
+  "rating": 4,
+  "pic": "uploads/1692773834021-623267878.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5af5f54f1b48a3c8c6023"
+  },
+  "title": "AI未来进行式",
+  "authors": "李开复,陈楸帆",
+  "tags": "AI",
+  "topics": "李开复",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "浙江人民出版社",
+  "isbn": "9787213101625",
+  "reviews": "20年后的时间是什么样的？这本书里有答案。不是典型的科幻小说，而是基于现有产业发展趋势做的预测。开复在ai领域的造诣众所周知，四十多年的积累，看待ai未来发展趋势的眼光当然有独到之处。updated 2023.6.13现在的AI进行式太火爆了，ChatGPT已经大显身手了",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2022-04-01",
+  "rating": 4,
+  "pic": "uploads/1692774239919-972701634.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b01154f1b48a3c8c6037"
+  },
+  "title": "巨人的工具",
+  "authors": "[美] 蒂姆·费里斯 (Tim Ferriss)",
+  "tags": "管理,工具,认知,见识,提升",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版社",
+  "isbn": "9787508693248",
+  "reviews": "睡前一翻，触动我的故事并不多，但是算得上是引发了思考",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2018-12-24",
+  "rating": 5,
+  "pic": "uploads/1692774417655-586356275.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b0ad54f1b48a3c8c6053"
+  },
+  "title": "Kotlin实战",
+  "authors": "【美】Dmitry Jemerov（德米特里·詹莫瑞福）,【美】 Svetlana Isakova（斯维特拉娜·伊凡诺沃）",
+  "tags": "Kotlin,开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "电子工业出版社",
+  "isbn": "9787121321580",
+  "reviews": "放在书架上已经落灰了，还没抽出时间看呢。虽然官方力推Kotlin，但是还没听说身边的人有在日常开发中用的呢。留着以后再看吧。##2020.04.05 ##在家看GitHub上面滴滴的开发工具开源项目的时候，发现这个项目已经默认支持AndroidX和kotlin了，再加上最近遇到的其他几个kotlin项目，感觉是时候系统学习一下它了。要不然没办法了解业内新技术了，就跟不上技术进步的步伐了。kotlin给我的第一印象是编译型语言，就像JS那样，但是实际上它确是和java一样的静态型语言，它所谓的弱数据类型只是是在编译阶段由编译器根据变量赋值而反推出来的类型，类型并不是运行阶段才决定的。但是kotlin确实有很多优点，但是我没办法深究吧，能看懂即可，毕竟目前还要专注于framework层。",
+  "excerpts": "",
+  "purchaseYear": "2023-06-13",
+  "publicationYear": "2017-08-01",
+  "rating": 3,
+  "pic": "uploads/1692774573003-781300265.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b11554f1b48a3c8c606b"
+  },
+  "title": "启发",
+  "authors": "罗振宇",
+  "tags": "认知",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "新星出版社",
+  "isbn": "9787513350716",
+  "reviews": "“蹲坑”用书",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2023-01-01",
+  "rating": 5,
+  "pic": "uploads/1692774677292-156969841.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b1d254f1b48a3c8c6080"
+  },
+  "title": "Harry Potter and the Philosopher's Stone",
+  "authors": "[英] J·K·罗琳",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "Bloosbury Publishing Plc",
+  "isbn": "9781408855652",
+  "reviews": "super like the story, enjoy reading it",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2014-09-01",
+  "rating": 5,
+  "pic": "uploads/1692774866961-698365250.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b2b654f1b48a3c8c608f"
+  },
+  "title": "你当像鸟飞往你的山",
+  "authors": "塔拉·韦斯特弗",
+  "tags": "文学,小说",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "南海出版公司",
+  "isbn": "9787544276986",
+  "reviews": "罗振宇推荐的书，说的是一个从来没有读过书的女孩考上了顶级学校硕士的故事，展示了一个人的潜力可以无限的放大。正在读英文版。",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2019-10-01",
+  "rating": 4,
+  "pic": "uploads/1692775094368-988358069.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b3ae54f1b48a3c8c60a0"
+  },
+  "title": "小孩",
+  "authors": "大冰",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "湖南文艺出版社",
+  "isbn": "9787540492380",
+  "reviews": "一本书就读了这么一句：走过的路越多，越喜欢宅着。见过的人越多，越喜欢孩子。其他的看不下去。",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2019-07-01",
+  "rating": 3,
+  "pic": "uploads/1692775342367-7466114.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b40e54f1b48a3c8c60af"
+  },
+  "title": "保重",
+  "authors": "大冰",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "北京联合出版公司",
+  "isbn": "9787559664129",
+  "reviews": "年龄和阅历的关系，看不下去了",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2022-08-01",
+  "rating": 3,
+  "pic": "uploads/1692775438285-882061972.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b50354f1b48a3c8c60c6"
+  },
+  "title": "乖，摸摸头",
+  "authors": "大冰",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "湖南文艺出版社",
+  "isbn": "9787540468798",
+  "reviews": "是因为小时候看大冰主持的节目认识他的，在我心中是才子佳人的存在。所以一直想拜读一下他的作品，所以就入手了能买到的他的所有的书。然后只有这一本里的杂草敏哪一故事吸引我，给我留下了深刻的印象。但是，对于大冰现在追求的生活style，我是没有同感的，甚至有种潜意识的排斥。我有时候再想，如果要是放在10年前，甚至15年前，我肯定会被这样的故事深深打动。",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2014-09-01",
+  "rating": 3,
+  "pic": "uploads/1692775683289-547940066.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b57354f1b48a3c8c60d3"
+  },
+  "title": "第一行代码(第3版)",
+  "authors": "郭霖",
+  "tags": "开发,Android",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115524836",
+  "reviews": "本来是想看看关于jetpack和协程的部分，但是其实帮助不大，对这两者的理解其实来自于其他资料",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2020-04-01",
+  "rating": 3,
+  "pic": "uploads/1692775795483-30396988.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b61354f1b48a3c8c60e4"
+  },
+  "title": "JavaScript权威指南（原书第7版）",
+  "authors": "[美] David Flanagan",
+  "tags": "JavaScript",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "机械工业出版社",
+  "isbn": "9787111677222",
+  "reviews": "这是本好书，刷这一本就足够了，里面有很多经验之谈，干货不少。匹配我的阅读偏好。赞",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2021-03-20",
+  "rating": 5,
+  "pic": "uploads/1692775955593-806746634.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b70554f1b48a3c8c60f3"
+  },
+  "title": "深入React技术栈",
+  "authors": "陈屹",
+  "tags": "React,开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115437303",
+  "reviews": "这本书和这位作者的风格都比较匹配我的偏好，有收获",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2016-11-01",
+  "rating": 5,
+  "pic": "uploads/1692776197186-11435723.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b76154f1b48a3c8c6104"
+  },
+  "title": "JavaScript高级程序设计（第3版）",
+  "authors": "[美] Nicholas C. Zakas",
+  "tags": "JavaScript,开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115275790",
+  "reviews": "刷一波，一抹js在我心中矮穷矬的形象，原来现代版本的js是那么的超前。当然很多感知并不是来自这本书，只是这本书是认知中的一环而已",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2012-03-29",
+  "rating": 5,
+  "pic": "uploads/1692776289893-421907261.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b7d654f1b48a3c8c6114"
+  },
+  "title": "DK天文大百科",
+  "authors": "[英] 伊恩·里德帕斯",
+  "tags": "天文,百科,科学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京科学技术出版社",
+  "isbn": "9787571405632",
+  "reviews": "DK的书都不错，无脑入了第N本了，送给孩子的礼物",
+  "excerpts": "",
+  "purchaseYear": "2023-06-12",
+  "publicationYear": "2020-10-01",
+  "rating": 5,
+  "pic": "uploads/1692776406072-603656048.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b89254f1b48a3c8c612a"
+  },
+  "title": "黄金时代",
+  "authors": "王小波",
+  "tags": "王小波,文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京十月文艺出版社",
+  "isbn": "9787530216606",
+  "reviews": "这种风格的文章容易把我带回到高中时代，会让我想起读杂志和报纸的那个年代。那些生活状态，那些事。内心的共鸣还是很波澜壮阔的，这也是为什么他的作品吸引我的原因。另外，和菜头对黄金时代那一章的评论还是很有深度的。",
+  "excerpts": "",
+  "purchaseYear": "2023-06-11",
+  "publicationYear": "2017-04-01",
+  "rating": 5,
+  "pic": "uploads/1692776594784-323762017.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5b8e854f1b48a3c8c613c"
+  },
+  "title": "React 学习手册（第二版）",
+  "authors": "[美] Alex Banks,[美] Eve Procello",
+  "tags": "React,开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中国电力出版社",
+  "isbn": "9787519856540",
+  "reviews": "干货很多，对口味的少有的一本书",
+  "excerpts": "",
+  "purchaseYear": "2023-06-06",
+  "publicationYear": "2021-06-01",
+  "rating": 5,
+  "pic": "uploads/1692776680413-831287993.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5ba7054f1b48a3c8c6152"
+  },
+  "title": "React Native开发指南（第2版）",
+  "authors": "[美]邦尼•艾森曼",
+  "tags": "React,开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115509017",
+  "reviews": "不太深，原理少，不涉及引擎相关内容，作者功力不够深厚",
+  "excerpts": "",
+  "purchaseYear": "2023-06-05",
+  "publicationYear": "2019-04-01",
+  "rating": 4,
+  "pic": "uploads/1692777072258-334994176.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5bad454f1b48a3c8c6162"
+  },
+  "title": "Kotlin核心编程",
+  "authors": "水滴技术团队",
+  "tags": "Kotlin,开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "机械工业出版社",
+  "isbn": "9787111624318",
+  "reviews": "非常棒，最后竟然和redux连上了，全栈的视野",
+  "excerpts": "",
+  "purchaseYear": "2023-06-05",
+  "publicationYear": "2019-04-15",
+  "rating": 5,
+  "pic": "uploads/1692777172347-834943334.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5bb2c54f1b48a3c8c6172"
+  },
+  "title": "富足",
+  "authors": "吴军",
+  "tags": "吴军,认知",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版集团",
+  "isbn": "9787521751123",
+  "reviews": "作为每本都读的粉丝，作者的套路已熟悉，虽然大多都内容都了解过。那又能怎么样呢，再看一遍也有收获",
+  "excerpts": "",
+  "purchaseYear": "2023-05-21",
+  "publicationYear": "2023-01-01",
+  "rating": 5,
+  "pic": "uploads/1692777260962-67571946.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5bb8754f1b48a3c8c6183"
+  },
+  "title": "界限",
+  "authors": "【美】 内德拉·格洛佛·塔瓦布",
+  "tags": "认知",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版社",
+  "isbn": "9787521735321",
+  "reviews": "翻了一下，看了几章，启发不大",
+  "excerpts": "",
+  "purchaseYear": "2023-05-21",
+  "publicationYear": "2022-01-25",
+  "rating": 3,
+  "pic": "uploads/1692777351883-419460378.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5bc0854f1b48a3c8c6191"
+  },
+  "title": "旋元佑英文字彙",
+  "authors": "旋元佑",
+  "tags": "英语",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "眾文",
+  "isbn": "9789575325350",
+  "reviews": "这个时间点说明什么？",
+  "excerpts": "",
+  "purchaseYear": "2023-05-21",
+  "publicationYear": "2019-12-01",
+  "rating": 5,
+  "pic": "uploads/1692777480941-728091449.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5bdd454f1b48a3c8c61a1"
+  },
+  "title": "硅谷之谜",
+  "authors": "吴军",
+  "tags": "吴军",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115410924",
+  "reviews": "",
+  "excerpts": "",
+  "purchaseYear": "2023-05-21",
+  "publicationYear": "2015-12-01",
+  "rating": 5,
+  "pic": "uploads/1692777940711-502837458.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5be9154f1b48a3c8c61bd"
+  },
+  "title": "文明之光",
+  "authors": "吴军",
+  "tags": "科普,历史,吴军",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115001429",
+  "reviews": "不错",
+  "excerpts": "",
+  "purchaseYear": "2023-05-21",
+  "publicationYear": "2014-12-01",
+  "rating": 5,
+  "pic": "uploads/1692778129257-952312205.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5beee54f1b48a3c8c61d0"
+  },
+  "title": "What It Takes",
+  "authors": "Stephen A. Schwarzman",
+  "tags": "管理",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "Avid Reader Press / Simon & Schuster",
+  "isbn": "9781501158148",
+  "reviews": "go big",
+  "excerpts": "",
+  "purchaseYear": "2019-09-17",
+  "publicationYear": "2023-05-19",
+  "rating": 5,
+  "pic": "uploads/1692778222334-517284628.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5bf5254f1b48a3c8c61df"
+  },
+  "title": "纳瓦尔宝典",
+  "authors": "[美] 埃里克·乔根森",
+  "tags": "管理,商业,认知",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版社",
+  "isbn": "9787521741124",
+  "reviews": "这本书里推荐的书单花费了我上千元",
+  "excerpts": "",
+  "purchaseYear": "2023-05-08",
+  "publicationYear": "2022-04-01",
+  "rating": 5,
+  "pic": "uploads/1692778322518-100230030.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5bfaf54f1b48a3c8c61f2"
+  },
+  "title": "高敏感是种天赋",
+  "authors": "[丹麦]伊尔斯·桑德",
+  "tags": "心理,认知",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京联合出版公司",
+  "isbn": "9787559608710",
+  "reviews": "哪些人属于高敏感的人？这个问题的答案也许并不重要，更重要的是外界环境的互动过程中自己内心能量的真实波动情况如何？以及如何调整自己到最佳状态。不过，我确实在更多的场景下，更偏好深度聊天，相比之下，这本书对这一点的探讨对我更有启发",
+  "excerpts": "",
+  "purchaseYear": "2023-05-02",
+  "publicationYear": "2017-08-01",
+  "rating": 4,
+  "pic": "uploads/1692778415502-453801860.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5c02254f1b48a3c8c6204"
+  },
+  "title": "薄世宁医学通识讲义",
+  "authors": "薄世宁",
+  "tags": "医学通识,医学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版集团",
+  "isbn": "9787521709605",
+  "reviews": "对于没有系统了解过医学知识的读者来讲是很有帮助和启发的。得到的课程已经听过了。",
+  "excerpts": "",
+  "purchaseYear": "2023-04-20",
+  "publicationYear": "2019-10-01",
+  "rating": 5,
+  "pic": "uploads/1692778530417-530993213.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5c09754f1b48a3c8c6216"
+  },
+  "title": "中央帝国的财政密码",
+  "authors": "郭建龙",
+  "tags": "历史,经济",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "鹭江出版社",
+  "isbn": "9787545911091",
+  "reviews": "bold",
+  "excerpts": "",
+  "purchaseYear": "2023-04-20",
+  "publicationYear": "2017-04-01",
+  "rating": 5,
+  "pic": "uploads/1692778647052-260979496.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5c10054f1b48a3c8c6227"
+  },
+  "title": "中央帝国的哲学密码",
+  "authors": "郭建龙",
+  "tags": "哲学,郭建龙",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "鹭江出版社",
+  "isbn": "9787545915174",
+  "reviews": "bold",
+  "excerpts": "",
+  "purchaseYear": "2023-04-20",
+  "publicationYear": "2018-08-01",
+  "rating": 5,
+  "pic": "uploads/1692778752798-606969281.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5c1ea54f1b48a3c8c6238"
+  },
+  "title": "中央帝国的军事密码",
+  "authors": "郭建龙",
+  "tags": "郭建龙,军事",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "鹭江出版社",
+  "isbn": "9787545916126",
+  "reviews": " 影响军事战争成败的重要原因之一是地理位置。称得上是成一家之言，起码给我的感觉是这样的，有启发。",
+  "excerpts": "",
+  "purchaseYear": "2023-04-20",
+  "publicationYear": "2019-09-01",
+  "rating": 5,
+  "pic": "uploads/1692778986033-879671123.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5c2da54f1b48a3c8c6249"
+  },
+  "title": "现代大学英语",
+  "authors": "杨立民",
+  "tags": "英语",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "外语教学与研究出版社",
+  "isbn": "9787560098760",
+  "reviews": "英语精读，翻翻看。sweet",
+  "excerpts": "",
+  "purchaseYear": "2023-04-20",
+  "publicationYear": "2010-08-01",
+  "rating": 5,
+  "pic": "uploads/1692779226741-763103333.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5c33154f1b48a3c8c6258"
+  },
+  "title": "Word Power Made Easy",
+  "authors": "Norman Lewis",
+  "tags": "英语",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "Pocket Books",
+  "isbn": "9780671741907",
+  "reviews": "巴掌大的书，还那么厚，翻起来不方便，所以吃灰中。还是旋元佑的大本书读起来有收获，7本已经搞定了一多半了。哈哈",
+  "excerpts": "",
+  "purchaseYear": "2023-04-20",
+  "publicationYear": "1991-02-15",
+  "rating": 5,
+  "pic": "uploads/1692779313612-976234181.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5c98754f1b48a3c8c6269"
+  },
+  "title": "血玲珑",
+  "authors": "毕淑敏",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民文学出版社",
+  "isbn": "9787020033546",
+  "reviews": "其实这本书早在10多年前就看过，当时还是塞班系统上的阅读软件，而且肯定是盗版书。最近终于买了纸质书，不过却是二手书，感觉这件小事多少还是说明和作者的缘分一直属于相对来讲比较清贫的程度",
+  "excerpts": "",
+  "purchaseYear": "2023-04-20",
+  "publicationYear": "2001-03-01",
+  "rating": 0,
+  "pic": "uploads/1692780935126-746433082.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5caaf54f1b48a3c8c6278"
+  },
+  "title": "显微镜下的大明",
+  "authors": "马伯庸",
+  "tags": "历史",
+  "topics": "",
+  "readingStatus": "在读",
+  "readingProgress": 0,
+  "publisherInfo": "湖南文艺出版社",
+  "isbn": "9787540488475",
+  "reviews": "非常有趣的纪实文学作品，读起来很享受",
+  "excerpts": "",
+  "purchaseYear": "2023-04-08",
+  "publicationYear": "2019-01-01",
+  "rating": 5,
+  "pic": "uploads/1692781231996-355572238.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5cb2954f1b48a3c8c6286"
+  },
+  "title": "稀缺",
+  "authors": "[美] Sendhil Mullainathan,[美] Eldar Shafir",
+  "tags": "认知,管理",
+  "topics": "",
+  "readingStatus": "在读",
+  "readingProgress": 0,
+  "publisherInfo": "浙江人民出版社",
+  "isbn": "9787213087929",
+  "reviews": "稀缺的条件如果对心态造成影响，这是大多数人的表现，其后果更为严重",
+  "excerpts": "",
+  "purchaseYear": "2023-03-05",
+  "publicationYear": "2018-07-01",
+  "rating": 5,
+  "pic": "uploads/1692781353685-534738472.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5cbab54f1b48a3c8c62a2"
+  },
+  "title": "旋元佑文法解題",
+  "authors": "旋元佑",
+  "tags": "英语",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "眾文",
+  "isbn": "9789575325428",
+  "reviews": " 一口气想刷完的冲动不能说不强烈，从此告别各类说不清道不明的语法规则，不破不立，解恨的是你终于可以俯视种种所谓特殊情况了，可恨的是你为什么现在才上车，为什么没有早点把这个技能树点亮，痛恨的是你竟然不知道用这个去考研或者考个东东",
+  "excerpts": "",
+  "purchaseYear": "2023-02-22",
+  "publicationYear": "2020-05-01",
+  "rating": 5,
+  "pic": "uploads/1692781483984-567746432.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5cc2254f1b48a3c8c62af"
+  },
+  "title": "深度工作",
+  "authors": "[美] 卡尔·纽波特",
+  "tags": "管理",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "江西人民出版社",
+  "isbn": "9787210093213",
+  "reviews": "me tm是多么的无知，感觉这几十年白活了，为什么本来应该更优秀的却迟迟没有做到？我是否真正深度工作过。这本书为什么没有早点看到！",
+  "excerpts": "",
+  "purchaseYear": "2023-02-19",
+  "publicationYear": "2017-07-01",
+  "rating": 5,
+  "pic": "uploads/1692781602570-55513751.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5cca954f1b48a3c8c62be"
+  },
+  "title": "我曾走在崩溃的边缘",
+  "authors": "俞敏洪",
+  "tags": "俞敏洪",
+  "topics": "名人传记",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版集团",
+  "isbn": "9787521703078",
+  "reviews": "配图丰富，有历史感。很多图片第一次看到。彩图。青涩的老俞，回不去的时光。对于老俞每本书都看的我来说，大部分内容属于老生常谈。看书名不会以为是写创业经历的。对于不打算创业的我来说不值得推敲。如果老俞能把2022年的事情以这样的书名来写一本，可能戏剧张力更大，老俞的人格魅力呈现的会更明显。并且出色度过了这段岁月，对于那么多无法做到这种层次的人来讲，更有启发意义。日子艰难，需要慰藉",
+  "excerpts": "",
+  "purchaseYear": "2023-02-07",
+  "publicationYear": "2019-04-01",
+  "rating": 5,
+  "pic": "uploads/1692781737136-790492336.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5cd0a54f1b48a3c8c62cd"
+  },
+  "title": "雅思词汇词根+联想记忆法",
+  "authors": "俞敏洪",
+  "tags": "俞敏洪,英语",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "群言出版社",
+  "isbn": "9787800805097",
+  "reviews": "啃",
+  "excerpts": "",
+  "purchaseYear": "2023-02-05",
+  "publicationYear": "2006-01-01",
+  "rating": 4,
+  "pic": "uploads/1692781834078-73845844.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5cd6c54f1b48a3c8c62dd"
+  },
+  "title": "旋元佑文法",
+  "authors": "旋元佑",
+  "tags": "英语",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "眾文",
+  "isbn": "9789575325329",
+  "reviews": "对得起封面上写的承诺",
+  "excerpts": "",
+  "purchaseYear": "2023-02-05",
+  "publicationYear": "2019-10-05",
+  "rating": 5,
+  "pic": "uploads/1692781932995-114761802.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5cde654f1b48a3c8c62ea"
+  },
+  "title": "法治的细节",
+  "authors": "罗翔",
+  "tags": "法律,刑法",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "云南人民出版社",
+  "isbn": "9787222204331",
+  "reviews": "这本书应该是选编成书的，看了刑法学讲义之后再看这本书，会发现重复信息不少。所以就简单翻了翻。里面实际的案例也有，但是感觉趣味性一般。但是这本书的亮点是最后的关于读经典的对话的部分。其实我只花了两个小时就把这本书翻完了",
+  "excerpts": "",
+  "purchaseYear": "2023-01-24",
+  "publicationYear": "2021-11-01",
+  "rating": 5,
+  "pic": "uploads/1692782054638-177619474.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5ce8d54f1b48a3c8c62fd"
+  },
+  "title": "刑法学讲义",
+  "authors": "罗翔",
+  "tags": "刑法",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "云南人民出版社",
+  "isbn": "9787222193727",
+  "reviews": "扫盲，从零开始学习。感觉罗老师讲的通俗易懂并且更重要的是，能讲出哲学道理。感觉是很好的榜样，所以跟着学。——##——2023.1.24 讲解的范围比较全面，尤其是结合实际案例来讲，既有趣味性也方便理解，很多接近的刑法法条就这样清晰地去分开了。不仅知道了法规，也理解了刑法的社会价值，刑法的必要性和作用。对于日常听说的社会上发生的案例，有了更加深刻的理解",
+  "excerpts": "",
+  "purchaseYear": "2023-01-24",
+  "publicationYear": "2020-08-01",
+  "rating": 5,
+  "pic": "uploads/1692782221099-864372126.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5cf7054f1b48a3c8c630a"
+  },
+  "title": "英语魔法师之语法俱乐部",
+  "authors": "旋元佑",
+  "tags": "英语",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "九州出版社",
+  "isbn": "9787801146274",
+  "reviews": "这tm简直是被名字耽误了的一本好书。这是私以为看过的最好的语法书，没有之一。但就凭作者提倡的“不要死记硬背”的理念并一以贯之，兑现承诺，看到最后都没有烂尾，就问你还有哪本书能做到？隔壁的什么道，什么真的，除了厚之外还可以防身，反正我是没那么多时间去啃。但是呢，这本书，简直是为理工科量身定制的。你不是要逻辑思维么，不是要理解才能融会贯通么，全都安排上。有啥理解不了的语法现象，来，旋老师给你分析一下。哦原来你说的这个问题，其实不能这么理解，它tmd其实是这么一个问题，把过去分词和现在分词全都当成形容词，这不就消消乐了么。还有谁，如果不是有深入到老巢的理解，能开那么大脑洞么？能自成一体地出这么一套神功么？而且这是野路子么，人家可是托福满分的好吧。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-16",
+  "publicationYear": "2001-05-01",
+  "rating": 5,
+  "pic": "uploads/1692782448685-850392480.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5cfd554f1b48a3c8c6318"
+  },
+  "title": "我们今天怎样做父亲",
+  "authors": "梁启超",
+  "tags": "家庭,生活",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "上海古籍出版社",
+  "isbn": "9787532595747",
+  "reviews": "还行 其实就是 家书",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2020-06-08",
+  "rating": 3,
+  "pic": "uploads/1692782549824-512558166.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5d06754f1b48a3c8c632a"
+  },
+  "title": "中国古代文化常识",
+  "authors": "王力,马汉麟,姜亮夫,叶圣陶,刘乐园",
+  "tags": "文化常识",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京联合出版公司",
+  "isbn": "9787550232822",
+  "reviews": "这本书对于语文考试非常有帮助，基本上试卷上涉及到的古代文化知识都有涉及，而且图文并茂，只要读过一边，各种文化意象的功力会提升不少。而我目前只看了一章，如果我还在上高中的话，肯定会刷一遍的。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2014-11-01",
+  "rating": 5,
+  "pic": "uploads/1692782695952-185639555.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5d0cf54f1b48a3c8c6345"
+  },
+  "title": "梁启超家书",
+  "authors": "梁启超",
+  "tags": "家庭,生活",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中国青年出版社",
+  "isbn": "9787500688402",
+  "reviews": "家书，即是最真实的记录，也给读者更大的参考价值。虽然本书里几乎每一篇家书都会大篇幅地谈论当时的大事件，然后在结束的最后一个或者几个段落才会谈及家人和生活琐事。但是重点关注那些真正家书的部分仍然是有很大的参考价值的。至于当时的历史大事件就是学者们比较关注的了。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2009-08-01",
+  "rating": 5,
+  "pic": "uploads/1692782799953-556429402.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5d1c454f1b48a3c8c635b"
+  },
+  "title": "清华园日记",
+  "authors": "季羡林",
+  "tags": "日记,季羡林,文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京十月文艺出版社",
+  "isbn": "9787530219775",
+  "reviews": "作者在自序中说，他要再不加修改的情况下，直接把影印版出版，还原日记最真实的样貌，从而给读者提供最大的参考价值。但是其实真本书并非影印版。但是翻了几篇日记，看过之后还是有收获的。里面有很多生活的细节，这也是日记的书籍的特色。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2020-10-01",
+  "rating": 5,
+  "pic": "uploads/1692783044574-284943495.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5d29754f1b48a3c8c636f"
+  },
+  "title": "无问西东",
+  "authors": "季羡林",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "天地出版社",
+  "isbn": "9787545549898",
+  "reviews": "值得多读",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2019-10-01",
+  "rating": 5,
+  "pic": "uploads/1692783255736-877690049.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5d47454f1b48a3c8c637d"
+  },
+  "title": "留德十年",
+  "authors": "季羡林",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "北京理工大学出版社",
+  "isbn": "9787568203180",
+  "reviews": "季老的写作风格是公认的坦诚和真实的。这也是他的作品的一大特色。留德十年围绕着第二次世界大战这个大历史时间，作者从自己的视角记录了不一样的人生经历。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2015-05-01",
+  "rating": 5,
+  "pic": "uploads/1692783732240-261857500.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5d4f254f1b48a3c8c638b"
+  },
+  "title": "天朝的崩溃",
+  "authors": "茅海建",
+  "tags": "历史",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "三联书店",
+  "isbn": "9787108050656",
+  "reviews": "成功激发了我的阅读兴趣。本书的副标题是鸦片战争再研究。从琦善卖国开始讲起，起码趣味性是很好的。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2014-10-01",
+  "rating": 5,
+  "pic": "uploads/1692783858904-710160862.jpg",
+  "__v": 0
+}]

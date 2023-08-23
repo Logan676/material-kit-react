@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "64e5a31754f1b48a3c8c5ed2"
+  },
+  "topic": "名人传记",
+  "bookId": "64e5a31754f1b48a3c8c5ec4,64e5a31754f1b48a3c8c5ec4,64e5a31754f1b48a3c8c5ec4,64e5cca954f1b48a3c8c62be",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e5af5f54f1b48a3c8c6033"
+  },
+  "topic": "李开复",
+  "bookId": "64e5af5f54f1b48a3c8c6023",
+  "__v": 0
+}]
