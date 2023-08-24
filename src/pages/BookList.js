@@ -94,10 +94,24 @@ const BookList = ({ refresh, entityId, from }) => {
       }
 
       const response = await axios.get('/api/books');
+
+      // 将购买年份转换为时间戳并按照时间戳排序
+      // const sortedBooks = response.data.sort((a, b) => {
+      //   const timestampA = getTimestampFromPurchaseYear(a.purchaseYear);
+      //   const timestampB = getTimestampFromPurchaseYear(b.purchaseYear);
+      //   return timestampB - timestampA;
+      // });
+
       setBooks(response.data);
     } catch (error) {
       console.error('获取书籍信息失败:', error);
     }
+  };
+
+  // 在合适的位置定义一个函数，用于将购买年份字符串转换为时间戳
+  const getTimestampFromPurchaseYear = (purchaseYear) => {
+    const [year, month, day] = purchaseYear.split('-').map(Number);
+    return new Date(year, month - 1, day).getTime(); // 月份从0开始，需要减1
   };
 
   const fetchBookObjects = async (bookIds) => {

@@ -84,7 +84,14 @@ const TagListPage = () => {
       .get('/api/tags')
       .then((response) => {
         console.log('查询到的标签:', response.data);
-        setSavedTags(response.data);
+
+        // 按照 BookId 长度进行排序
+        const sortedTags = response.data.slice().sort((a, b) => {
+          const aBookIdLength = a.bookId.split(',').length;
+          const bBookIdLength = b.bookId.split(',').length;
+          return bBookIdLength - aBookIdLength;
+        });
+        setSavedTags(sortedTags);
       })
       .catch((error) => {
         console.error('Error fetching saved tags:', error);

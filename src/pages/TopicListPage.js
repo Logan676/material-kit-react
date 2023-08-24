@@ -84,7 +84,14 @@ const TopicListPage = () => {
       .get('/api/topics')
       .then((response) => {
         console.log('查询到的专题:', response.data);
-        setSavedTopics(response.data);
+        // 按照 bookId 长度进行降序排序
+        const sortedTopics = response.data.slice().sort((a, b) => {
+          const aBookIdLength = a.bookId.split(',').length;
+          const bBookIdLength = b.bookId.split(',').length;
+          // 降序排序：将 b 放在前面以排在 a 前面
+          return bBookIdLength - aBookIdLength;
+        });
+        setSavedTopics(sortedTopics);
       })
       .catch((error) => {
         console.error('Error fetching saved topics:', error);

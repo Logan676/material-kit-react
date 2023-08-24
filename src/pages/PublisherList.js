@@ -8,6 +8,28 @@ import axios from './axiosInstance';
 import { countBookIds, imageHost } from './utils';
 
 const useStyles = makeStyles((theme) => ({
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    // marginBottom: theme.spacing(2),
+  },
+  singleLineStyle: {
+    padding: theme.spacing(1),
+    // marginBottom: theme.spacing(2),
+  },
+  singleLineContent: {
+    display: 'flex',
+    color: 'black',
+    justifyContent: 'space-between',
+  },
+  singleLineText: {
+    // flexGrow: 1,
+    color: 'black',
+  },
+  singleLineActions: {
+    marginLeft: theme.spacing(2),
+  },
   card: {
     display: 'flex',
     width: 500,
@@ -38,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
 const PublisherList = ({ refresh, onEdit }) => {
   const classes = useStyles();
   const [publishers, setPublishers] = useState([]);
+  const [isCardStyle, setIsCardStyle] = useState(false);
 
   useEffect(() => {
     fetchPublishers();
@@ -46,7 +69,14 @@ const PublisherList = ({ refresh, onEdit }) => {
   const fetchPublishers = async () => {
     try {
       const response = await axios.get('/api/publishers');
-      setPublishers(response.data);
+      // 按照 bookId 长度进行降序排序
+      const sortedPublishers = response.data.slice().sort((a, b) => {
+        const aBookIdLength = a.bookId.split(',').length;
+        const bBookIdLength = b.bookId.split(',').length;
+        // 降序排序：将 b 放在前面以排在 a 前面
+        return bBookIdLength - aBookIdLength;
+      });
+      setPublishers(sortedPublishers);
     } catch (error) {
       console.error('Error fetching publishers:', error);
     }
@@ -70,41 +100,58 @@ const PublisherList = ({ refresh, onEdit }) => {
 
   return (
     <div>
-      <Typography variant="body1" gutterBottom>
-        总共有 {publishers.length} 家出版社
-      </Typography>
+      <div className={classes.header}>
+        <Typography variant="body1" gutterBottom>
+          总共有 {publishers.length} 家出版社
+        </Typography>
+        <Button variant="outlined" onClick={() => setIsCardStyle(!isCardStyle)}>
+          切换列表样式
+        </Button>
+      </div>
       {publishers.map((publisher, index) => {
         const imageUrl = `${imageHost}/${publisher.pic}`;
         const publisherPath = `/dashboard/publisher/${publisher._id}`;
         return (
           <Link key={publisher._id} to={publisherPath} className={classes.link}>
-            <Card key={publisher._id} className={classes.card}>
-              <CardActionArea className={classes.actionArea}>
-                <div className={classes.cardContent}>
-                  <Typography variant="h5" component="h2">
-                    {publisher.name}
-                  </Typography>
-                  <Typography variant="body2" gutterBottom>
-                    编号：{index + 1}
+            {isCardStyle ? (
+              // 第一种样式（卡片样式）
+              <Card key={publisher._id} className={classes.card}>
+                <CardActionArea className={classes.actionArea}>
+                  <div className={classes.cardContent}>
+                    <Typography variant="h5" component="h2">
+                      {index + 1}. {publisher.name}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      关联书籍 {countBookIds(publisher.bookId)} 本
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      重要出版作品：{publisher.representativeWork}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      出版社简介：{publisher.introduction}
+                    </Typography>
+                  </div>
+                  <CardMedia className={classes.cardMedia} image={imageUrl} title={publisher.name} />
+                  <CardContent>
+                    <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(publisher)}>
+                      <DeleteIcon />
+                    </IconButton>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            ) : (
+              // 第二种样式（单行样式）
+              <div className={classes.singleLineStyle}>
+                <div className={classes.singleLineContent}>
+                  <Typography variant="body2" component="h2">
+                    {index + 1}. {publisher.name}
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
                     关联书籍 {countBookIds(publisher.bookId)} 本
                   </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    重要出版作品：{publisher.representativeWork}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    出版社简介：{publisher.introduction}
-                  </Typography>
                 </div>
-                <CardMedia className={classes.cardMedia} image={imageUrl} title={publisher.name} />
-                <CardContent>
-                  <IconButton aria-label="删除" color="secondary" onClick={() => handleDelete(publisher)}>
-                    <DeleteIcon />
-                  </IconButton>
-                </CardContent>
-              </CardActionArea>
-            </Card>
+              </div>
+            )}
           </Link>
         );
       })}
