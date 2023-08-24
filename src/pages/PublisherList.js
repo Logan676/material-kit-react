@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@mui/styles';
-import { Card, CardActionArea, CardContent, CardMedia, Typography, IconButton, Button, Box, Grid } from '@mui/material';
+import {
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Typography,
+  IconButton,
+  Button,
+  Box,
+  Grid,
+  Divider,
+} from '@mui/material';
 import { Link } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
@@ -12,11 +23,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    // marginBottom: theme.spacing(2),
   },
   singleLineStyle: {
     padding: theme.spacing(1),
-    // marginBottom: theme.spacing(2),
   },
   singleLineContent: {
     display: 'flex',
@@ -150,6 +159,7 @@ const PublisherList = ({ refresh, onEdit }) => {
                     关联书籍 {countBookIds(publisher.bookId)} 本
                   </Typography>
                 </div>
+                <Divider />
               </div>
             )}
           </Link>
