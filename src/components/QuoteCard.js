@@ -7,8 +7,8 @@ const useStyles = makeStyles((theme) => ({
   card: {
     display: 'flex',
     // height: 200,
-    padding: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    // padding: theme.spacing(2),
+    // marginBottom: theme.spacing(2),
     alignItems: 'center', // Align items vertically in the card
   },
 }));
@@ -18,10 +18,10 @@ const QuoteCard = ({ text, author }) => {
   return (
     <div>
       <CardContent>
-        <Typography variant="h5" component="div">
+        <Typography variant="body3" component="div">
           <FormatQuoteIcon /> {text}
         </Typography>
-        <Typography variant="subtitle1" color="text.secondary" sx={{ textAlign: 'right', marginTop: 2 }}>
+        <Typography variant="subtitle2" color="text.secondary" sx={{ textAlign: 'right', marginTop: 0 }}>
           - {author}
         </Typography>
       </CardContent>

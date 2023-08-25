@@ -21,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: 'italic',
     color: 'gray',
     fontSize: '0.5rem',
-    marginBottom: '1rem',
+    // marginBottom: '1rem',
   },
   cardActions: {
     display: 'flex',
     justifyContent: 'space-between', // Horizontal space between items
     alignItems: 'flex-start',
-    marginTop: '1rem',
-    marginBottom: '3rem',
+    // marginTop: '1rem',
+    // marginBottom: '3rem',
   },
   quoteCardContainer: {
     flex: 1, // Take available space
