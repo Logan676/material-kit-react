@@ -4,7 +4,7 @@
   },
   "name": "中信出版集团",
   "pic": "",
-  "bookId": "64e5a31754f1b48a3c8c5ec4,64e5a31754f1b48a3c8c5ec4,64e5a31754f1b48a3c8c5ec4,64e5bb2c54f1b48a3c8c6172,64e5c02254f1b48a3c8c6204,64e5cca954f1b48a3c8c62be",
+  "bookId": "64e5a31754f1b48a3c8c5ec4,64e5a31754f1b48a3c8c5ec4,64e5a31754f1b48a3c8c5ec4,64e5bb2c54f1b48a3c8c6172,64e5c02254f1b48a3c8c6204,64e5cca954f1b48a3c8c62be,64e7083a13e06cfe2ba0c08a,64e710a013e06cfe2ba0c192,64e8219e13e06cfe2ba0c4d0",
   "__v": 0
 },
 {
@@ -22,7 +22,7 @@
   },
   "name": "南海出版公司",
   "pic": "",
-  "bookId": "64e5a5c654f1b48a3c8c5f35,64e5b2b654f1b48a3c8c608f",
+  "bookId": "64e5a5c654f1b48a3c8c5f35,64e5b2b654f1b48a3c8c608f,64e80fb413e06cfe2ba0c32f",
   "__v": 0
 },
 {
@@ -31,7 +31,7 @@
   },
   "name": "广西师范大学出版社",
   "pic": "",
-  "bookId": "64e5a6c954f1b48a3c8c5f58",
+  "bookId": "64e5a6c954f1b48a3c8c5f58,64e7039d13e06cfe2ba0c021,64e711b913e06cfe2ba0c1c0",
   "__v": 0
 },
 {
@@ -49,7 +49,7 @@
   },
   "name": "作家出版社",
   "pic": "",
-  "bookId": "64e5a7df54f1b48a3c8c5f8c",
+  "bookId": "64e5a7df54f1b48a3c8c5f8c,64e7128d13e06cfe2ba0c1d5,64e81ea513e06cfe2ba0c484,64e81ea513e06cfe2ba0c484,64e81ea513e06cfe2ba0c484",
   "__v": 0
 },
 {
@@ -67,7 +67,7 @@
   },
   "name": "三联书店",
   "pic": "",
-  "bookId": "64e5a99554f1b48a3c8c5fb5,64e5d4f254f1b48a3c8c638b",
+  "bookId": "64e5a99554f1b48a3c8c5fb5,64e5d4f254f1b48a3c8c638b,64e713ef13e06cfe2ba0c209,64e80dd313e06cfe2ba0c301,64e8176313e06cfe2ba0c37d",
   "__v": 0
 },
 {
@@ -76,7 +76,7 @@
   },
   "name": "北京大学出版社",
   "pic": "",
-  "bookId": "64e5aa7a54f1b48a3c8c5fc4",
+  "bookId": "64e5aa7a54f1b48a3c8c5fc4,64e70b1b13e06cfe2ba0c0cc,64e81f6313e06cfe2ba0c4a5,64e81fb913e06cfe2ba0c4b3",
   "__v": 0
 },
 {
@@ -94,7 +94,7 @@
   },
   "name": "人民邮电出版社",
   "pic": "",
-  "bookId": "64e5ac1454f1b48a3c8c5fef,64e5b57354f1b48a3c8c60d3,64e5b70554f1b48a3c8c60f3,64e5b76154f1b48a3c8c6104,64e5ba7054f1b48a3c8c6152,64e5bdd454f1b48a3c8c61a1,64e5be9154f1b48a3c8c61bd",
+  "bookId": "64e5ac1454f1b48a3c8c5fef,64e5b57354f1b48a3c8c60d3,64e5b70554f1b48a3c8c60f3,64e5b76154f1b48a3c8c6104,64e5ba7054f1b48a3c8c6152,64e5bdd454f1b48a3c8c61a1,64e5be9154f1b48a3c8c61bd,64e8189b13e06cfe2ba0c3a5,64e8409e13e06cfe2ba0c5a3,64e8423d13e06cfe2ba0c5b1,64e8428d13e06cfe2ba0c5c4",
   "__v": 0
 },
 {
@@ -130,7 +130,7 @@
   },
   "name": "中信出版社",
   "pic": "",
-  "bookId": "64e5b01154f1b48a3c8c6037,64e5bb8754f1b48a3c8c6183,64e5bf5254f1b48a3c8c61df",
+  "bookId": "64e5b01154f1b48a3c8c6037,64e5bb8754f1b48a3c8c6183,64e5bf5254f1b48a3c8c61df,64e70f2513e06cfe2ba0c15f,64e80d6a13e06cfe2ba0c2f3,64e81c7713e06cfe2ba0c447,64e843b513e06cfe2ba0c5e6,64e8454e13e06cfe2ba0c62b",
   "__v": 0
 },
 {
@@ -148,7 +148,7 @@
   },
   "name": "新星出版社",
   "pic": "",
-  "bookId": "64e5b11554f1b48a3c8c606b",
+  "bookId": "64e5b11554f1b48a3c8c606b,64e816a013e06cfe2ba0c35a",
   "__v": 0
 },
 {
@@ -166,7 +166,7 @@
   },
   "name": "湖南文艺出版社",
   "pic": "",
-  "bookId": "64e5b3ae54f1b48a3c8c60a0,64e5b50354f1b48a3c8c60c6,64e5caaf54f1b48a3c8c6278",
+  "bookId": "64e5b3ae54f1b48a3c8c60a0,64e5b50354f1b48a3c8c60c6,64e5caaf54f1b48a3c8c6278,64e70f9313e06cfe2ba0c16f,64e80f4513e06cfe2ba0c31e,64e814f713e06cfe2ba0c33d",
   "__v": 0
 },
 {
@@ -175,7 +175,7 @@
   },
   "name": "北京联合出版公司",
   "pic": "",
-  "bookId": "64e5b40e54f1b48a3c8c60af,64e5bfaf54f1b48a3c8c61f2,64e5d06754f1b48a3c8c632a",
+  "bookId": "64e5b40e54f1b48a3c8c60af,64e5bfaf54f1b48a3c8c61f2,64e5d06754f1b48a3c8c632a,64e7042213e06cfe2ba0c02f",
   "__v": 0
 },
 {
@@ -184,7 +184,7 @@
   },
   "name": "机械工业出版社",
   "pic": "",
-  "bookId": "64e5b61354f1b48a3c8c60e4,64e5bad454f1b48a3c8c6162",
+  "bookId": "64e5b61354f1b48a3c8c60e4,64e5bad454f1b48a3c8c6162,64e80d0613e06cfe2ba0c2e3,64e818f013e06cfe2ba0c3b6,64e8196c13e06cfe2ba0c3c7,64e819ea13e06cfe2ba0c3df,64e81b8f13e06cfe2ba0c425,64e8401913e06cfe2ba0c595",
   "__v": 0
 },
 {
@@ -202,7 +202,7 @@
   },
   "name": "北京十月文艺出版社",
   "pic": "",
-  "bookId": "64e5b89254f1b48a3c8c612a,64e5d1c454f1b48a3c8c635b",
+  "bookId": "64e5b89254f1b48a3c8c612a,64e5d1c454f1b48a3c8c635b,64e80a5a13e06cfe2ba0c2c6,64e844f913e06cfe2ba0c61d,64e8459413e06cfe2ba0c639",
   "__v": 0
 },
 {
@@ -247,7 +247,7 @@
   },
   "name": "外语教学与研究出版社",
   "pic": "",
-  "bookId": "64e5c2da54f1b48a3c8c6249",
+  "bookId": "64e5c2da54f1b48a3c8c6249,64e70bc213e06cfe2ba0c0da",
   "__v": 0
 },
 {
@@ -265,7 +265,7 @@
   },
   "name": "人民文学出版社",
   "pic": "",
-  "bookId": "64e5c98754f1b48a3c8c6269",
+  "bookId": "64e5c98754f1b48a3c8c6269,64e8157013e06cfe2ba0c34b,64e8170013e06cfe2ba0c36d,64e817cb13e06cfe2ba0c38b,64e8183613e06cfe2ba0c398,64e823b313e06cfe2ba0c51f,64e8445513e06cfe2ba0c602,64e844a213e06cfe2ba0c60f",
   "__v": 0
 },
 {
@@ -283,7 +283,7 @@
   },
   "name": "群言出版社",
   "pic": "",
-  "bookId": "64e5cd0a54f1b48a3c8c62cd",
+  "bookId": "64e5cd0a54f1b48a3c8c62cd,64e70dd013e06cfe2ba0c130",
   "__v": 0
 },
 {
@@ -319,7 +319,7 @@
   },
   "name": "中国青年出版社",
   "pic": "",
-  "bookId": "64e5d0cf54f1b48a3c8c6345",
+  "bookId": "64e5d0cf54f1b48a3c8c6345,64e7048b13e06cfe2ba0c042,64e80e4513e06cfe2ba0c310",
   "__v": 0
 },
 {
@@ -337,6 +337,231 @@
   },
   "name": "北京理工大学出版社",
   "pic": "",
-  "bookId": "64e5d47454f1b48a3c8c637d",
+  "bookId": "64e5d47454f1b48a3c8c637d,64e707a813e06cfe2ba0c076",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7052913e06cfe2ba0c05f"
+  },
+  "name": "中华书局",
+  "pic": "",
+  "bookId": "64e7052913e06cfe2ba0c053,64e70ac113e06cfe2ba0c0b9,64e81f0a13e06cfe2ba0c492,64e8229413e06cfe2ba0c4f1",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e706d113e06cfe2ba0c074"
+  },
+  "name": "清华大学出版社",
+  "pic": "",
+  "bookId": "64e706d113e06cfe2ba0c061,64e80ca613e06cfe2ba0c2d5,64e8434913e06cfe2ba0c5d6",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7099313e06cfe2ba0c0a5"
+  },
+  "name": "中国人民大学出版社",
+  "pic": "",
+  "bookId": "64e7099313e06cfe2ba0c098",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70a2813e06cfe2ba0c0b4"
+  },
+  "name": "商务印书馆",
+  "pic": "",
+  "bookId": "64e70a2813e06cfe2ba0c0a7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70c4913e06cfe2ba0c0fa"
+  },
+  "name": "上海译文出版社",
+  "pic": "",
+  "bookId": "64e70c4913e06cfe2ba0c0eb",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70cb213e06cfe2ba0c10b"
+  },
+  "name": "中国友谊出版公司",
+  "pic": "",
+  "bookId": "64e70cb213e06cfe2ba0c0fd,64e7139513e06cfe2ba0c1f7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70d2513e06cfe2ba0c11d"
+  },
+  "name": "复旦大学出版社",
+  "pic": "",
+  "bookId": "64e70d2513e06cfe2ba0c10d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70d7613e06cfe2ba0c12e"
+  },
+  "name": "西安交通大学出版社",
+  "pic": "",
+  "bookId": "64e70d7613e06cfe2ba0c122",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70e4313e06cfe2ba0c14d"
+  },
+  "name": "上海人民出版社",
+  "pic": "",
+  "bookId": "64e70e4313e06cfe2ba0c13d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70ec113e06cfe2ba0c15d"
+  },
+  "name": "浙江教育出版社",
+  "pic": "",
+  "bookId": "64e70ec113e06cfe2ba0c14f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70ffc13e06cfe2ba0c190"
+  },
+  "name": "长江文艺出版社",
+  "pic": "",
+  "bookId": "64e70ffc13e06cfe2ba0c182",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7110913e06cfe2ba0c1b1"
+  },
+  "name": "浙江文艺出版社",
+  "pic": "",
+  "bookId": "64e7110913e06cfe2ba0c1a4,64e7116613e06cfe2ba0c1b3",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7132413e06cfe2ba0c1f5"
+  },
+  "name": "华中科技大学出版社",
+  "pic": "",
+  "bookId": "64e7132413e06cfe2ba0c1e5",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81a3d13e06cfe2ba0c404"
+  },
+  "name": "广西美术出版社",
+  "pic": "",
+  "bookId": "64e81a3d13e06cfe2ba0c3f7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81aa013e06cfe2ba0c413"
+  },
+  "name": "海南出版社",
+  "pic": "",
+  "bookId": "64e81aa013e06cfe2ba0c406",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81af813e06cfe2ba0c423"
+  },
+  "name": "接力出版社",
+  "pic": "",
+  "bookId": "64e81af813e06cfe2ba0c415",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81c0713e06cfe2ba0c445"
+  },
+  "name": "同心出版社",
+  "pic": "",
+  "bookId": "64e81c0713e06cfe2ba0c439",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81cc513e06cfe2ba0c469"
+  },
+  "name": "重庆出版社",
+  "pic": "",
+  "bookId": "64e81cc513e06cfe2ba0c45d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81e4a13e06cfe2ba0c482"
+  },
+  "name": "二十一世纪出版社",
+  "pic": "",
+  "bookId": "64e81e4a13e06cfe2ba0c475",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8202713e06cfe2ba0c4cc"
+  },
+  "name": "国际文化出版公司",
+  "pic": "",
+  "bookId": "64e8202713e06cfe2ba0c4c0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8222713e06cfe2ba0c4ee"
+  },
+  "name": "中国科学技术出版社",
+  "pic": "",
+  "bookId": "64e8222713e06cfe2ba0c4e2",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e822f213e06cfe2ba0c50e"
+  },
+  "name": "陕西师范大学出版社",
+  "pic": "",
+  "bookId": "64e822f213e06cfe2ba0c501",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8233f13e06cfe2ba0c51a"
+  },
+  "name": "南方日报出版社",
+  "pic": "",
+  "bookId": "64e8233f13e06cfe2ba0c510",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e83e4413e06cfe2ba0c560"
+  },
+  "name": "岳麓书社",
+  "pic": "",
+  "bookId": "64e83e4413e06cfe2ba0c554,64e83e4413e06cfe2ba0c554,64e83f3e13e06cfe2ba0c574",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e83fb113e06cfe2ba0c593"
+  },
+  "name": "Addison-Wesley Professional",
+  "pic": "",
+  "bookId": "64e83fb113e06cfe2ba0c587",
   "__v": 0
 }]

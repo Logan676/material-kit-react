@@ -1257,4 +1257,1644 @@
   "rating": 5,
   "pic": "uploads/1692783858904-710160862.jpg",
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7039d13e06cfe2ba0c021"
+  },
+  "title": "翦商",
+  "authors": "李硕",
+  "tags": "历史",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "广西师范大学出版社",
+  "isbn": "9787559852533",
+  "reviews": "一翻而已",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2022-10-01",
+  "rating": 4,
+  "pic": "uploads/1692861341691-49982712.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7042213e06cfe2ba0c02f"
+  },
+  "title": "所见微尘，皆因有光",
+  "authors": "梁衡,毕淑敏,刘醒龙",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京联合出版公司",
+  "isbn": "9787559641939",
+  "reviews": "冲着毕淑敏去的，结果发现这本书竟然有三位作者，而且仅仅收录了毕淑敏的一篇文章。所以我就继续看下去。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2020-06-01",
+  "rating": 3,
+  "pic": "uploads/1692861474276-846879775.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7048b13e06cfe2ba0c042"
+  },
+  "title": "梁思成的作业",
+  "authors": "梁思成",
+  "tags": "文学,建筑",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中国青年出版社",
+  "isbn": "9787515353845",
+  "reviews": "厚厚的一大本，书比想象中大。类似于影音但却是机打文字，加上复古的纸张和斑驳的插图，使得阅读体验上与众不同。能体会到书卷的厚重，也能感受到作者学习历程中的勤奋和才华。我本身对于古建筑没有多少了解，兴趣不大。所以没有多少共鸣。但是相信对于古建筑的爱好者来讲，这本书应该是很有价值和纪念意义的资料了。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2021-01-01",
+  "rating": 5,
+  "pic": "uploads/1692861579235-903035068.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7052913e06cfe2ba0c053"
+  },
+  "title": "读书指南",
+  "authors": "梁启超",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中华书局",
+  "isbn": "9787101074406",
+  "reviews": "确切地说是传统经典文学阅读指南。虽然不同章节介绍了不同类别的阅读数目，就像当下的推荐书单那样，但是其实通用的阅读方法也反复提及，比如要了解成书背景，知道作者所处的是什么样的时代。不过年代久远，专业不同，导致可读性降低，不过总体还是值得翻阅。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2010-08-01",
+  "rating": 4,
+  "pic": "uploads/1692861737079-758172750.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e706d113e06cfe2ba0c061"
+  },
+  "title": "伟大的中国工业革命",
+  "authors": "文一",
+  "tags": "政治,经济,基建",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "清华大学出版社",
+  "isbn": "9787302434207",
+  "reviews": "比看资讯和解读类的新闻，获取的信息要全面，但是讨论的话题不够深入，有种蜻蜓点水的感觉。说实在的，我觉着不如林的好。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2016-06-01",
+  "rating": 3,
+  "pic": "uploads/1692862161243-332427792.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e707a813e06cfe2ba0c076"
+  },
+  "title": "牛棚杂忆",
+  "authors": "季羡林",
+  "tags": "季羡林,文学,历史,文化大革命",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京理工大学出版社",
+  "isbn": "9787568203449",
+  "reviews": "这本书写的是文化大革命时期的事情，从一个作者自身经历反映了当时所处时代的点点滴滴。对于那段历史，没人能够淡然一笑。",
+  "excerpts": "摘抄1：一个时代的真是记载，一段生活的赤诚回忆。 摘抄2：季羡林先生一生命运多舛，年过半百之际遭遇...",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2015-06-01",
+  "rating": 5,
+  "pic": "uploads/1692862376177-578775169.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7083a13e06cfe2ba0c08a"
+  },
+  "title": "中国式现代化",
+  "authors": "蔡昉",
+  "tags": "经济",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版集团",
+  "isbn": "9787521749854",
+  "reviews": "本书作者有23人，文章内容大多是政策解读。这当然有参考价值，对了解目前的宏观经济政策有帮助",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2022-12-01",
+  "rating": 3,
+  "pic": "uploads/1692862522636-825970539.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7099313e06cfe2ba0c098"
+  },
+  "title": "大崛起",
+  "authors": "赵燕菁",
+  "tags": "经济",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中国人民大学出版社",
+  "isbn": "9787300309705",
+  "reviews": "简单翻了一下，里面涉及到的公式和符号比较多，感觉是偏专业类书籍。这本书的阅读仅限于对作者经历的了解。具体章节，没有兴趣读下去。等以后找个合适的心境再继续吧。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2023-01-01",
+  "rating": 3,
+  "pic": "uploads/1692862867337-269748212.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70a2813e06cfe2ba0c0a7"
+  },
+  "title": "常识",
+  "authors": "[美]托马斯·潘恩",
+  "tags": "政治",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "商务印书馆",
+  "isbn": "9787100116862",
+  "reviews": "背景：美国独立战争期间，Thomas Paine撰写了铿锵有力并广为流传的小册子，即本书，极大地鼓舞了北美民众的独立情绪。这本书只有58页。而我只看完了第一页。因为我本来以为是社会生活尝试，谁知讨论的是美国政治体制相关的内容。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-15",
+  "publicationYear": "2015-11-02",
+  "rating": 3,
+  "pic": "uploads/1692863016080-592494846.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70ac113e06cfe2ba0c0b9"
+  },
+  "title": "汉书（全十二册）",
+  "authors": "班固",
+  "tags": "历史,文学经典,文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中华书局",
+  "isbn": "9787101003055",
+  "reviews": "跟着台大公开课读的，感觉第一卷的内容和史记里的是高度重复的，但论阅读文学性上史记是遥不可及的高峰",
+  "excerpts": "",
+  "purchaseYear": "2023-01-14",
+  "publicationYear": "1962-06-01",
+  "rating": 5,
+  "pic": "uploads/1692863169686-688744472.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70b1b13e06cfe2ba0c0cc"
+  },
+  "title": "解读中国经济",
+  "authors": "林毅夫",
+  "tags": "经济",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京大学出版社",
+  "isbn": "9787301297025",
+  "reviews": "这本书其实脱胎于北大课堂上的经济学专题。虽然讲述的是宏观经济的议题，但是深入浅出，通俗易懂，打开之后，就被这本书的写作风格吸引了，一口气把近400页的书翻完了，有的章节是细读的。第一次看宏观经济类的专业书，竟然理解起来毫不费力。我知道不是我的理解力好，而是作者的才华高，透过现象看到本质，想的很清楚自然写出来的就是简单却深刻的道理。网友给出这么高的评价，也证明了这本书确实被大家认可，很多发生在这片土地上的重大历史事件，作者都没有回避，而且态度足够坦诚，观点足够鲜明和有建设性。不论是对于了解中国经济制度发展变迁，还是看懂先行的宏观政策的指定逻辑都非常有帮助。知其然，知其所以然。作者是真正立足于国内特殊的国情之下，分析既定事件并给出理论解释的，而这样的理论是学术界尚未有人做过的。这样的好书值得多读",
+  "excerpts": "",
+  "purchaseYear": "2023-01-07",
+  "publicationYear": "2018-09-01",
+  "rating": 5,
+  "pic": "uploads/1692863259114-581378305.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70bc213e06cfe2ba0c0da"
+  },
+  "title": "高级英语1",
+  "authors": "张汉熙,王立礼",
+  "tags": "英语",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "外语教学与研究出版社",
+  "isbn": "9787513591508",
+  "reviews": "enjoy reading. Actually, I realized that how few vocabularies I have form this exact reading experience. Many paragraphs in chapters are full of strange words that I don’t understand.",
+  "excerpts": "",
+  "purchaseYear": "2023-01-02",
+  "publicationYear": "2017-07-01",
+  "rating": 5,
+  "pic": "uploads/1692863426186-906521416.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70c4913e06cfe2ba0c0eb"
+  },
+  "title": "枪炮、病菌与钢铁",
+  "authors": "[美国] 贾雷德·戴蒙德",
+  "tags": "历史,大历史",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "上海译文出版社",
+  "isbn": "9787532739233",
+  "reviews": "2022.5.22人类1.3万年的演化历史以及演化的原因分析。开眼界的一本书。2022.12.20作者自序中一下子自我推荐了七八本书，而且最得意的还不是这本。不过翻翻，就能了解一些宏大主题。也算得上是亲近了一回专家思想。这是一部以世界史为讨论范畴的书。所以它的视角偏宏观，我想说的是，为什么作者能从这么宏大的视角看待问题，国内的学术水平差距在哪里，而国外的学术水平以及支持这些研究背后的资源和经济发展水平到底比我们高出来多少？",
+  "excerpts": "",
+  "purchaseYear": "2023-01-02",
+  "publicationYear": "2006-06-01",
+  "rating": 5,
+  "pic": "uploads/1692863561608-260122567.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70cb213e06cfe2ba0c0fd"
+  },
+  "title": "林肯传",
+  "authors": "戴尔.卡耐基",
+  "tags": "名人传记",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中国友谊出版公司",
+  "isbn": "9787505735750",
+  "reviews": "《平凡的世界》里孙少安的苦都没有林肯的苦那么深。林肯的一生中各种不讲究的习惯是穷苦出身下层人民难以改变的真实困境。身为总统又有多少习惯能改变。他命运的悲剧，一生的劳苦与不幸也和出身底层有关。但是他的善良和正义，以及为了正义而坚持革命的勇气和毅力的却是异于常人的。令人敬佩。他的先天下之忧而忧的情怀另他在历史上永垂不朽。但是这本书写的比较简略，大段的故事被省略。其实看到的只是林肯一生的一个简介，并非全貌。也许了解他人生的全面，才能体会到作为人的平凡和卑微，以及矢志不渝地坚持把世界变得更加美好的革命斗争的伟大与不朽",
+  "excerpts": "",
+  "purchaseYear": "2023-01-02",
+  "publicationYear": "2015-09-01",
+  "rating": 5,
+  "pic": "uploads/1692863666707-249099682.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70d2513e06cfe2ba0c10d"
+  },
+  "title": "美国也荒唐",
+  "authors": "沈群",
+  "tags": "美国,港片,生活",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "复旦大学出版社",
+  "isbn": "9787309074291",
+  "reviews": "有种港片的味道，作者深处的美国时代，多少能令人想起《赌神》电影里发哥前期的经历的那些桥段。能感受到作者是有才华和志向的热血男儿，他的经历对于关注类似经历的人很有启发。作者写作风格非常坦诚，从这里能看到不一样的美国生活，和不一样的美国梦。对于一个国内的天之骄子初来乍到到美国谋生的窘迫全面细致地呈现给了读者，给了后来者一个直观的感受。把真实的美国和想象中的美国做了一个对比。并且从大陆出国留学人员的视角来感受美国社会的种种，有好有坏，有惊讶有惊喜。就像是自己的朋友语重心长地讲述自己的美国故事并且随时欢迎你，接待你一样。放心过来吧，这里有我照应你，别怕。",
+  "excerpts": "",
+  "purchaseYear": "2023-01-01",
+  "publicationYear": "2010-08-01",
+  "rating": 5,
+  "pic": "uploads/1692863781608-829565485.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70d7613e06cfe2ba0c122"
+  },
+  "title": "新东方•雅思词汇词根+联想记忆法:写作",
+  "authors": "俞敏洪",
+  "tags": "英语",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "西安交通大学出版社",
+  "isbn": "9787560530918",
+  "reviews": "damn tools should be added to my tool kit",
+  "excerpts": "",
+  "purchaseYear": "2022-12-27",
+  "publicationYear": "2013-04-01",
+  "rating": 5,
+  "pic": "uploads/1692863862078-869076039.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70dd013e06cfe2ba0c130"
+  },
+  "title": "100个句子记完7000个托福单词",
+  "authors": "俞敏洪",
+  "tags": "英语",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "群言出版社",
+  "isbn": "9787519302931",
+  "reviews": "看评分和评论多少感到意外，一边倒地给出了差评。really？起码对于我来说，真的是interesting。it feels like，playing computer games when I was young，stay all day long at front of the screen，not tired at all，not even feel a bit of pain even been bitted tens of thouends of times。",
+  "excerpts": "",
+  "purchaseYear": "2022-12-27",
+  "publicationYear": "2017-10-01",
+  "rating": 5,
+  "pic": "uploads/1692863952353-456137835.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70e4313e06cfe2ba0c13d"
+  },
+  "title": "置身事内",
+  "authors": "兰小欢",
+  "tags": "经济,政府",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "上海人民出版社",
+  "isbn": "9787208171336",
+  "reviews": "看前沿和目录都能感受到这本书干货多。尤其对于我这种第一次接触这个领域知识的人来说，更是有很大启发。开卷有益，并且还有大大的惊喜。这本书的写作风格我很喜欢，大白话并且观点清晰明确直指主要矛盾。",
+  "excerpts": "",
+  "purchaseYear": "2022-12-26",
+  "publicationYear": "2021-08-01",
+  "rating": 5,
+  "pic": "uploads/1692864067932-383274410.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70ec113e06cfe2ba0c14f"
+  },
+  "title": "我生命中的那些日子",
+  "authors": "俞敏洪",
+  "tags": "名人传记,日记",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "浙江教育出版社",
+  "isbn": "9787572202810",
+  "reviews": "老俞的那些忙里偷闲的日子，真正属于自己的时间能自由地做一些自己喜欢的事情，不考虑世俗的工作和责任的时光。通过写日记记录的方式，把那些值得回味的点点滴滴记录下来，留给未来方便回忆。这其中我认为最重要的是时常提醒自己，记得过一些属于自己生命中的美好时光。",
+  "excerpts": "",
+  "purchaseYear": "2022-12-26",
+  "publicationYear": "2020-06-01",
+  "rating": 5,
+  "pic": "uploads/1692864193020-132923151.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70f2513e06cfe2ba0c15f"
+  },
+  "title": "艺术哲学",
+  "authors": "[法] 丹纳",
+  "tags": "艺术,哲学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版社",
+  "isbn": "9787521712766",
+  "reviews": "丹纳讲课的讲义。傅雷翻译过。经典的艺术书不会过时。",
+  "excerpts": "",
+  "purchaseYear": "2022-12-26",
+  "publicationYear": "2021-01-01",
+  "rating": 5,
+  "pic": "uploads/1692864293640-246908724.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70f9313e06cfe2ba0c16f"
+  },
+  "title": "愿你的青春不负梦想",
+  "authors": "俞敏洪",
+  "tags": "俞敏洪,随笔,文学",
+  "topics": "俞敏洪",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "湖南文艺出版社",
+  "isbn": "9787540478612",
+  "reviews": "“高考作文写作素材精选”。对老俞的故事了解多了之后再看他的这本书，就会有种记录流水账的感觉。尤其是他的求学经历，反复提及的次数，有点不厌其烦地重复了。",
+  "excerpts": "",
+  "purchaseYear": "2022-12-25",
+  "publicationYear": "2007-01-01",
+  "rating": 3,
+  "pic": "uploads/1692864403853-49903520.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70ffc13e06cfe2ba0c182"
+  },
+  "title": "康熙大帝（全四册）",
+  "authors": "二月河",
+  "tags": "历史,小说",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "长江文艺出版社",
+  "isbn": "9787535440556",
+  "reviews": "",
+  "excerpts": "",
+  "purchaseYear": "2022-12-23",
+  "publicationYear": "2009-09-01",
+  "rating": 0,
+  "pic": "uploads/1692864508778-449098379.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e710a013e06cfe2ba0c192"
+  },
+  "title": "俞敏洪：我的成长观",
+  "authors": "俞敏洪",
+  "tags": "俞敏洪,价值观,随笔",
+  "topics": "俞敏洪",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版集团",
+  "isbn": "9787521723670",
+  "reviews": "这tm真的是本好书。本以为是写给高中生尤其是高考生的干货，想着翻翻而已。结果看进去了，不知不觉看了100页。最大的启发就是帮助我回想起来了，哦，原来我也有自己喜欢且擅长的的学科，原来我曾经也是可以全身心投入到自己感兴趣的领域，不知疲倦地研究下去。那现在为什么都快把这事给忘了呢！另外后面的章节，其实对于工作、生活和人生价值的讨论也是非常有启发的。就好比和一位高手在书房聊了一晚上，而且这位高手说的还如此的坦诚。真的是感慨。从高中时写作文的时候经常用老俞讲的素材，到后来高考结束之后开始看老俞的演讲，再后来慢慢学着制定大学里每年读50本书的计划。到后来毕业工作，老俞的踪迹慢慢淡去。今天忽然再次相遇。真的很感慨。我也已经读了三百多本书了。以前丢出去的时间的漂流瓶再次回到手里，不仅感慨万千啊！老俞牛逼！",
+  "excerpts": "",
+  "purchaseYear": "2022-12-21",
+  "publicationYear": "2020-12-01",
+  "rating": 5,
+  "pic": "uploads/1692864672802-911185812.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7110913e06cfe2ba0c1a4"
+  },
+  "title": "丰乳肥臀",
+  "authors": "莫言",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "浙江文艺出版社",
+  "isbn": "9787533946630",
+  "reviews": "书名差点被改成金童玉女，在作者一再坚持之下，维持不变。这件事本身就有故事。由于名气在外，书被装订成了典藏版，开篇就是诺奖的获奖发言。其实我觉着更有意思的是，莫言的书法，通过一首小诗，来表达写这本书的目的。别猜了，我告诉你们为什么写这本书，为什么有这样的故事。哈哈，读者自己不需要填补这部经典创作时作者的心路历程了。不过由于这部书属于迷幻色彩的小说，我只看了章节目录，并没有深入，感觉需要年纪大了才有耐心看的下去吧",
+  "excerpts": "",
+  "purchaseYear": "2022-12-20",
+  "publicationYear": "2017-01-01",
+  "rating": 5,
+  "pic": "uploads/1692864777108-863531265.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7116613e06cfe2ba0c1b3"
+  },
+  "title": "蛙",
+  "authors": "莫言",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "浙江文艺出版社",
+  "isbn": "9787533946661",
+  "reviews": "大概翻了翻，写的是他姑姑的经历，还有那个不能言说的大时代。特定历史背景下的人物命运，自然有共同之处，这也是作者以一个人的经历来描写一群人的生命的题中之义。足够原始和地道的乡民生活，加上农村出身的个人经历，足够体味到小说人物展示出的生命张力。也足够有共鸣，掩卷长叹，发人深思",
+  "excerpts": "",
+  "purchaseYear": "2022-12-20",
+  "publicationYear": "2017-01-01",
+  "rating": 5,
+  "pic": "uploads/1692864870708-290100633.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e711b913e06cfe2ba0c1c0"
+  },
+  "title": "原来宋朝这么有趣：日常不寻常",
+  "authors": "吴钩",
+  "tags": "历史",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "广西师范大学出版社",
+  "isbn": "9787559835031",
+  "reviews": "这是写给青少年的书，我这把年纪读，有种浅阅读的感觉，感觉思想深度上不够丰富",
+  "excerpts": "",
+  "purchaseYear": "2022-12-20",
+  "publicationYear": "2021-03-01",
+  "rating": 3,
+  "pic": "uploads/1692864953163-3331255.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7128d13e06cfe2ba0c1d5"
+  },
+  "title": "陆犯焉识",
+  "authors": "严歌苓",
+  "tags": "小说,历史",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "作家出版社",
+  "isbn": "9787506360876",
+  "reviews": "这本书是含有敏感话题的，但是读起来是比较有趣味的。通过介绍那段难忘的历史片段，为我们呈现了一个大时代下的小人物的悲剧，不论是电影《归来》还是电影《一秒钟》都只能代表原作的一些细节，完全不能和原作相提并论。原作里讲述的故事更加真实、情节更加耐人寻味，看这个故事，体会到的不仅仅是苦难，也不仅仅是绝望。体会更深的是没有人能掌握自己命运的那种无奈和恐惧。",
+  "excerpts": "",
+  "purchaseYear": "2022-11-27",
+  "publicationYear": "2011-10-01",
+  "rating": 5,
+  "pic": "uploads/1692865165320-261328224.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7132413e06cfe2ba0c1e5"
+  },
+  "title": "艺术的慰藉",
+  "authors": "[英] 阿兰·德波顿,[澳] 约翰·阿姆斯特朗",
+  "tags": "艺术",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "华中科技大学出版社",
+  "isbn": "9787568050685",
+  "reviews": "艺术的作用，赞同作者对于艺术的功用的看法。艺术其实可以离我们非常近，艺术甚至是帮助我们生活的更好的工具。思想上和陈丹青的理念比较接近。",
+  "excerpts": "",
+  "purchaseYear": "2022-11-27",
+  "publicationYear": "2019-07-01",
+  "rating": 5,
+  "pic": "uploads/1692865316470-771991554.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7139513e06cfe2ba0c1f7"
+  },
+  "title": "读懂孩子的心",
+  "authors": "樊登",
+  "tags": "生活,教育,育儿",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "中国友谊出版公司",
+  "isbn": "9787505743052",
+  "reviews": "书的整体结构是按照章节的形式来讨论孩子不同阶段的问题和建议。更偏向于强调家长的自我提升和自我完善。每一章都是基于一本不错的书的观点来展开的，从这个角度看，可以说是在推荐书。作为是一个讲书人的角色，作者完成了对一本好书的讲解和推荐。作为家长也获得了对孩子教育的启发。甚至对推荐的几本书产生了要下单的冲动。因为确实有的书在其他大咖也推荐过。",
+  "excerpts": "",
+  "purchaseYear": "2022-09-11",
+  "publicationYear": "2019-03-01",
+  "rating": 5,
+  "pic": "uploads/1692865429723-427152862.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e713ef13e06cfe2ba0c209"
+  },
+  "title": "书剑恩仇录",
+  "authors": "金庸",
+  "tags": "武侠小说,小说",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "三联书店",
+  "isbn": "9787108006615",
+  "reviews": "文字优美，故事有趣，但是没有啊哈的那种惊讶的感觉",
+  "excerpts": "",
+  "purchaseYear": "2022-05-22",
+  "publicationYear": "1994-05-01",
+  "rating": 4,
+  "pic": "uploads/1692865519732-478912928.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80a5a13e06cfe2ba0c2c6"
+  },
+  "title": "人民的名义",
+  "authors": "周梅森",
+  "tags": "纪实小说",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京十月文艺出版社",
+  "isbn": "9787530216194",
+  "reviews": "阅读的目的是为了品味政治家的心理诉求和行为动机",
+  "excerpts": "",
+  "purchaseYear": "2022-05-22",
+  "publicationYear": "2017-01-01",
+  "rating": 5,
+  "pic": "uploads/1692928602286-622794453.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80ca613e06cfe2ba0c2d5"
+  },
+  "title": "汇编语言（第3版）",
+  "authors": "王爽",
+  "tags": "开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "清华大学出版社",
+  "isbn": "9787302333142",
+  "reviews": "汇编不会编。汇编的知识显得枯燥难以理解。对这本书目前停留在三天打鱼 两天晒网的状态。可能是曲高和寡吧。",
+  "excerpts": "",
+  "purchaseYear": "2022-05-22",
+  "publicationYear": "2013-09-01",
+  "rating": 0,
+  "pic": "uploads/1692929190225-357592433.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80d0613e06cfe2ba0c2e3"
+  },
+  "title": "深入Java虚拟机(原书第2版)",
+  "authors": "（美）文纳斯",
+  "tags": "java,开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "机械工业出版社",
+  "isbn": "9787111128052",
+  "reviews": "",
+  "excerpts": "",
+  "purchaseYear": "2022-05-22",
+  "publicationYear": "2003-09-01",
+  "rating": 0,
+  "pic": "uploads/1692929286592-975451140.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80d6a13e06cfe2ba0c2f3"
+  },
+  "title": "原则",
+  "authors": "[美] 瑞·达利欧",
+  "tags": "管理",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版社",
+  "isbn": "9787508684031",
+  "reviews": "其实也没有看懂多少东西，但是模糊的阅读过程中，总是有一种强烈的共鸣感。让我不时联想到一些生活中遇到的灵光乍现的时刻更确切的说，是忽然开窍了恍然大悟的那种感觉。总之这本书我觉得着有帮助的，对我是一种启发式的帮助，虽然可能对投资没有多少专业性的提升，但是对于价值判断是有提升的。帮助我让我复习了以前了解过的那些比较高大上的认知。另外，可以看出来作者还是比较真诚的，很多密不传人的记忆都公之于众了。是一本好书。",
+  "excerpts": "",
+  "purchaseYear": "2022-05-22",
+  "publicationYear": "2018-01-01",
+  "rating": 4,
+  "pic": "uploads/1692929386954-402092548.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80dd313e06cfe2ba0c301"
+  },
+  "title": "我们仨",
+  "authors": "杨绛",
+  "tags": "名人传记,文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "三联书店",
+  "isbn": "9787108018809",
+  "reviews": "这本书不论是文字还是故事，都没有感受到优美之处，也许是当时的心境不适合读这本书吧，其实没有感受到这本书的魅力",
+  "excerpts": "",
+  "purchaseYear": "2022-05-22",
+  "publicationYear": "2003-07-01",
+  "rating": 3,
+  "pic": "uploads/1692929491315-74409669.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80e4513e06cfe2ba0c310"
+  },
+  "title": "人世间",
+  "authors": "梁晓声",
+  "tags": "小说",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中国青年出版社",
+  "isbn": "9787515350264",
+  "reviews": "一个震撼人心的故事，人的悲欢离合其实是时代的写照，几十年的时代背景下人物的命运是和时代紧密相连的，这就是小说人物注定的命运。只不过庆幸的是几十年来国内经济一直处于高速增长的趋势，所以才能看到秉昆一家，以及千千万万家庭生活条件的明显改善。勤劳认干的人们试图通过自己的劳作获得更好的生活，通过双手挣钱，努力承担起养家糊口的责任，虽然是常有些困难出现。但是在这样的时代变迁下家庭条件的逐渐改善，必然引起了太多人的回忆和共鸣",
+  "excerpts": "",
+  "purchaseYear": "2022-05-22",
+  "publicationYear": "2017-11-01",
+  "rating": 5,
+  "pic": "uploads/1692929605441-516144388.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80f4513e06cfe2ba0c31e"
+  },
+  "title": "郭论",
+  "authors": "郭德纲",
+  "tags": "文学,故事",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "湖南文艺出版社",
+  "isbn": "9787540487850",
+  "reviews": "相声、唱戏背后的故事，走的是四大名著的风格，但是只能望其项背",
+  "excerpts": "",
+  "purchaseYear": "2022-05-14",
+  "publicationYear": "2018-09-01",
+  "rating": 3,
+  "pic": "uploads/1692929861948-418941854.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80fb413e06cfe2ba0c32f"
+  },
+  "title": "百年孤独",
+  "authors": "[哥伦比亚] 加西亚·马尔克斯",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "南海出版公司",
+  "isbn": "9787544253994",
+  "reviews": "没想到这本书竟然是一部魔幻主义的作品。更加期待了。2022.5.1人物名称难记，人物关系复杂，理解困难。2022.5.9 家族成员关系冷漠，奥孔多镇子上的人情淡漠，对社会的不公视若无睹，甚至否定历史。这样的背景下人物命运不可能逃避悲剧的命运。这样的人物处境，无奈、无助，所以愈发凸显孤独感。少有的闪现亲情的温暖的是夫妻俩送女儿上学的那段，倾其所有给女儿准备花销，但是她却生了带尾巴的孩子导致整个家族难逃被大风抹去存在痕迹的命运",
+  "excerpts": "",
+  "purchaseYear": "2022-05-09",
+  "publicationYear": "2011-06-01",
+  "rating": 5,
+  "pic": "uploads/1692929972220-95037337.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e814f713e06cfe2ba0c33d"
+  },
+  "title": "玩儿",
+  "authors": "于谦",
+  "tags": "故事",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "湖南文艺出版社",
+  "isbn": "9787540484033",
+  "reviews": "玩儿的门道是什么？玩儿好很难。玩儿特有的精神是什么！",
+  "excerpts": "",
+  "purchaseYear": "2022-05-03",
+  "publicationYear": "2018-03-01",
+  "rating": 5,
+  "pic": "uploads/1692931319012-732790087.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8157013e06cfe2ba0c34b"
+  },
+  "title": "我的二本学生",
+  "authors": "黄灯",
+  "tags": "大学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民文学出版社",
+  "isbn": "9787020161874",
+  "reviews": "辞藻华丽，故事情节大多缺少社会历练，属于象牙塔里的社会实践。语言并不生动也不优美，甚至出现了明显的错位和断裂。看完不知道在讲什么，更谈不上有什么收获",
+  "excerpts": "",
+  "purchaseYear": "2022-05-02",
+  "publicationYear": "2020-08-01",
+  "rating": 2,
+  "pic": "uploads/1692931440597-731611382.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e816a013e06cfe2ba0c35a"
+  },
+  "title": "阅读的方法",
+  "authors": "罗振宇",
+  "tags": "阅读,认知,工具",
+  "topics": "阅读的方法",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "新星出版社",
+  "isbn": "9787513348867",
+  "reviews": "一口气读完了，用了四天时间。收获很多，一下子想买很多书，想看很多书。",
+  "excerpts": "",
+  "purchaseYear": "2022-04-26",
+  "publicationYear": "2022-04-23",
+  "rating": 5,
+  "pic": "uploads/1692931744311-884173022.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8170013e06cfe2ba0c36d"
+  },
+  "title": "野草",
+  "authors": "鲁迅",
+  "tags": "文学,散文",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民文学出版社",
+  "isbn": "10019-1981",
+  "reviews": "",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "1973-03-01",
+  "rating": 5,
+  "pic": "uploads/1692931840490-103194626.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8176313e06cfe2ba0c37d"
+  },
+  "title": "邓小平时代",
+  "authors": "【美】傅高义 (Ezra.F.Vogel)",
+  "tags": "名人传记",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "三联书店",
+  "isbn": "9787108041531",
+  "reviews": "翻过",
+  "excerpts": "",
+  "purchaseYear": "2013-01-18",
+  "publicationYear": "2022-04-04",
+  "rating": 4,
+  "pic": "uploads/1692931939621-356301384.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e817cb13e06cfe2ba0c38b"
+  },
+  "title": "彷徨",
+  "authors": "鲁迅",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民文学出版社",
+  "isbn": "10019-1982",
+  "reviews": "为此买了全集，然而全集里还是这几篇看的下去，体会最深",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "1973-03-01",
+  "rating": 5,
+  "pic": "uploads/1692932043271-28940710.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8183613e06cfe2ba0c398"
+  },
+  "title": "呐喊",
+  "authors": "鲁迅",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民文学出版社",
+  "isbn": "10019-1979",
+  "reviews": "中学课本指定课外读物",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "1973-03-01",
+  "rating": 5,
+  "pic": "uploads/1692932150404-280767811.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8189b13e06cfe2ba0c3a5"
+  },
+  "title": "UNIX环境高级编程",
+  "authors": "W.Richard Stevens,Stephen A.Rago",
+  "tags": "开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115147318",
+  "reviews": "不理解",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "2006-01-01",
+  "rating": 0,
+  "pic": "uploads/1692932251133-578625182.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e818f013e06cfe2ba0c3b6"
+  },
+  "title": "算法导论（原书第2版）",
+  "authors": "[美] Thomas H·Cormen",
+  "tags": "开发,算法",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "机械工业出版社",
+  "isbn": "9787111187776",
+  "reviews": "第一章",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "2006-09-01",
+  "rating": 0,
+  "pic": "uploads/1692932336034-651891644.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8196c13e06cfe2ba0c3c7"
+  },
+  "title": "计算机程序的构造和解释(原书第2版)",
+  "authors": "[美] Harold Abelson,[美] Gerald Jay Sussman,[美] Julie Sussman",
+  "tags": "软件,编程",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "机械工业出版社",
+  "isbn": "9787111135104",
+  "reviews": "无感 python 没收获",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "2004-02-01",
+  "rating": 0,
+  "pic": "uploads/1692932460626-372229985.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e819ea13e06cfe2ba0c3df"
+  },
+  "title": "深入理解计算机系统（原书第2版）",
+  "authors": "[美] Randal E.Bryant,[美] David O' Hallaron",
+  "tags": "计算机,软件,开发,编程",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "机械工业出版社",
+  "isbn": "9787111321330",
+  "reviews": "a programmers perspective",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "2011-01-01",
+  "rating": 5,
+  "pic": "uploads/1692932586425-532089644.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81a3d13e06cfe2ba0c3f7"
+  },
+  "title": "艺术的故事",
+  "authors": "[英国] E·H·贡布里希",
+  "tags": "艺术",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "广西美术出版社",
+  "isbn": "9787807463726",
+  "reviews": "说是清华大学校长送给入学新生的书。是很厚，但是文字其实没有那么多，插图很多，读起来很快。对艺术这件事有了完全不同以往的看法，感觉艺术更真实，更贴近生活了",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "2008-04-01",
+  "rating": 5,
+  "pic": "uploads/1692932669319-618247424.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81aa013e06cfe2ba0c406"
+  },
+  "title": "领袖们",
+  "authors": "理查德·尼克松",
+  "tags": "政治",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "海南出版社",
+  "isbn": "9787544340717",
+  "reviews": "吴军推荐书籍，说是国外那些有影响力的著名领导人，看待中国的角度和国内媒体报道的角度有很大不同。—updated看了周的那一章，确实角度很不一样，写的比较坦诚。但是丘吉尔那一章感觉有点盲目崇拜的意味。其他章节没看，不感兴趣。20220403",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "2012-02-01",
+  "rating": 5,
+  "pic": "uploads/1692932768956-653567397.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81af813e06cfe2ba0c415"
+  },
+  "title": "我不是教你诈",
+  "authors": "[美] 刘墉",
+  "tags": "职场",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "接力出版社",
+  "isbn": "9787806791110",
+  "reviews": "挑了几个故事看了下，职场相关的。对我没用借鉴价值。因为此职场非彼职场。无感。",
+  "excerpts": "",
+  "purchaseYear": "2022-04-04",
+  "publicationYear": "2003-02-01",
+  "rating": 2,
+  "pic": "uploads/1692932856881-447607910.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81b8f13e06cfe2ba0c425"
+  },
+  "title": "深入理解Java虚拟机（第3版）",
+  "authors": "周志明",
+  "tags": "java,jvm,Java虚拟机",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "机械工业出版社",
+  "isbn": "9787111641247",
+  "reviews": "看记录以前读过一次第二版，19年的时候，其实没怎么看下去。但是这次不一样，这次看下去了，主要因为这次是带着问题来看的，项目中遇到的很多疑问得到了解答。收获很大，喜欢这个作者写作的的风格，化繁为简，由浅入深。可以感受到作者自己已经对这门技术有了非常深入透彻的理解，才有能力一针见血的把事情的本质说清楚而且说的很简单。另外这次看的还是第二版。",
+  "excerpts": "",
+  "purchaseYear": "2022-02-07",
+  "publicationYear": "2019-12-01",
+  "rating": 5,
+  "pic": "uploads/1692933007801-9800296.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81c0713e06cfe2ba0c439"
+  },
+  "title": "鲁迅全集",
+  "authors": "鲁迅",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "同心出版社",
+  "isbn": "9787547711101",
+  "reviews": "看看那个时代下仍然清醒着的人是怎么思考的！-updated 华盖集以及续编，而已集。里面的评论很类似现在文化名人写的博客，多结合当时时政发表评论。所以无感。还是感觉朝花夕拾比较有共鸣。当然读书不是为了共鸣，而是为了心知。",
+  "excerpts": "",
+  "purchaseYear": "2021-10-30",
+  "publicationYear": "2014-05-01",
+  "rating": 0,
+  "pic": "uploads/1692933127161-404301774.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81c7713e06cfe2ba0c447"
+  },
+  "title": "新基建",
+  "authors": "任泽平,马家进,连一席",
+  "tags": "基建,经济",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版社",
+  "isbn": "9787521718782",
+  "reviews": "重点章节：新基建-充电桩；人口流动之未来的都市圈和城市群。泽平宏观，从国家治理的角度对新基建等争议话题提出自己的建议，立足未来和国家整体发展，尽量兼顾局部利益。个人比较赞同",
+  "excerpts": "",
+  "purchaseYear": "2021-10-30",
+  "publicationYear": "2020-06-01",
+  "rating": 3,
+  "pic": "uploads/1692933239959-239190620.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81cc513e06cfe2ba0c45d"
+  },
+  "title": "三体全集",
+  "authors": "刘慈欣",
+  "tags": "科幻",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "重庆出版社",
+  "isbn": "9787229042066",
+  "reviews": "",
+  "excerpts": "",
+  "purchaseYear": "2021-08-27",
+  "publicationYear": "2012-01-01",
+  "rating": 5,
+  "pic": "uploads/1692933317551-816526120.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81e4a13e06cfe2ba0c475"
+  },
+  "title": "一座城池",
+  "authors": "韩寒",
+  "tags": "小说",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "二十一世纪出版社",
+  "isbn": "9787539132150",
+  "reviews": "这部作品格局有点小，吃一顿饭写一章，开一次车写一章，泡一个妞写n掌，一次爆炸写的好像世界末日，这种水平也就适合小孩子看，其实信息量不大。读了三部韩寒的小说，分别是《1988：想和世界谈谈》、《三重门》和《一座城池》，总体感觉是属于高中没毕业的那种风格，而且一直没有长大，话题停留在那个青春时光并没有成长和成熟起来。所以不禁想到这也许是他去开赛车的原因吧，毕竟可以写的话题慢慢遇到天花板了，总不能反反复复写逃学的事情吧，读者也会审美疲劳的，不如拿着版税潇洒一把。",
+  "excerpts": "",
+  "purchaseYear": "2021-08-26",
+  "publicationYear": "2006-01-01",
+  "rating": 3,
+  "pic": "uploads/1692933706441-532141494.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81ea513e06cfe2ba0c484"
+  },
+  "title": "三重门",
+  "authors": "韩寒",
+  "tags": "文学",
+  "topics": "韩寒",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "作家出版社",
+  "isbn": "9787506318884",
+  "reviews": "一袭青春文学的气息扑面而来，中学生读这样的文学作品很能体会到文学的趣味所在。作为韩寒的成名作，可以读到他的才气，比如把白马王子和青梅竹马多说成是是马厩。他对文字的独到见解，以及对身边的人事物的调侃的口吻常常给人以惊喜。而不禁惊叹他天资聪慧，而且还有着缜密的思维以及深厚的文学功底。但是中年人读这样的作品会稍感话题太小，有点幼稚了。毕竟围绕着暗恋和初恋的心理活动，着墨太多，就会显得格局不够宏大。这部作品对读者群体的年龄敏感。另外，对于中学生来说，如何写好一篇作文，书里面还是有很多见解值得参考的。——这就是青春真实的样子，从这个故事里我看到了我的青春",
+  "excerpts": "进高中两个月来，林雨翔除文学外，兴趣仿佛是西方文人眼里苏州佳丽的脸，变化无端，今天喜欢下棋明天甚爱电脑，但这些本来美好的兴趣在雨翔手里，就像执鞭中国足球队的外国知名教练，来一个败一个。雨翔样样会其皮毛，自诩是个杂家，其实不过是个砸家；放在读书上的心思都没了。",
+  "purchaseYear": "2021-07-31",
+  "publicationYear": "2000-05-01",
+  "rating": 5,
+  "pic": "uploads/1692933797073-615168305.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81f0a13e06cfe2ba0c492"
+  },
+  "title": "水浒传",
+  "authors": "施耐庵,罗贯中",
+  "tags": "文学,小说",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "中华书局",
+  "isbn": "9787101067293",
+  "reviews": "读水浒只是希望可以享受这个故事所带来的的乐趣，当然这部书和红楼梦一样，人物众多，人物关系复杂，能把这些关系读懂也是对阅读能力的一种提升。读起来才发现，书中对皇室和上层阶级的描写不符合实际情况，多少是吃瓜老农想象出来的。看看红楼梦中的贵族生活，相比之下水浒里上层的生活其实就是当地富绅的生活而已。也许写书的作者自己就压根不知道贵族生活是什么样子的。另外，这部书的价值观已经和当代的价值观产生了很大差别，现在看来很多都是很难效仿的，所以不适合没有分辨能力的中学生读。而且所谓的四大名著之一有点名不符实了，现在更加感觉这个噱头是书商为了卖书而故意搞出来的。搞成四大名著全套卖，肯定利润更大啊。但是其他的三部很难有红楼梦的高度。---结局是悲剧会让这部书很有深度，但是这种结局并不高明",
+  "excerpts": "",
+  "purchaseYear": "2021-07-31",
+  "publicationYear": "2009-06-01",
+  "rating": 3,
+  "pic": "uploads/1692933898477-494104435.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81f6313e06cfe2ba0c4a5"
+  },
+  "title": "大观红楼3",
+  "authors": "欧丽娟",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "北京大学出版社",
+  "isbn": "9787301296448",
+  "reviews": "和视频课程一模一样，看了课程的无需再买",
+  "excerpts": "",
+  "purchaseYear": "2021-07-20",
+  "publicationYear": "2018-08-01",
+  "rating": 5,
+  "pic": "uploads/1692933987117-221208794.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81fb913e06cfe2ba0c4b3"
+  },
+  "title": "大观红楼1",
+  "authors": "欧丽娟",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京大学出版社",
+  "isbn": "9787301283622",
+  "reviews": "内容和视频课程是一样的，就像是同声传译一样，不过内容还是很赞的",
+  "excerpts": "",
+  "purchaseYear": "2021-07-20",
+  "publicationYear": "2017-08-01",
+  "rating": 5,
+  "pic": "uploads/1692934073374-401968971.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8202713e06cfe2ba0c4c0"
+  },
+  "title": "1988：我想和这个世界谈谈",
+  "authors": "韩寒",
+  "tags": "小说",
+  "topics": "韩寒",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "国际文化出版公司",
+  "isbn": "9787512500983",
+  "reviews": "第一次近距离了解韩寒，感受他的协作风格，比想象中的更加露骨，更加充满青春气息，有被震撼到，被那些曾经回荡在自己的脑海中但是后来不知不觉被盖子盖住却不能表达出来的东西所震撼到。我能找谁谈谈？看完这本书之后再去看后会无期，对这部电影肯定就多了一分熟悉和了解，只是电影的尺寸实在是比不得小说。韩寒的那种表达方式其实是非常出彩的，读起来津津有味。",
+  "excerpts": "",
+  "purchaseYear": "2021-07-18",
+  "publicationYear": "2010-09-01",
+  "rating": 5,
+  "pic": "uploads/1692934183752-67804850.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8219e13e06cfe2ba0c4d0"
+  },
+  "title": "俞军产品方法论",
+  "authors": "俞军",
+  "tags": "产品经理,产品",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版集团",
+  "isbn": "9787521712056",
+  "reviews": "迅速地翻了一下目录，没有看到特别吸引我的章节，也就没仔细看，目前的状态是对着这一本书，还提不起的兴趣，可能工作当中没有相关需求吧。其实我倒是想了解产品设计的一些基础知识，比如说，用户体验了，比如说交互设计了，等等。但是这本书应该不是讲这个的。我感觉这本书的话题比较高级不适合那种入门级的学习。",
+  "excerpts": "",
+  "purchaseYear": "2021-02-21",
+  "publicationYear": "2019-12-01",
+  "rating": 3,
+  "pic": "uploads/1692934558025-970101543.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8222713e06cfe2ba0c4e2"
+  },
+  "title": "英伦巡礼·第1季 吴国盛科学博物馆图志",
+  "authors": "吴国盛",
+  "tags": "科普",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中国科学技术出版社",
+  "isbn": "9787504672759",
+  "reviews": "众所周知，博物馆对于培养一个人对科学的兴趣是非常有帮助的。这本书里面对我启发最大的是一句话，我觉得单这一句话就值回书价了。这句话就是：对钟表这种机械装置没有感觉的人，不可能对数理科学着迷。其实我对科学的各领域的了解是很片面的，所以博物馆题材的书籍肯定能帮助我开阔视野，这本书值得推荐的。既然目前没有能力亲自去博物馆看一次，那为了近距离接触这些人类文明史上的明珠，起码翻翻书是可以做到的。",
+  "excerpts": "",
+  "purchaseYear": "2021-02-21",
+  "publicationYear": "2021-02-21",
+  "rating": 5,
+  "pic": "uploads/1692934695637-181064474.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8229413e06cfe2ba0c4f1"
+  },
+  "title": "史记",
+  "authors": "司马迁",
+  "tags": "文学,历史",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中华书局",
+  "isbn": "9787101003048",
+  "reviews": "看世家的时候感觉古人困于天象迷信，做了太多无用之事。劳民伤财不说还没有取得任何实质性的效果。尤其是在求医问药的时候，过于相信鬼神天象只说，贻误病情。通篇没看到任何技术上的进步和文明上的进展。不过谦让和禅让的品行是值得尊重的，也是太史公推崇的思想。相比于西方思想的发展，东方的思想一直在原地踏步没有取得可叠加的进步。",
+  "excerpts": "",
+  "purchaseYear": "2021-02-21",
+  "publicationYear": "1982-11-01",
+  "rating": 5,
+  "pic": "uploads/1692934804490-748622628.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e822f213e06cfe2ba0c501"
+  },
+  "title": "万万没想到",
+  "authors": "李天飞",
+  "tags": "故事",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "陕西师范大学出版社",
+  "isbn": "9787561386392",
+  "reviews": "看一看出来作者功底深厚，是系统研究过西游之后，整理出来的一些新发。对于不打算修佛、修道的人来说，当成小说来看还是挺有趣的。",
+  "excerpts": "",
+  "purchaseYear": "2021-01-27",
+  "publicationYear": "2016-11-01",
+  "rating": 5,
+  "pic": "uploads/1692934898341-90984765.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8233f13e06cfe2ba0c510"
+  },
+  "title": "读大学，究竟读什么",
+  "authors": "覃彪喜",
+  "tags": "大学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "南方日报出版社",
+  "isbn": "9787806524732",
+  "reviews": "这本书写的是比较符合社会真实情况的，是一位有社会阅历的过来人给大学生的一些告诫。大学生有很多思想上的洁癖，有很多理想化的想法。更尴尬的是明明是自己缺乏见识，却天真的认为别人说话是别有用心。但是社会的残酷之处就在于，一个人要打破幻想，认清现实才能有所发展。举例说，学习英语这件事，其实要建立明确的目标感，你学英语是为了出国还是为了考研，还是仅仅为了可以读英文的杂志。目标不同，那行为肯定不同。毕竟做事情是要有所收获的，而目标感是很重要的基本素质。",
+  "excerpts": "",
+  "purchaseYear": "2021-01-10",
+  "publicationYear": "2006-03-01",
+  "rating": 4,
+  "pic": "uploads/1692934975104-876948986.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e823b313e06cfe2ba0c51f"
+  },
+  "title": "红楼梦",
+  "authors": "曹雪芹,高鹗",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "想读",
+  "readingProgress": 0,
+  "publisherInfo": "人民文学出版社",
+  "isbn": "9787020002207",
+  "reviews": "",
+  "excerpts": "",
+  "purchaseYear": "2020-10-19",
+  "publicationYear": "1996-12-01",
+  "rating": 0,
+  "pic": "uploads/1692935091342-398935624.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e83e4413e06cfe2ba0c554"
+  },
+  "title": "李卓吾批评本西游记（上下）",
+  "authors": "吴承恩",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "岳麓书社",
+  "isbn": "9787806657287",
+  "reviews": "读的是繁体宣纸竖版线装书，崇贤馆善本。几百元入手的，虽然价格比平装书贵一大截，但是阅读体验也好一大截。大部头的书被分成了六册，拿在手就没那么重了，每一册做的比较薄，翻阅起来更舒服。宣纸的手感更是印刷纸不能比的。打开书淡淡的檀香味，感觉这才是阅读经典文学正确的打开方式。李卓吾的评批字数不多，很多内容也是文学愤青抒发对所在世道的不满，尤其对和尚充满敌意，比如唐僧原阳未泄那一段，通过对比反讽他所处世道和尚都破了戒。西游记里的诗词除了个别有点艺术性之外大多数都是打油诗的水准，相比红楼梦不知差了多少。但是西游的有独特的魅力，四大名著中只有西游是我轻松享受地阅读完的。我偏爱西游的浪漫主义色彩，比如上天入地无所不能的齐天大圣，至高无上的如来佛祖等。充满想象力的同时又有一种所向披靡的执行力。格局如庄子般浩大",
+  "excerpts": "",
+  "purchaseYear": "2020-07-03",
+  "publicationYear": "2012-08-01",
+  "rating": 5,
+  "pic": "uploads/1692941892271-554849152.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e83f3e13e06cfe2ba0c574"
+  },
+  "title": "西游记",
+  "authors": "吴承恩",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "岳麓书社",
+  "isbn": "9787806654026",
+  "reviews": "花果山的猴子猴孙们使用的兵器都是猴王偷来的。猴王的兵器也是从龙王那里抢来的。猴王的法术是秘传而且不让说出老师的名号。猴王是靠个单兵作战能力突出而被封猴王的，成为猴王之后自己并不参互日常管理，日常管理交给了四健将。自己只负责外交和提升国际地位。从弼马温一直升到齐天大圣。这是一个杰出的私营企业创业者形象。由于能力太强，对待商业制度的方式又是暴力而不是遵循规则的，所以被招安了，从此事业走上了正轨。 #分割线# 其实并没有读完呢，不知道为毛一写评论，豆瓣默认就标志为已读状态了。难不成大多数人都是在读完才写评论的吗，阅读过程中写点就不常见吗。显然不是！也许是明代小说的风格使然，西游记中多次出现了自成一体的打油诗，可惜水平和红楼梦相比差很多。就像吴承恩和曹雪芹身世的差别，一个是草根阶层一个是天之骄子。",
+  "excerpts": "",
+  "purchaseYear": "2020-07-01",
+  "publicationYear": "2004-06-01",
+  "rating": 5,
+  "pic": "uploads/1692942142321-669242652.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e83fb113e06cfe2ba0c587"
+  },
+  "title": "Algorithms in C, Parts 1-4",
+  "authors": "[美国] Robert Sedgewick",
+  "tags": "算法",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "Addison-Wesley Professional",
+  "isbn": "9780201314526",
+  "reviews": "",
+  "excerpts": "",
+  "purchaseYear": "2020-06-28",
+  "publicationYear": "1997-09-27",
+  "rating": 0,
+  "pic": "uploads/1692942257780-376509460.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8401913e06cfe2ba0c595"
+  },
+  "title": "算法：C语言实现",
+  "authors": "塞奇威克",
+  "tags": "算法",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "机械工业出版社",
+  "isbn": "9787111275718",
+  "reviews": "这本书是我比较期待的一本了，首先得到了大佬的推荐，c primer plus推荐的三本编程书籍中就有它，另外一本是高德纳的基本算法，所以这规格不可谓不高，因而吊足我胃口也是理所当然的。#分割线#就和读高德纳的书类似，找不到感觉，高德纳的书好歹不明觉厉，这本书却感觉是东一榔头西一棒槌，比如第三章讲c语言的部分和前两章讲算法理论研究的内容放在一起，有种不连续性。其实抛开这些，我感觉这本书还是晦涩难懂，可能适合IQ 140以上的人吧。本来是为了强化c语言才阅读这本书的，发现这本书的重点是算法。",
+  "excerpts": "",
+  "purchaseYear": "2020-06-27",
+  "publicationYear": "2009-10-01",
+  "rating": 3,
+  "pic": "uploads/1692942361718-769708878.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8409e13e06cfe2ba0c5a3"
+  },
+  "title": "C和指针",
+  "authors": "Kenneth A.Reek",
+  "tags": "编程",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115172013",
+  "reviews": "指针学的好c语言才香。感觉指针都被c给玩坏了，希望这本书可以划定一些边界，制定一些使用规则。如果是个避坑指南就值回书价了。如果能讲透原理那就是难得了。",
+  "excerpts": "",
+  "purchaseYear": "2020-06-14",
+  "publicationYear": "2008-04-01",
+  "rating": 0,
+  "pic": "uploads/1692942494280-70058907.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8423d13e06cfe2ba0c5b1"
+  },
+  "title": "C语言程序设计",
+  "authors": "[美] K. N. King",
+  "tags": "编程,程序,开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115219572",
+  "reviews": "翻了一下，没读过。看目录就知道真本书的内容和c primer plus同质化严重，并不是说这本书不好，只是两本书都是入门书，选择一本就足够了。人不能总是在重复阅读入门书来获得进步的，一旦获得了所需的基础知识之后就应该去读一些内容更有针对性的进阶书了。",
+  "excerpts": "",
+  "purchaseYear": "2020-06-13",
+  "publicationYear": "2010-04-01",
+  "rating": 5,
+  "pic": "uploads/1692942909369-360205237.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8428d13e06cfe2ba0c5c4"
+  },
+  "title": "C Primer Plus",
+  "authors": "Stephen Prata",
+  "tags": "程序,开发,编程",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民邮电出版社",
+  "isbn": "9787115130228",
+  "reviews": "书写得不错，就是大部头的书的通病，拿在手里又沉又硬，只能边看边撕，每次只拿一小部分看。幸亏现在有条件，大学时可不舍得撕书啊。目前看到第10章，写作风格是典型老外的那种风格，事无巨细，娓娓道来。可能会让人觉着啰嗦，所以我一般都是跳过自己已经掌握的部分，不过这种啰嗦风格对于学习不熟悉的知识还是很有帮助的。评分这么高确实名副其实。好书总是给人知识以外的东西，这本书也是如此。透过这本书，可以了解到FORTROAN、PASCAL、C的诸多版本、UNIX、LINUX等花边历史信息，以及C程序员的典型编程风格等等，嗯，看完这本书就可以吹嘘一番，把自己当初C程序员了。",
+  "excerpts": "",
+  "purchaseYear": "2020-06-11",
+  "publicationYear": "2005-02-01",
+  "rating": 5,
+  "pic": "uploads/1692942989957-309429051.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8434913e06cfe2ba0c5d6"
+  },
+  "title": "深入理解Android系统",
+  "authors": "张元亮",
+  "tags": "Android,开发",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "清华大学出版社",
+  "isbn": "9787302404392",
+  "reviews": "老罗你好，近日买了一本书，书名叫《深入理解Android系统》，张元亮编著，其中第10章“ART机制架构详解”部分章节完全与本文相同，想来应该这里是原创，提醒一下你。目前市面上有没有什么好一点的Android系统分析的书可以推荐？感觉越到底层很多东西，太过于深奥，很多都是对于代码的复制粘贴，没什么见解和归纳。自己光看6.0的源码很吃力。罗升阳回复黑衣大格哥:那本书就是垃圾，作者连自己的个人信息都不敢留，原因就是知道自己身上有屎，基本上就是东抄西抄拼起来的。不仅抄了这篇文章，匿名内存和Binder那两章，也是抄了我的书，至少在目录上丝毫不差，抄别人的我就不说了。https://blog.csdn.net/Luoshengyang/article/details/18006645",
+  "excerpts": "",
+  "purchaseYear": "2020-05-08",
+  "publicationYear": "2015-07-01",
+  "rating": 1,
+  "pic": "uploads/1692943177315-6709942.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e843b513e06cfe2ba0c5e6"
+  },
+  "title": "沃顿商学院最受欢迎的谈判课",
+  "authors": "[美]斯图尔特•戴蒙德",
+  "tags": "管理,商学院",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版社",
+  "isbn": "9787508686776",
+  "reviews": "商学院版人性的弱点。##不想躺在沙发上刷三个小时的抖音，毕竟现在里面全是同一个主题，实在是变的一点也不fancy了。所以就拿来这本厚书翻一下，还是写的不错的，有很多我不了解的内容。精装书捧在手里读起来是在受罪，沉、硬，晚上读纸质书即便阅读灯也更伤眼睛，索性使用阅读器，阅读反而体验更佳，难得体会一下舒服读好书的感觉了。",
+  "excerpts": "",
+  "purchaseYear": "2020-04-06",
+  "publicationYear": "2018-06-01",
+  "rating": 4,
+  "pic": "uploads/1692943285325-27999435.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8445513e06cfe2ba0c602"
+  },
+  "title": "朝花夕拾",
+  "authors": "鲁迅",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民文学出版社",
+  "isbn": "10019-1985",
+  "reviews": "大部分章节在中学课本中都学习过了，不过再读一次仍然发现和课本里的印象不太一样了。更加完整，也更多了一些理解，多了对背景，时间的了解，所以文章中要表达的意思理解的更丰富一些。今天刚看到消息，掌阅出了本书的公版书（免费正版），算是一个令我开心的巧合吧。",
+  "excerpts": "",
+  "purchaseYear": "2020-04-05",
+  "publicationYear": "1973-04-01",
+  "rating": 5,
+  "pic": "uploads/1692943445861-945073839.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e844a213e06cfe2ba0c60f"
+  },
+  "title": "白鹿原",
+  "authors": "陈忠实",
+  "tags": "小说",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "人民文学出版社",
+  "isbn": "9787020090297",
+  "reviews": "故事情节已经和现代生活发生了天翻地覆的变化，很多情节已经很难想象得到了。这反而说明了那个已经模糊的时代下小人物的命运是多么脆弱，那是一个吃人的时代，人是被时代禁锢的。族长的权威性，宗族制度的铁面无私和僵化腐朽。遇到大旱灾，想着求雨不惜伤害自己身体，令人惋惜。男女感情中对真实感情的压抑。通篇只有朱先生因嘉轩给村里办学堂而给他下跪这一件事情可圈可点。其余琐碎，都是悲剧。",
+  "excerpts": "",
+  "purchaseYear": "2020-03-29",
+  "publicationYear": "2012-09-01",
+  "rating": 4,
+  "pic": "uploads/1692943522718-248052214.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e844f913e06cfe2ba0c61d"
+  },
+  "title": "早晨从中午开始",
+  "authors": "路遥",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京十月文艺出版社",
+  "isbn": "9787530212035",
+  "reviews": "记录了平凡的世界的创作历程，作者写的很坦诚，对读者有很大启发。由于这本书除了介绍《平凡的世界》的创作历程（第一章）之外，还有论述了创作其他作品的历程，我只对《平凡的世界》创作历程感兴趣，所以只看了第一章。不过看完了《平凡的世界》和这本书，是我对陕北燃起了兴趣，充满了向往，希望哪天可以去陕北高原看一看，听听陕北民歌，体味一番陕北的风土人情。",
+  "excerpts": "",
+  "purchaseYear": "2020-03-21",
+  "publicationYear": "2012-04-01",
+  "rating": 5,
+  "pic": "uploads/1692943609173-319910243.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8454e13e06cfe2ba0c62b"
+  },
+  "title": "智能时代",
+  "authors": "吴军",
+  "tags": "AI,科普",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "中信出版社",
+  "isbn": "9787508663814",
+  "reviews": "",
+  "excerpts": "",
+  "purchaseYear": "2020-03-21",
+  "publicationYear": "2016-08-01",
+  "rating": 4,
+  "pic": "uploads/1692943694211-114942366.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8459413e06cfe2ba0c639"
+  },
+  "title": "平凡的世界",
+  "authors": "路遥",
+  "tags": "文学",
+  "topics": "",
+  "readingStatus": "读过",
+  "readingProgress": 0,
+  "publisherInfo": "北京十月文艺出版社",
+  "isbn": "9787530212004",
+  "reviews": "刚读完第一部，时代感很强，使得我对那个时代有了更深刻具体的了解。感慨小人物的命运是被大时代的滚滚洪流裹挟前进的，平凡人甚至是是无力改变自己的命运的。那我们今天得来的一切看似多么平常却又多么的值得庆幸。我们今天认为平常的事情在当时竟然被严厉禁止。书中的少平是一个根在农村，思想却是接受了城市里先进思想的人，他的精神世界已经丰富到脱离了农村思想的限制。从这一方便讲这部书也确实给读者一次像少平那样开拓精神世界的机会，让读者可以在精神世界上从农村走向城市，完成个人的思维蜕变。本书对人物内心的描写很有代入感，人物鲜明的个性和悲欢让人感动深受，引起共鸣。看完书对比看了一下电视剧，感觉电视剧是无法做到像书描写的那么具体的，尤其是人物内心的活动是电视剧无法展示出来的。好书，值得一读。",
+  "excerpts": "",
+  "purchaseYear": "2020-02-05",
+  "publicationYear": "2012-03-01",
+  "rating": 5,
+  "pic": "uploads/1692943764602-603629331.jpg",
+  "__v": 0
 }]

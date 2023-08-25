@@ -67,7 +67,7 @@
   },
   "name": "杨绛",
   "pic": "",
-  "bookId": "64e5a99554f1b48a3c8c5fb5",
+  "bookId": "64e5a99554f1b48a3c8c5fb5,64e80dd313e06cfe2ba0c301",
   "__v": 0
 },
 {
@@ -166,7 +166,7 @@
   },
   "name": "罗振宇",
   "pic": "",
-  "bookId": "64e5b11554f1b48a3c8c606b",
+  "bookId": "64e5b11554f1b48a3c8c606b,64e816a013e06cfe2ba0c35a",
   "__v": 0
 },
 {
@@ -292,7 +292,7 @@
   },
   "name": "吴军",
   "pic": "",
-  "bookId": "64e5bb2c54f1b48a3c8c6172,64e5bdd454f1b48a3c8c61a1,64e5be9154f1b48a3c8c61bd",
+  "bookId": "64e5bb2c54f1b48a3c8c6172,64e5bdd454f1b48a3c8c61a1,64e5be9154f1b48a3c8c61bd,64e8454e13e06cfe2ba0c62b",
   "__v": 0
 },
 {
@@ -382,7 +382,7 @@
   },
   "name": "毕淑敏",
   "pic": "",
-  "bookId": "64e5c98754f1b48a3c8c6269",
+  "bookId": "64e5c98754f1b48a3c8c6269,64e7042213e06cfe2ba0c02f",
   "__v": 0
 },
 {
@@ -427,7 +427,7 @@
   },
   "name": "俞敏洪",
   "pic": "",
-  "bookId": "64e5cca954f1b48a3c8c62be,64e5cd0a54f1b48a3c8c62cd",
+  "bookId": "64e5cca954f1b48a3c8c62be,64e5cd0a54f1b48a3c8c62cd,64e70d7613e06cfe2ba0c122,64e70dd013e06cfe2ba0c130,64e70ec113e06cfe2ba0c14f,64e70f9313e06cfe2ba0c16f,64e710a013e06cfe2ba0c192",
   "__v": 0
 },
 {
@@ -445,7 +445,7 @@
   },
   "name": "梁启超",
   "pic": "",
-  "bookId": "64e5cfd554f1b48a3c8c6318,64e5d0cf54f1b48a3c8c6345",
+  "bookId": "64e5cfd554f1b48a3c8c6318,64e5d0cf54f1b48a3c8c6345,64e7052913e06cfe2ba0c053",
   "__v": 0
 },
 {
@@ -499,7 +499,7 @@
   },
   "name": "季羡林",
   "pic": "",
-  "bookId": "64e5d1c454f1b48a3c8c635b,64e5d29754f1b48a3c8c636f,64e5d47454f1b48a3c8c637d",
+  "bookId": "64e5d1c454f1b48a3c8c635b,64e5d29754f1b48a3c8c636f,64e5d47454f1b48a3c8c637d,64e707a813e06cfe2ba0c076",
   "__v": 0
 },
 {
@@ -509,5 +509,662 @@
   "name": "茅海建",
   "pic": "",
   "bookId": "64e5d4f254f1b48a3c8c638b",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7039d13e06cfe2ba0c02d"
+  },
+  "name": "李硕",
+  "pic": "",
+  "bookId": "64e7039d13e06cfe2ba0c021",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7042213e06cfe2ba0c036"
+  },
+  "name": "梁衡",
+  "pic": "",
+  "bookId": "64e7042213e06cfe2ba0c02f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7042213e06cfe2ba0c03b"
+  },
+  "name": "刘醒龙",
+  "pic": "",
+  "bookId": "64e7042213e06cfe2ba0c02f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7048b13e06cfe2ba0c04b"
+  },
+  "name": "梁思成",
+  "pic": "",
+  "bookId": "64e7048b13e06cfe2ba0c042",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e706d113e06cfe2ba0c06a"
+  },
+  "name": "文一",
+  "pic": "",
+  "bookId": "64e706d113e06cfe2ba0c061",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7083a13e06cfe2ba0c094"
+  },
+  "name": "蔡昉",
+  "pic": "",
+  "bookId": "64e7083a13e06cfe2ba0c08a",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7099313e06cfe2ba0c09f"
+  },
+  "name": "赵燕菁",
+  "pic": "",
+  "bookId": "64e7099313e06cfe2ba0c098",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70a2813e06cfe2ba0c0ae"
+  },
+  "name": "[美]托马斯·潘恩",
+  "pic": "",
+  "bookId": "64e70a2813e06cfe2ba0c0a7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70ac113e06cfe2ba0c0c1"
+  },
+  "name": "班固",
+  "pic": "",
+  "bookId": "64e70ac113e06cfe2ba0c0b9",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70b1b13e06cfe2ba0c0d2"
+  },
+  "name": "林毅夫",
+  "pic": "",
+  "bookId": "64e70b1b13e06cfe2ba0c0cc",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70bc213e06cfe2ba0c0e1"
+  },
+  "name": "张汉熙",
+  "pic": "",
+  "bookId": "64e70bc213e06cfe2ba0c0da",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70bc213e06cfe2ba0c0e3"
+  },
+  "name": "王立礼",
+  "pic": "",
+  "bookId": "64e70bc213e06cfe2ba0c0da",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70c4913e06cfe2ba0c0f3"
+  },
+  "name": "[美国] 贾雷德·戴蒙德",
+  "pic": "",
+  "bookId": "64e70c4913e06cfe2ba0c0eb",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70cb213e06cfe2ba0c108"
+  },
+  "name": "戴尔.卡耐基",
+  "pic": "",
+  "bookId": "64e70cb213e06cfe2ba0c0fd",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70d2513e06cfe2ba0c117"
+  },
+  "name": "沈群",
+  "pic": "",
+  "bookId": "64e70d2513e06cfe2ba0c10d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70e4313e06cfe2ba0c144"
+  },
+  "name": "兰小欢",
+  "pic": "",
+  "bookId": "64e70e4313e06cfe2ba0c13d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70f2513e06cfe2ba0c168"
+  },
+  "name": "[法] 丹纳",
+  "pic": "",
+  "bookId": "64e70f2513e06cfe2ba0c15f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e70ffc13e06cfe2ba0c189"
+  },
+  "name": "二月河",
+  "pic": "",
+  "bookId": "64e70ffc13e06cfe2ba0c182",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7110913e06cfe2ba0c1ab"
+  },
+  "name": "莫言",
+  "pic": "",
+  "bookId": "64e7110913e06cfe2ba0c1a4,64e7116613e06cfe2ba0c1b3",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e711b913e06cfe2ba0c1c7"
+  },
+  "name": "吴钩",
+  "pic": "",
+  "bookId": "64e711b913e06cfe2ba0c1c0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7128d13e06cfe2ba0c1dc"
+  },
+  "name": "严歌苓",
+  "pic": "",
+  "bookId": "64e7128d13e06cfe2ba0c1d5",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7132413e06cfe2ba0c1ee"
+  },
+  "name": "[英] 阿兰·德波顿",
+  "pic": "",
+  "bookId": "64e7132413e06cfe2ba0c1e5",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7132413e06cfe2ba0c1f0"
+  },
+  "name": "[澳] 约翰·阿姆斯特朗",
+  "pic": "",
+  "bookId": "64e7132413e06cfe2ba0c1e5",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7139513e06cfe2ba0c200"
+  },
+  "name": "樊登",
+  "pic": "",
+  "bookId": "64e7139513e06cfe2ba0c1f7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e713ef13e06cfe2ba0c213"
+  },
+  "name": "金庸",
+  "pic": "",
+  "bookId": "64e713ef13e06cfe2ba0c209",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80a5a13e06cfe2ba0c2cd"
+  },
+  "name": "周梅森",
+  "pic": "",
+  "bookId": "64e80a5a13e06cfe2ba0c2c6",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80ca613e06cfe2ba0c2dc"
+  },
+  "name": "王爽",
+  "pic": "",
+  "bookId": "64e80ca613e06cfe2ba0c2d5",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80d0613e06cfe2ba0c2eb"
+  },
+  "name": "（美）文纳斯",
+  "pic": "",
+  "bookId": "64e80d0613e06cfe2ba0c2e3",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80d6a13e06cfe2ba0c2fa"
+  },
+  "name": "[美] 瑞·达利欧",
+  "pic": "",
+  "bookId": "64e80d6a13e06cfe2ba0c2f3",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80e4513e06cfe2ba0c317"
+  },
+  "name": "梁晓声",
+  "pic": "",
+  "bookId": "64e80e4513e06cfe2ba0c310",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80f4513e06cfe2ba0c325"
+  },
+  "name": "郭德纲",
+  "pic": "",
+  "bookId": "64e80f4513e06cfe2ba0c31e",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e80fb413e06cfe2ba0c336"
+  },
+  "name": "[哥伦比亚] 加西亚·马尔克斯",
+  "pic": "",
+  "bookId": "64e80fb413e06cfe2ba0c32f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e814f713e06cfe2ba0c344"
+  },
+  "name": "于谦",
+  "pic": "",
+  "bookId": "64e814f713e06cfe2ba0c33d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8157013e06cfe2ba0c356"
+  },
+  "name": "黄灯",
+  "pic": "",
+  "bookId": "64e8157013e06cfe2ba0c34b",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8170013e06cfe2ba0c375"
+  },
+  "name": "鲁迅",
+  "pic": "",
+  "bookId": "64e8170013e06cfe2ba0c36d,64e817cb13e06cfe2ba0c38b,64e8183613e06cfe2ba0c398,64e81c0713e06cfe2ba0c439,64e8445513e06cfe2ba0c602",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8176313e06cfe2ba0c384"
+  },
+  "name": "【美】傅高义 (Ezra.F.Vogel)",
+  "pic": "",
+  "bookId": "64e8176313e06cfe2ba0c37d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8189b13e06cfe2ba0c3ac"
+  },
+  "name": "W.Richard Stevens",
+  "pic": "",
+  "bookId": "64e8189b13e06cfe2ba0c3a5",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8189b13e06cfe2ba0c3ae"
+  },
+  "name": "Stephen A.Rago",
+  "pic": "",
+  "bookId": "64e8189b13e06cfe2ba0c3a5",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e818f013e06cfe2ba0c3be"
+  },
+  "name": "[美] Thomas H·Cormen",
+  "pic": "",
+  "bookId": "64e818f013e06cfe2ba0c3b6",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8196c13e06cfe2ba0c3cd"
+  },
+  "name": "[美] Julie Sussman",
+  "pic": "",
+  "bookId": "64e8196c13e06cfe2ba0c3c7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8196c13e06cfe2ba0c3cf"
+  },
+  "name": "[美] Harold Abelson",
+  "pic": "",
+  "bookId": "64e8196c13e06cfe2ba0c3c7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8196c13e06cfe2ba0c3d5"
+  },
+  "name": "[美] Gerald Jay Sussman",
+  "pic": "",
+  "bookId": "64e8196c13e06cfe2ba0c3c7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e819ea13e06cfe2ba0c3e9"
+  },
+  "name": "[美] David O' Hallaron",
+  "pic": "",
+  "bookId": "64e819ea13e06cfe2ba0c3df",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e819ea13e06cfe2ba0c3eb"
+  },
+  "name": "[美] Randal E.Bryant",
+  "pic": "",
+  "bookId": "64e819ea13e06cfe2ba0c3df",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81a3d13e06cfe2ba0c400"
+  },
+  "name": "[英国] E·H·贡布里希",
+  "pic": "",
+  "bookId": "64e81a3d13e06cfe2ba0c3f7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81aa013e06cfe2ba0c40d"
+  },
+  "name": "理查德·尼克松",
+  "pic": "",
+  "bookId": "64e81aa013e06cfe2ba0c406",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81af813e06cfe2ba0c41d"
+  },
+  "name": "[美] 刘墉",
+  "pic": "",
+  "bookId": "64e81af813e06cfe2ba0c415",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81b8f13e06cfe2ba0c42d"
+  },
+  "name": "周志明",
+  "pic": "",
+  "bookId": "64e81b8f13e06cfe2ba0c425",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81c7713e06cfe2ba0c44e"
+  },
+  "name": "任泽平",
+  "pic": "",
+  "bookId": "64e81c7713e06cfe2ba0c447",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81c7713e06cfe2ba0c450"
+  },
+  "name": "马家进",
+  "pic": "",
+  "bookId": "64e81c7713e06cfe2ba0c447",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81c7713e06cfe2ba0c454"
+  },
+  "name": "连一席",
+  "pic": "",
+  "bookId": "64e81c7713e06cfe2ba0c447",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81cc513e06cfe2ba0c466"
+  },
+  "name": "刘慈欣",
+  "pic": "",
+  "bookId": "64e81cc513e06cfe2ba0c45d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81e4a13e06cfe2ba0c47c"
+  },
+  "name": "韩寒",
+  "pic": "",
+  "bookId": "64e81e4a13e06cfe2ba0c475,64e81ea513e06cfe2ba0c484,64e8202713e06cfe2ba0c4c0,64e81ea513e06cfe2ba0c484,64e81ea513e06cfe2ba0c484",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81f0a13e06cfe2ba0c499"
+  },
+  "name": "施耐庵",
+  "pic": "",
+  "bookId": "64e81f0a13e06cfe2ba0c492",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81f0a13e06cfe2ba0c49d"
+  },
+  "name": "罗贯中",
+  "pic": "",
+  "bookId": "64e81f0a13e06cfe2ba0c492",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e81f6313e06cfe2ba0c4ac"
+  },
+  "name": "欧丽娟",
+  "pic": "",
+  "bookId": "64e81f6313e06cfe2ba0c4a5,64e81fb913e06cfe2ba0c4b3",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8219e13e06cfe2ba0c4d9"
+  },
+  "name": "俞军",
+  "pic": "",
+  "bookId": "64e8219e13e06cfe2ba0c4d0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8222713e06cfe2ba0c4ec"
+  },
+  "name": "吴国盛",
+  "pic": "",
+  "bookId": "64e8222713e06cfe2ba0c4e2",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8229413e06cfe2ba0c4f8"
+  },
+  "name": "司马迁",
+  "pic": "",
+  "bookId": "64e8229413e06cfe2ba0c4f1",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e822f213e06cfe2ba0c50b"
+  },
+  "name": "李天飞",
+  "pic": "",
+  "bookId": "64e822f213e06cfe2ba0c501",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8233f13e06cfe2ba0c517"
+  },
+  "name": "覃彪喜",
+  "pic": "",
+  "bookId": "64e8233f13e06cfe2ba0c510",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e823b313e06cfe2ba0c526"
+  },
+  "name": "曹雪芹",
+  "pic": "",
+  "bookId": "64e823b313e06cfe2ba0c51f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e823b313e06cfe2ba0c529"
+  },
+  "name": "高鹗",
+  "pic": "",
+  "bookId": "64e823b313e06cfe2ba0c51f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e83e4413e06cfe2ba0c559"
+  },
+  "name": "吴承恩",
+  "pic": "",
+  "bookId": "64e83e4413e06cfe2ba0c554,64e83e4413e06cfe2ba0c554,64e83f3e13e06cfe2ba0c574",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e83fb113e06cfe2ba0c58f"
+  },
+  "name": "[美国] Robert Sedgewick",
+  "pic": "",
+  "bookId": "64e83fb113e06cfe2ba0c587",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8401913e06cfe2ba0c59f"
+  },
+  "name": "塞奇威克",
+  "pic": "",
+  "bookId": "64e8401913e06cfe2ba0c595",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8409e13e06cfe2ba0c5a9"
+  },
+  "name": "Kenneth A.Reek",
+  "pic": "",
+  "bookId": "64e8409e13e06cfe2ba0c5a3",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8423d13e06cfe2ba0c5b9"
+  },
+  "name": "[美] K. N. King",
+  "pic": "",
+  "bookId": "64e8423d13e06cfe2ba0c5b1",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8428d13e06cfe2ba0c5cb"
+  },
+  "name": "Stephen Prata",
+  "pic": "",
+  "bookId": "64e8428d13e06cfe2ba0c5c4",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8434913e06cfe2ba0c5de"
+  },
+  "name": "张元亮",
+  "pic": "",
+  "bookId": "64e8434913e06cfe2ba0c5d6",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e843b513e06cfe2ba0c5ed"
+  },
+  "name": "[美]斯图尔特•戴蒙德",
+  "pic": "",
+  "bookId": "64e843b513e06cfe2ba0c5e6",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e844a213e06cfe2ba0c616"
+  },
+  "name": "陈忠实",
+  "pic": "",
+  "bookId": "64e844a213e06cfe2ba0c60f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e844f913e06cfe2ba0c626"
+  },
+  "name": "路遥",
+  "pic": "",
+  "bookId": "64e844f913e06cfe2ba0c61d,64e8459413e06cfe2ba0c639",
   "__v": 0
 }]
